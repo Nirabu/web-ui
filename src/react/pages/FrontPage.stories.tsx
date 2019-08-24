@@ -5,7 +5,7 @@ import { Frontpage } from "./Frontpage";
 import {Header } from "../components/Header";
 import { Buttons } from "../components/Buttons";
 
-import './../../styles/pages/FrontPage.scss'
+import '../../css/pages/FrontPage.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(
