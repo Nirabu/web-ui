@@ -8,11 +8,5 @@ storiesOf('Pages/Sections/Aquarium', module)
         () => (
             <Aquarium />
         )
-    )
-    .add(
-        'About',
-        () => (
-            <Aquarium />
-        )
     );
 

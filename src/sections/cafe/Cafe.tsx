@@ -3,8 +3,10 @@ import './Cafe.scss';
 
 export const Cafe: React.FC = () => {
     return (
-        <div>
-            <h4>Menu</h4>
+        <div className='cafe-container'>
+            <header>
+                <h1>Cat cafe</h1>
+            </header>
         </div>
     )
 };
