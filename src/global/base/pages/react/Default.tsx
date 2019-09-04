@@ -5,7 +5,7 @@ interface FrontpageProps {
     nav: JSX.Element;
 }
 
-export const Frontpage: React.FC<FrontpageProps> = (props) => {
+export const Default: React.FC<FrontpageProps> = (props) => {
     return (
         <div className="grid_container">
             <div className="top_page">

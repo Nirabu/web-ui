@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Frontpage } from "./Frontpage";
+import { Default } from "./Default";
 
-import {Header } from "../components/Header";
-import { Buttons } from "../components/Buttons";
+import {Header } from "../../../components/display/react/Header";
+import { Buttons } from "../../../components/multi/react/Buttons";
 
-import '../../css/pages/FrontPage.scss'
+import '../css/Default.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(
         'Front-page',
         () => (
-            <Frontpage
+            <Default
                 header={<Header title={'Nimado'} />}
                 nav={<Buttons text={'Click here'}/>}
             />
@@ -20,7 +20,7 @@ storiesOf('Pages/Main-pages', module)
     .add(
         'About-page',
     () => (
-        <Frontpage
+        <Default
             header={<Header title={'About'} />}
             nav={<Buttons text={'Click here'}/>}
         />
