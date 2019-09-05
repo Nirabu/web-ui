@@ -1,13 +1,12 @@
 import * as React from 'react';
-import './Cafe.scss';
 import {Navbar} from "../../global/components/navigations/react/Navbar";
+import './news.scss';
 
-export const Cafe: React.FC = () => {
+export const News: React.FC = () => {
     return (
-        <div className='cafe'>
-
+        <div className='news'>
             <header className='theme'>
-                <h2>Cafe</h2>
+                <h2>News</h2>
             </header>
 
             <nav className='main-navigation'>
@@ -18,7 +17,7 @@ export const Cafe: React.FC = () => {
                 <p>Videos</p>
             </main>
 
-            <footer className='ending-cafe'>
+            <footer className='ending-news'>
                 <p>All rights reserved to Nimado</p>
             </footer>
         </div>

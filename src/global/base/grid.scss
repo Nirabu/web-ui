@@ -1,0 +1,25 @@
+.App {
+  display: grid;
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
+  grid-area: 1/1/2/2;
+}
+
+.mainTitle {
+  grid-area: 2/1/3/5;
+  padding-bottom: 2rem;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+  grid-area: 1/4/2/5;
+}
+
+.mainContent {
+  grid-area: 3/1/4/5;
+}
+

@@ -1,13 +1,18 @@
+/* Imports */
 import * as React from 'react';
-import './Cafe.scss';
+
+/* Components */
 import {Navbar} from "../../global/components/navigations/react/Navbar";
 
-export const Cafe: React.FC = () => {
+/* CSS */
+import './Entrance.scss'
+
+export const Entrance: React.FC = () => {
     return (
-        <div className='cafe'>
+        <div className='entrance'>
 
             <header className='theme'>
-                <h2>Cafe</h2>
+                <h2>Entrance</h2>
             </header>
 
             <nav className='main-navigation'>
@@ -15,10 +20,14 @@ export const Cafe: React.FC = () => {
             </nav>
 
             <main className='main-content'>
-                <p>Videos</p>
+                <div className='nimado-news'>
+                    <div style={{textAlign: 'center', paddingTop: '1rem'}}>Nimado news</div>
+
+
+                </div>
             </main>
 
-            <footer className='ending-cafe'>
+            <footer className='ending-entrance'>
                 <p>All rights reserved to Nimado</p>
             </footer>
         </div>

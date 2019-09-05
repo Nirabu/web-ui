@@ -11,9 +11,13 @@ export const Default: React.FC<FrontpageProps> = (props) => {
             <div className="top_page">
                 <header>
                     {props.header}
+
                 </header>
             </div>
 
+            <article className='weather'>
+
+            </article>
             <div className="introduction_section">
                 <nav>
                     {props.nav}

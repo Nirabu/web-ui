@@ -1,22 +1,26 @@
 import * as React from 'react';
 import './Aquarium.scss'
+import {Navbar} from "../../global/components/navigations/react/Navbar";
 
 export const Aquarium: React.FC = () => {
     return (
-        <div className='aquarium-container'>
-            <header>
-                <h1>The open sea</h1>
+        <div className='aquarium'>
+
+            <header className='theme'>
+                <h2>Aquarium</h2>
             </header>
 
-            <main>
-                <aside>
-                    <h4>Animals in the main sea</h4>
-                    <p>Dolphins</p>
-                    <p>Whales</p>
-                    <p>Fish</p>
-                    <p>Sharks</p>
-                </aside>
+            <nav className='main-navigation'>
+                <Navbar/>
+            </nav>
+
+            <main className='main-content'>
+                <p>Videos</p>
             </main>
+
+            <footer className='ending'>
+                <p>All rights reserved to Nimado</p>
+            </footer>
         </div>
     )
 };
