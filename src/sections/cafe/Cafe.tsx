@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Cafe.scss';
-import {Navbar} from "../../global/components/navigations/react/Navbar";
+import {Navbar} from "../../global/components/navigations/Navbar";
 
 export const Cafe: React.FC = () => {
     return (

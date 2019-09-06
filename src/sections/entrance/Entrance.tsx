@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 /* Components */
-import {Navbar} from "../../global/components/navigations/react/Navbar";
+import {Navbar} from "../../global/components/navigations/Navbar";
 
 /* CSS */
 import './Entrance.scss'
@@ -12,7 +12,7 @@ export const Entrance: React.FC = () => {
         <div className='entrance'>
 
             <header className='theme'>
-                <h2>Entrance</h2>
+                <h2>Nimado Entrance</h2>
             </header>
 
             <nav className='main-navigation'>
@@ -22,8 +22,6 @@ export const Entrance: React.FC = () => {
             <main className='main-content'>
                 <div className='nimado-news'>
                     <div style={{textAlign: 'center', paddingTop: '1rem'}}>Nimado news</div>
-
-
                 </div>
             </main>
 

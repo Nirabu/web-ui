@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Navbar} from "../../global/components/navigations/react/Navbar";
+import {Navbar} from "../../global/components/navigations/Navbar";
 import './cinema.scss';
 
 export const Cinema: React.FC = () => {

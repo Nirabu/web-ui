@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Aquarium.scss'
-import {Navbar} from "../../global/components/navigations/react/Navbar";
+import {Navbar} from "../../global/components/navigations/Navbar";
 
 export const Aquarium: React.FC = () => {
     return (

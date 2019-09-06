@@ -2,10 +2,10 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Default } from "./Default";
 
-import {Header } from "../../../components/display/react/Header";
-import { Buttons } from "../../../components/multi/react/Buttons";
+import {Header } from "../../components/display/Header";
+import { Buttons } from "../../components/multi/Buttons";
 
-import '../css/Default.scss'
+import './Default.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(

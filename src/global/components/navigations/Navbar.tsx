@@ -12,8 +12,6 @@ export const Navbar: React.FC<NavbarProps> = (props) => {
             <li><NavLink to='/garden'>Garden</NavLink></li>
             <li><NavLink to='/cinema'>Cinema</NavLink></li>
             <li><NavLink to='/news'>News</NavLink></li>
-            <li style={{paddingLeft: '5rem'}}><NavLink to='/favorites'>Favorites</NavLink></li>
-            <li><NavLink to='/history'>History</NavLink></li>
         </ul>
     )
 };
