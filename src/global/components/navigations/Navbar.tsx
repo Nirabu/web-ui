@@ -6,7 +6,8 @@ interface NavbarProps { }
 export const Navbar: React.FC<NavbarProps> = (props) => {
     return (
         <ul>
-            <li><NavLink to='/'>Entrance</NavLink></li>
+            <li><NavLink to='/'>Portal</NavLink></li>
+            <li><NavLink to='/playground'>Playground</NavLink></li>
             <li><NavLink to='/aquarium'>Aquarium</NavLink></li>
             <li><NavLink to='/cafe'>Cafe</NavLink></li>
             <li><NavLink to='/garden'>Garden</NavLink></li>

@@ -7,7 +7,7 @@ export const Cafe: React.FC = () => {
         <div className='cafe'>
 
             <header className='theme'>
-                <h2>Cafe</h2>
+                <h2>Nimado Cafe</h2>
             </header>
 
             <nav className='main-navigation'>

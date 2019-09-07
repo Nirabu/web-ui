@@ -21,14 +21,11 @@ export const Portal: React.FC = () => {
             </header>
 
             <main  className='portal' style={{backgroundColor: '#f7f7f7', height: '100vh'}}>
-
-
                 <div className='first_column'>
-
                     <div className='tour'>
                         <h4 className='tour_name'>Relax</h4>
                         <ul className='tour_links'>
-                            <li><NavLink to='/entrance'>Entrance</NavLink></li>
+                            <li><NavLink to='/playground'>Playground</NavLink></li>
                             <li><NavLink to='/cafe'>Cafe</NavLink></li>
                             <li><NavLink to='/aquarium'>Aquarium</NavLink></li>
                             <li><NavLink to='/garden'>Garden</NavLink></li>
@@ -36,7 +33,7 @@ export const Portal: React.FC = () => {
                     </div>
 
                     <div className='tour_top' style={{borderTop: '1px solid #9370DB'}}>
-                        <h4 style={{marginLeft: '1rem'}}>Top 10</h4>
+                        <h4>Top 10</h4>
 
                         <ul>
                             <li><NavLink to='/entrance'>Cafe: New dessert</NavLink></li>
@@ -47,7 +44,7 @@ export const Portal: React.FC = () => {
                     </div>
 
                     <div className='tour_reviews' style={{borderTop: '1px solid #9370DB'}}>
-                        <h4 style={{marginLeft: '1rem'}}>Reviews</h4>
+                        <h4>Reviews</h4>
 
                         <ul>
                             <li><NavLink to='/entrance'>Cafe: New dessert</NavLink></li>

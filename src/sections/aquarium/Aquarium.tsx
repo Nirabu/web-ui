@@ -7,7 +7,7 @@ export const Aquarium: React.FC = () => {
         <div className='aquarium'>
 
             <header className='theme'>
-                <h2>Aquarium</h2>
+                <h2>Nimado Aquarium</h2>
             </header>
 
             <nav className='main-navigation'>

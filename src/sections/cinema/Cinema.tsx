@@ -7,7 +7,7 @@ export const Cinema: React.FC = () => {
         <div className='cinema'>
 
             <header className='theme'>
-                <h2>Cinema</h2>
+                <h2>Nimado Cinema</h2>
             </header>
 
             <nav className='main-navigation'>

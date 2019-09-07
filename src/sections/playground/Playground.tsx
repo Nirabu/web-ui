@@ -5,9 +5,9 @@ import * as React from 'react';
 import {Navbar} from "../../global/components/navigations/Navbar";
 
 /* CSS */
-import './Entrance.scss'
+import './playground.scss'
 
-export const Entrance: React.FC = () => {
+export const Playground: React.FC = () => {
     return (
         <div className='entrance'>
 
