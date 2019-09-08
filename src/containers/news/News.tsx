@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Tour} from "../../react/components/navigations/navigationbar/Tour";
-import '../../css/layouts/news.scss';
+import '../../css/layouts/_news.scss';
 
 export const News: React.FC = () => {
     return (
