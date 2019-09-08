@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Default } from "../../react/layouts/pages/Default";
+import { Default } from "../../presentations/layouts/pages/Default";
 
-import {Category } from "../../react/components/display/headers/Category";
-import { Buttons } from "../../react/components/multi/Buttons";
+import {Category } from "../../presentations/components/display/headers/Category";
+import { Buttons } from "../../presentations/components/multi/Buttons";
 import {Tour} from "../../containers/tour/other/types/Tour";
 
-import '../../react/layouts/pages/Default.scss'
+import '../../presentations/layouts/pages/Default.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Tour} from "../../react/components/navigations/navigationbar/Tour";
+import {Tour} from "../../presentations/components/navigations/navigationbar/Tour";
 import '../../css/layouts/_cinema.scss';
 
 export const Cinema: React.FC = () => {
