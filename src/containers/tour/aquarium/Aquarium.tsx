@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../../css/aquarium.scss';
+import '../../../css/layouts/aquarium.scss';
 import {Tour} from "../../../react/components/navigations/navigationbar/Tour";
 
 export const Aquarium: React.FC = () => {

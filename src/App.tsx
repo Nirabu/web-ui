@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Main} from "./sections/Main";
+import {Main} from "./containers/Main";
 import {Account} from "./react/components/navigations/navigationbar/Account";
 import {Weather} from "./react/components/display/Weather";
 

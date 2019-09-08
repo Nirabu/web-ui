@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Tour} from '../../../../sections/tour/other/types/Tour';
+import {Tour} from '../../../../containers/tour/other/types/Tour';
 
 interface HeaderProps {
     category: Tour;

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import {Tour} from "../../react/components/navigations/navigationbar/Tour";
-import './news.scss';
+import '../../css/layouts/cinema.scss';
 
-export const News: React.FC = () => {
+export const Cinema: React.FC = () => {
     return (
-        <div className='news'>
+        <div className='cinema'>
+
             <header className='theme'>
-                <h2>Nimado News</h2>
+                <h2>Nimado Cinema</h2>
             </header>
 
             <nav className='main-navigation'>
@@ -17,9 +18,9 @@ export const News: React.FC = () => {
                 <p>Videos</p>
             </main>
 
-            <footer className='ending-news'>
+            <footer className='ending-cinema'>
                 <p>All rights reserved to Nimado</p>
             </footer>
         </div>
     )
-};
+}

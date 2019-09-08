@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {NavLink} from "react-router-dom"
-import './Portal.scss';
+import '../../css/layouts/portal.scss';
 
 export const Portal: React.FC = () => {
     return (

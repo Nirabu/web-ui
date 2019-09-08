@@ -4,7 +4,7 @@ import { Default } from "../react/layouts/pages/Default";
 
 import {Category } from "../react/components/display/headers/Category";
 import { Buttons } from "../react/components/multi/Buttons";
-import {Tour} from "../sections/tour/other/types/Tour";
+import {Tour} from "../containers/tour/other/types/Tour";
 
 import '../react/layouts/pages/Default.scss'
 
