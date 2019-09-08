@@ -1,10 +1,8 @@
 import React from 'react';
 
-import './index.scss';
-
-import {Main} from "./global/Main";
-import {Account} from "./global/components/navigations/Account";
-import {Weather} from "./global/components/display/Weather";
+import {Main} from "./sections/Main";
+import {Account} from "./react/components/navigations/navigationbar/Account";
+import {Weather} from "./react/components/display/Weather";
 
 const App: React.FC = () => {
     return (

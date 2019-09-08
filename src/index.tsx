@@ -1,4 +1,4 @@
-import './index.scss';
+import './css/index.scss';
 import * as React from'react';
 import {BrowserRouter} from 'react-router-dom';
 import ReactDOM from 'react-dom';

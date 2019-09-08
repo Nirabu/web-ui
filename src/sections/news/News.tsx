@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Navbar} from "../../global/components/navigations/Navbar";
+import {Tour} from "../../react/components/navigations/navigationbar/Tour";
 import './news.scss';
 
 export const News: React.FC = () => {
@@ -10,7 +10,7 @@ export const News: React.FC = () => {
             </header>
 
             <nav className='main-navigation'>
-                <Navbar/>
+                <Tour/>
             </nav>
 
             <main className='main-content'>

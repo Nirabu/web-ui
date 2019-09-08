@@ -5,13 +5,16 @@
   "dependencies": {
     "@types/jest": "^24.0.17",
     "@types/node": "12.7.1",
-    "@types/react": "^16.9.1",
+    "@types/react": "^16.9.2",
     "@types/react-dom": "^16.8.5",
     "@types/react-router-dom": "^4.3.5",
+    "@types/storybook__react": "^4.0.2",
+    "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.0",
+    "sass": "^1.23.0-module.beta.1",
     "typescript": "^3.5.3"
   },
   "scripts": {
@@ -38,18 +41,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/addon-actions": "^5.1.10",
-    "@storybook/addon-info": "^5.1.10",
-    "@storybook/addon-links": "^5.1.10",
-    "@storybook/addons": "^5.1.10",
-    "@storybook/react": "^5.1.10",
-    "@types/storybook__react": "^4.0.2",
-    "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
-    "jest": "^24.8.0",
-    "node-sass": "^4.12.0",
-    "react-docgen-typescript-loader": "^3.1.1",
-    "ts-jest": "^24.0.2"
+    "@storybook/react": "^5.1.11"
   }
 }
