@@ -5,6 +5,7 @@ import {changeAquarium} from "./redux/actions/Categories";
 import {Main} from "./containers/Main";
 import {Account} from "./presentations/components/navigations/navigationbar/Account";
 import {Weather} from "./presentations/components/display/Weather";
+import { withRouter } from 'react-router-dom';
 
 interface AppProps {
     color: any;
@@ -24,9 +25,7 @@ export const App: React.FC<AppProps> = (props) => {
             </article>
 
             <main className='mainContent'>
-
                 <Main/>
-
                 <p>{props.color.text}</p>
 
                 <button
@@ -59,3 +58,4 @@ const AppContainer = connect(
 )(App);
 
 export default AppContainer;
+

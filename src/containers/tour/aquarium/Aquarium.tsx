@@ -6,41 +6,55 @@ import {changeAquarium, changeCafe} from "../../../redux/actions/Categories";
 import {connect} from "react-redux";
 
 import '../../../css/layouts/_aquarium.scss';
+import {Account} from "../../../presentations/components/navigations/navigationbar/Account";
+import {Weather} from "../../../presentations/components/display/Weather";
+import {Main} from "../../Main";
 
-interface AquariumProps {
+interface AppProps {
     color: any;
     changeAquarium: any;
-    changeCafe: any;
 }
 
-export const Aquarium: React.FC<AquariumProps> = (props) => {
+export const Aquarium: React.FC<AppProps> = (props) => {
     return (
-        <div className='aquarium'>
-            <header className='theme'>
-                <h2>Nimado Aquarium</h2>
-            </header>
+        <div className='App'>
 
-            <nav className='main-navigation'>
-                <Tour/>
+            <nav className='account'>
+                <Account/>
             </nav>
 
-            <main className='main-content'>
-                <section>
-                    <h1>test</h1>
-                </section>
+            <article className='weather'>
+                <Weather/>
+            </article>
+
+            <main className='mainContent'>
+
+                <Main/>
+
+                <p>{props.color.text}</p>
+
+                <button
+                    onClick={() =>
+                        props.changeAquarium({text: 'Water!'})
+                    }
+                >
+                    Click Me!
+                </button>
             </main>
+
+            <footer>
+            </footer>
         </div>
-    )
+    );
 };
 
-// AppContainer
+// AppContainer.js
 const mapStateToProps = (state: any) => ({
-   colors: state.colors,
+    color: state.color,
 });
 
 const mapDispatchToProps = {
     changeAquarium,
-    changeCafe,
 };
 
 const AppContainer = connect(
@@ -48,4 +62,37 @@ const AppContainer = connect(
     mapDispatchToProps
 )(Aquarium);
 
+
+
 export default AppContainer;
+
+// interface AquariumProps {
+//     color: any;
+//     changeAquarium: any;
+// }
+//
+// export const Aquarium: React.FC<AquariumProps> = (props) => {
+//     return (
+//         <div className='aquarium'>
+//             <header className='theme'>
+//                 <h2>Nimado Aquarium</h2>
+//             </header>
+//
+//             <nav className='main-navigation'>
+//                 <Tour/>
+//             </nav>
+//
+//             <main className='main-content'>
+//                 <p>{props.color.text}</p>
+//
+//                 <button
+//                     onClick={() =>
+//                         props.changeAquarium({text: 'Power!'})
+//                     }
+//                 >
+//                     Click Me!
+//                 </button>
+//             </main>
+//         </div>
+//     )
+// };
