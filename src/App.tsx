@@ -16,31 +16,31 @@ export const App: React.FC<AppProps> = (props) => {
         <div className='App'>
 
             <nav className='account'>
-                <Account />
+                <Account/>
             </nav>
 
             <article className='weather'>
-                <Weather />
+                <Weather/>
             </article>
 
             <main className='mainContent'>
 
-                    <Main />
+                <Main/>
 
-                    <p>{props.color.text}</p>
+                <p>{props.color.text}</p>
 
-                    <button
-                        onClick={() =>
-                            props.changeAquarium({text: 'Power!'})
-                        }
-                    >
-                        Click Me!
-                    </button>
+                <button
+                    onClick={() =>
+                        props.changeAquarium({text: 'Power!'})
+                    }
+                >
+                    Click Me!
+                </button>
             </main>
 
-                <footer>
-                </footer>
-            </div>
+            <footer>
+            </footer>
+        </div>
     );
 };
 
