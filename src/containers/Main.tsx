@@ -1,9 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux'
 import {
     Route,
     Switch as RouterSwitch
 } from 'react-router-dom';
-
 
 import {Portal} from "./portal/Portal";
 import {Playground} from "./tour/playground/Playground";

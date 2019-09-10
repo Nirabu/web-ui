@@ -1,20 +1,16 @@
 import './css/index.scss';
 import * as React from'react';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux';
 import { store } from "./redux/Store";
+import Root from "./Root";
 
 ReactDOM.render((
-    <Provider store={store}>
-        <BrowserRouter>
-                <App/>
-        </BrowserRouter>
-    </Provider>
-
+    <Root store={store}/>
 ), document.getElementById('root'));
 
 
@@ -22,3 +18,11 @@ ReactDOM.render((
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+{
+    {/*<Provider store={store}>*/}
+    {/*    <Router>*/}
+    {/*        <App/>*/}
+    {/*    </Router>*/}
+    {/*</Provider>*/}
+}
+
