@@ -2,6 +2,11 @@
   display: grid;
 }
 
+.taskbar {
+  display: grid;
+  grid-area: 1/1/2/5;
+  background-color: #b5bcfc;
+}
 .weather {
   display: flex;
   justify-content: center;

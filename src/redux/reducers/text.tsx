@@ -1,16 +1,14 @@
 import {combineReducers} from 'redux';
 
-export const color = (state = {}, action:any) => {
+const color = (state = {}, action:any) => {
     switch (action.type) {
-        case 'AQUARIUM':
+        case 'SHOW':
             return action.color;
-        case 'CAFE':
+        case 'HIDE':
             return {};
         default:
             return state
     }
 };
 
-export const reducers = combineReducers({
-    color,
-});
+export default color;

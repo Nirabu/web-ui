@@ -25,7 +25,6 @@ const Root: React.FC<RootProps> = ({store}) => (
             <Route exact path='/cafe' component={Cafe}/>
             <Route exact path='/news' component={News}/>
             <Route exact path='/cinema' component={Cinema}/>
-            <Route exact path='/news' component={News}/>
         </Router>
     </Provider>
 );
