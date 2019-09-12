@@ -10,6 +10,7 @@ import {Account} from "../../../presentations/components/navigations/navigationb
 import {Weather} from "../../../presentations/components/display/Weather";
 import {Main} from "../../Main";
 
+
 interface AppProps {
     color: any;
     changeAquarium: any;
@@ -28,11 +29,8 @@ export const Aquarium: React.FC<AppProps> = (props) => {
             </article>
 
             <main className='mainContent'>
-
                 <Main/>
-
                 <p>{props.color.text}</p>
-
                 <button
                     onClick={() =>
                         props.changeAquarium({text: 'Water!'})

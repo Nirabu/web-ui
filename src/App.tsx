@@ -25,7 +25,6 @@ export const App: React.FC<AppProps> = (props) => {
             </article>
 
             <main className='mainContent'>
-                <Main/>
                 <p>{props.color.text}</p>
 
                 <button
