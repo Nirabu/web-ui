@@ -1,8 +1,20 @@
-import * as React from 'react';
-import '../../../css/layouts/_aquarium.scss';
+import React from 'react';
+
 import {Tour} from "../../../presentations/components/navigations/navigationbar/Tour";
 
-export const Aquarium: React.FC = () => {
+import {connect} from "react-redux";
+
+import '../../../css/layouts/_aquarium.scss';
+import {Account} from "../../../presentations/components/navigations/navigationbar/Account";
+import {Weather} from "../../../presentations/components/display/Weather";
+import {Main} from "../../Main";
+
+interface AppProps {
+    color: any;
+    changeAquarium: any;
+}
+
+export const Aquarium: React.FC<AppProps> = (props) => {
     return (
         <div className='aquarium'>
 
@@ -17,6 +29,10 @@ export const Aquarium: React.FC = () => {
             <main className='main-content'>
                 <p>Videos</p>
             </main>
+
+            <footer className='ending'>
+                <p>All rights reserved to Nimado</p>
+            </footer>
         </div>
-    )
+    );
 };

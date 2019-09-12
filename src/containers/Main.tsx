@@ -1,5 +1,9 @@
 import React from 'react';
-import {NavLink, Switch, Route} from 'react-router-dom';
+import { Provider } from 'react-redux'
+import {
+    Route,
+    Switch as RouterSwitch
+} from 'react-router-dom';
 
 import {Portal} from "./portal/Portal";
 import {Playground} from "./tour/playground/Playground";
@@ -9,15 +13,16 @@ import {Cinema} from "./cinema/Cinema";
 import {Garden} from "./tour/garden/Garden";
 import {News} from "./news/News";
 
+
 export const Main = () => (
-    <Switch>
-        <Route exact path='/' component={Portal}></Route>
-        <Route exact path='/playground' component={Playground}></Route>
-        <Route exact path='/aquarium' component={Aquarium}></Route>
-        <Route exact path='/garden' component={Garden}></Route>
-        <Route exact path='/cafe' component={Cafe}></Route>
-        <Route exact path='/news' component={News}></Route>
-        <Route exact path='/cinema' component={Cinema}></Route>
-        <Route exact path='/news' component={News}></Route>
-    </Switch>
+    <RouterSwitch>
+        <Route exact path='/' component={Portal}/>
+        <Route exact path='/playground' component={Playground}/>
+        <Route exact path='/aquarium' component={Aquarium}/>
+        <Route exact path='/garden' component={Garden}/>
+        <Route exact path='/cafe' component={Cafe}/>
+        <Route exact path='/news' component={News}/>
+        <Route exact path='/cinema' component={Cinema}/>
+        <Route exact path='/news' component={News}/>
+    </RouterSwitch>
 );
