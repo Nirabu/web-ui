@@ -17,10 +17,6 @@ export const Cafe: React.FC = () => {
             <main className='main-content'>
                 <p>Videos</p>
             </main>
-
-            <footer className='ending-cafe'>
-                <p>All rights reserved to Nimado</p>
-            </footer>
         </div>
     )
 };

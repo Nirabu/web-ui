@@ -13,7 +13,6 @@ import {Cinema} from "./cinema/Cinema";
 import {Garden} from "./tour/garden/Garden";
 import {News} from "./news/News";
 
-
 export const Main = () => (
     <RouterSwitch>
         <Route exact path='/' component={Portal}/>

@@ -16,10 +16,6 @@ export const News: React.FC = () => {
             <main className='main-content'>
                 <p>Videos</p>
             </main>
-
-            <footer className='ending-news'>
-                <p>All rights reserved to Nimado</p>
-            </footer>
         </div>
     )
 };

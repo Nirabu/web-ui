@@ -6,4 +6,4 @@ export const Weather: React.FC = () => {
             <p>31 Celsius</p>
         </div>
     )
-}
+};

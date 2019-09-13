@@ -17,10 +17,6 @@ export const Cinema: React.FC = () => {
             <main className='main-content'>
                 <p>Videos</p>
             </main>
-
-            <footer className='ending-cinema'>
-                <p>All rights reserved to Nimado</p>
-            </footer>
         </div>
     )
 }

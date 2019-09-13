@@ -29,10 +29,6 @@ export const Aquarium: React.FC<AppProps> = (props) => {
             <main className='main-content'>
                 <p>Videos</p>
             </main>
-
-            <footer className='ending'>
-                <p>All rights reserved to Nimado</p>
-            </footer>
         </div>
     );
 };

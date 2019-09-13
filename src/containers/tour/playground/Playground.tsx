@@ -24,10 +24,7 @@ export const Playground: React.FC = () => {
                     <div style={{textAlign: 'center', paddingTop: '1rem'}}>Nimado news</div>
                 </div>
             </main>
-
-            <footer className='ending-entrance'>
-                <p>All rights reserved to Nimado</p>
-            </footer>
+            
         </div>
     )
 };
