@@ -48,6 +48,11 @@ export const App: React.FC<AppProps> = (props) => {
                 <p>{props.color.text}</p>
                 </nav>
             </main>
+
+            <footer className='version'>
+                <p>Version 0.1.2</p>
+                <p>All rights reserved to Nimado organization</p>
+            </footer>
         </div>
     );
 };

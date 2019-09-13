@@ -1,0 +1,8 @@
+{
+  "temperature": "30",
+  "weather": "sun",
+  "Place": {
+    "city": "Seoul",
+    "Country": "South-Korea"
+  }
+}
