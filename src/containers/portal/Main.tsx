@@ -5,13 +5,13 @@ import {
     Switch as RouterSwitch
 } from 'react-router-dom';
 
-import {Portal} from "./portal/Portal";
-import {Playground} from "./tour/playground/Playground";
-import {Aquarium} from "./tour/aquarium/Aquarium";
-import {Cafe} from "./tour/cafe/Cafe";
-import {Cinema} from "./cinema/Cinema";
-import {Garden} from "./tour/garden/Garden";
-import {News} from "./news/News";
+import {Portal} from "./Portal";
+import {Playground} from "../tour/playground/Playground";
+import {Aquarium} from "../tour/aquarium/Aquarium";
+import {Cafe} from "../tour/cafe/Cafe";
+import {Cinema} from "../cinema/Cinema";
+import {Garden} from "../tour/garden/Garden";
+import {News} from "../news/News";
 
 export const Main = () => (
     <RouterSwitch>

@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 /* Components */
-import {Tour} from "../../../presentations/components/navigations/navigationbar/Tour";
+import {Tour} from "../../../presentations/components/navigations/bars/Tour";
 
 /* CSS */
 import './playground.scss'

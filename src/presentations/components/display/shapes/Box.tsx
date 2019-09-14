@@ -4,7 +4,6 @@ interface BoxProps {
     title?: string;
 }
 
-
 const Box: React.FC<BoxProps> = (props) => {
     return (
         <div className='box'>

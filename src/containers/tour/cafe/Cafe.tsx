@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Cafe.scss';
-import {Tour} from "../../../presentations/components/navigations/navigationbar/Tour";
+import {Tour} from "../../../presentations/components/navigations/bars/Tour";
 
 export const Cafe: React.FC = () => {
     return (
