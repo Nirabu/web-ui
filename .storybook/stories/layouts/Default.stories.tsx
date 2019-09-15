@@ -4,7 +4,7 @@ import { Default } from "../../../src/presentations/layouts/pages/Default";
 
 import {Categories } from "../../../src/presentations/components/display/subtitle/Categories";
 import { Buttons } from "../../../src/presentations/components/multi/Buttons";
-import {Tour} from "../../../src/containers/tour/other/types/Tour";
+import {Tour} from "../../../src/containers/considerations/other/types/Tour";
 
 import '../../../src/presentations/layouts/pages/Default.scss'
 

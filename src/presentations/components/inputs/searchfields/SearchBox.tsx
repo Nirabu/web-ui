@@ -5,7 +5,7 @@ const SearchBox: React.FC = () => {
         <>
             <form style={{paddingBottom: '2.5rem'}}>
                 <input
-                    placeholder="Nimado search"
+                    placeholder=""
                 />
             </form>
         </>

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 interface NavbarProps { }
 
-export const Tour: React.FC<NavbarProps> = (props) => {
+const Tour: React.FC<NavbarProps> = (props) => {
     return (
         <ul>
             <li><NavLink to='/'>Portal</NavLink></li>
@@ -15,3 +15,5 @@ export const Tour: React.FC<NavbarProps> = (props) => {
         </ul>
     )
 };
+
+export default Tour;

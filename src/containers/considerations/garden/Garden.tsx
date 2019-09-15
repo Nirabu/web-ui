@@ -1,17 +1,14 @@
 import * as React from 'react';
-import {Tour} from "../../presentations/components/navigations/bars/Tour";
-import '../../css/layouts/_cinema.scss';
+import './garden.scss';
 
-export const Cinema: React.FC = () => {
+export const Garden: React.FC = () => {
     return (
-        <div className='cinema'>
-
+        <div className='garden'>
             <header className='theme'>
-                <h2>Nimado Cinema</h2>
+                <h2>Nimado Garden</h2>
             </header>
 
             <nav className='main-navigation'>
-                <Tour/>
             </nav>
 
             <main className='main-content'>
@@ -19,4 +16,4 @@ export const Cinema: React.FC = () => {
             </main>
         </div>
     )
-}
+};

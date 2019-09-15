@@ -27,14 +27,16 @@
   margin-bottom: 0;
 
   .title-nimado {
+    display: flex;
     grid-column: 1/2;
     max-width: 6rem;
+    margin-right: 1.3rem;
   }
 
   .icon-nimado {
     grid-column: 2/3;
     grid-area: icon-nimado;
-    max-width: 2.8rem;
+    max-width: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }
@@ -44,7 +46,7 @@
     grid-area: search-nimado;
     align-self: center;
 
-    margin-right: 4rem;
+    margin-right: 7rem;
   }
 
   .nav-account {
@@ -64,13 +66,57 @@
 .content-nimado {
   grid-area: content-nimado;
   display: grid;
-  overflow: hidden;
+  grid-template-columns: repeat(3, 1fr) repeat(1, 0.5fr);
+  grid-template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
+  grid-template-areas:
+    "home-cafe home-news home-shopping home-top"
+    "home-tv home-weather home-children home-top"
+    ". home-wise . home-top";
+  grid-gap: 1rem;
 
+  padding: 1rem;
+  overflow: hidden;
   justify-content: center;
   background-color: #eeeff3;
 
+  .home-top {
+    grid-area: home-top;
+    background-color: #bc85dc;
+  }
 
-  .wise-word {
+  .home-cafe {
+    grid-area: home-cafe;
+    background-color: #DCADB2;
+  }
+
+  .home-news {
+    grid-area: home-news;
+    background-color: #d5dc5c;
+  }
+
+  .home-shopping {
+    grid-area: home-shopping;
+    background-color: #5edc55;
+  }
+
+  .home-tv {
+    grid-area: home-tv;
+    background-color: #dc586c;
+  }
+
+  .home-weather {
+    grid-area: home-weather;
+    background-color: #4d5cdc;
+  }
+
+  .home-children {
+    grid-area: home-children;
+    background-color: #5cd2dc;
+  }
+
+  .wise {
+    grid-area: home-wise;
+    background-color: #dc7dd6;
     padding-top: 2rem;
   }
 }
