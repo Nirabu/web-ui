@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from "@storybook/react";
-import { Cafe } from "../../../src/containers/tour/cafe/Cafe";
+import { Cafe } from "../../../src/containers/cafe/Cafe";
 import {Buttons} from "../../../src/presentations/components/multi/Buttons";
 
 

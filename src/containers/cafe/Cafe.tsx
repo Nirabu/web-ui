@@ -1,12 +1,13 @@
 import * as React from 'react';
-import {Tour} from "../../../presentations/components/navigations/bars/Tour";
-import './garden.scss';
+import './Cafe.scss';
+import Tour from "../../presentations/components/navigations/bars/Tour";
 
-export const Garden: React.FC = () => {
+export const Cafe: React.FC = () => {
     return (
-        <div className='garden'>
+        <div className='cafe'>
+
             <header className='theme'>
-                <h2>Nimado Garden</h2>
+                <h2>Nimado Cafe</h2>
             </header>
 
             <nav className='main-navigation'>

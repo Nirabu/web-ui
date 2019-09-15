@@ -1,9 +1,6 @@
 /* Imports */
 import * as React from 'react';
-
 /* Components */
-import {Tour} from "../../../presentations/components/navigations/bars/Tour";
-
 /* CSS */
 import './playground.scss'
 
@@ -16,7 +13,6 @@ export const Playground: React.FC = () => {
             </header>
 
             <nav className='main-navigation'>
-                <Tour/>
             </nav>
 
             <main className='main-content'>

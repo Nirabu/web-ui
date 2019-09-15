@@ -1,17 +1,15 @@
 import * as React from 'react';
-import './Cafe.scss';
-import {Tour} from "../../../presentations/components/navigations/bars/Tour";
+import '../../css/layouts/_cinema.scss';
 
-export const Cafe: React.FC = () => {
+export const Tv: React.FC = () => {
     return (
-        <div className='cafe'>
+        <div className='cinema'>
 
             <header className='theme'>
-                <h2>Nimado Cafe</h2>
+                <h2>Nimado Cinema</h2>
             </header>
 
             <nav className='main-navigation'>
-                <Tour/>
             </nav>
 
             <main className='main-content'>
@@ -19,4 +17,4 @@ export const Cafe: React.FC = () => {
             </main>
         </div>
     )
-};
+}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import {NavLink} from "react-router-dom"
 import '../../css/layouts/_portal.scss';
 
-export const Portal: React.FC = () => {
+export const Home: React.FC = () => {
     return (
         <div>
             <header className='portal_header'>
