@@ -5,7 +5,7 @@ interface HeaderProps {
     category: Tour;
 }
 
-export const Category: React.FC<HeaderProps> = (props:any) => {
+export const Categories: React.FC<HeaderProps> = (props:any) => {
     return (
         <h1>Nimado {props.category}</h1>
     )

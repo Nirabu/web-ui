@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Default } from "../../../src/presentations/layouts/pages/Default";
 
-import {Category } from "../../../src/presentations/components/display/headers/Category";
+import {Categories } from "../../../src/presentations/components/display/subtitle/Categories";
 import { Buttons } from "../../../src/presentations/components/multi/Buttons";
 import {Tour} from "../../../src/containers/tour/other/types/Tour";
 
@@ -13,7 +13,7 @@ storiesOf('Pages/Main-pages', module)
         'Front-page',
         () => (
             <Default
-                header={<Category category={Tour.Aquarium} />}
+                header={<Categories category={Tour.Aquarium} />}
                 nav={<Buttons text={'Click here'}/>}
             />
         )
@@ -22,7 +22,7 @@ storiesOf('Pages/Main-pages', module)
         'About-page',
     () => (
         <Default
-            header={<Category category={Tour.Aquarium} />}
+            header={<Categories category={Tour.Aquarium} />}
             nav={<Buttons text={'Click here'}/>}
         />
     )

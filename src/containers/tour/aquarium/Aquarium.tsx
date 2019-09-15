@@ -1,13 +1,13 @@
 import React from 'react';
 
-import {Tour} from "../../../presentations/components/navigations/navigationbar/Tour";
+import {Tour} from "../../../presentations/components/navigations/bars/Tour";
 
 import {connect} from "react-redux";
 
 import '../../../css/layouts/_aquarium.scss';
-import {Account} from "../../../presentations/components/navigations/navigationbar/Account";
-import {Weather} from "../../../presentations/components/display/Weather";
-import {Main} from "../../Main";
+import {Account} from "../../../presentations/components/navigations/bars/Account";
+import Temperature from "../../../presentations/components/display/weather/Temperature";
+import {Main} from "../../portal/Main";
 
 interface AppProps {
     color: any;

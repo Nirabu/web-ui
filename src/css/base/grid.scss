@@ -1,29 +1,92 @@
+/* Split into three columns instead of two. */
 .App {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". header-top header-top header-top header-top ."
+    "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
+    "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
+    "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+  grid-template-rows: 90px 55px 660px 140px;
+
+  width: 100%;
+  min-width: 900px;
+  height: 900px;
+  padding-top: 2rem;
+
 }
 
-.taskbar {
+/* Top page */
+.header-top {
+  grid-area: header-top;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  margin-bottom: 0;
+
+  .title-nimado {
+    grid-column: 1/2;
+    max-width: 6rem;
+  }
+
+  .icon-nimado {
+    grid-column: 2/3;
+    grid-area: icon-nimado;
+    max-width: 2.8rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .search-nimado {
+    grid-column: 3/4;
+    grid-area: search-nimado;
+    align-self: center;
+
+    margin-right: 4rem;
+  }
+
+  .nav-account {
+    grid-area: nav-account;
+  }
+}
+
+.nav-nimado {
+  grid-area: nav-nimado;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-top: 1px solid #ededed;
+}
+
+/* Main */
+.content-nimado {
+  grid-area: content-nimado;
   display: grid;
-  grid-area: 1/1/2/5;
-  background-color: #b5bcfc;
+  overflow: hidden;
+
+  justify-content: center;
+  background-color: #eeeff3;
+
+
+  .wise-word {
+    padding-top: 2rem;
+  }
 }
-.weather {
+
+/* Bottom */
+.footer-bottom {
+  grid-area: footer-bottom;
   display: flex;
   justify-content: center;
-  grid-area: 1/1/2/2;
-}
+  flex-direction: column;
 
-.mainTitle {
-  grid-area: 2/1/3/5;
-  padding-bottom: 2rem;
-}
+  .copyright-nimado {
 
-.account {
-  display: flex;
-  justify-content: center;
-  grid-area: 1/4/2/5;
-}
+  }
 
-.mainContent {
-  grid-area: 3/1/4/5;
+  .version-nimado {
+
+  }
 }

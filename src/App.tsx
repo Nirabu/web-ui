@@ -2,12 +2,15 @@ import React from 'react';
 import {connect} from "react-redux";
 import {showText, hideText} from "./redux/actions/text";
 
-import {Main} from "./containers/Main";
-import {Account} from "./presentations/components/navigations/navigationbar/Account";
-import {Weather} from "./presentations/components/display/Weather";
+import {Main} from "./containers/portal/Main";
+import {Account} from "./presentations/components/navigations/bars/Account";
+import Temperature from "./presentations/components/display/weather/Temperature";
 import { withRouter } from 'react-router-dom';
-import {PortalNav} from "./presentations/components/navigations/navigationbar/PortalNav";
-import {Tour} from "./presentations/components/navigations/navigationbar/Tour";
+import {PortalNav} from "./presentations/components/navigations/bars/PortalNav";
+import {Tour} from "./presentations/components/navigations/bars/Tour";
+import SearchBox from "./presentations/components/inputs/searchfields/SearchBox";
+import Circle from "./presentations/components/display/shapes/Circle";
+import Biggest from "./presentations/components/display/titles/Biggest";
 
 interface AppProps {
     color: any;
@@ -19,19 +22,33 @@ export const App: React.FC<AppProps> = (props) => {
     return (
         <div className='App'>
 
-            <div className='taskbar'>
-                <h1>Nimado</h1>
-                <nav className='account'>
+            <header className='header-top'>
+                <div className='title-nimado'>
+                    <Biggest title='Nimado'/>
+                </div>
+
+                <article className='icon-nimado'>
+                    <Circle />
+                </article>
+
+                <article className='search-nimado'>
+                    <SearchBox />
+                </article>
+
+                <nav className='nav-account'>
                     <Account />
                 </nav>
-            </div>
+            </header>
 
-            <main className='mainContent'>
+            <nav className='nav-nimado'>
                 <PortalNav/>
-                <nav className='text'>
+            </nav>
+
+            <main className='content-nimado'>
+                <nav className='wise-word'>
                     <button
                         onClick={() =>
-                            props.showText({text: 'Power!'})
+                            props.showText({text: 'You begin to remove a mountain by carrying away small stones!'})
                         }
                     >
                         Show text
@@ -45,13 +62,38 @@ export const App: React.FC<AppProps> = (props) => {
                         Hide text
                     </button>
 
-                <p>{props.color.text}</p>
+                    <p>{props.color.text}</p>
                 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </main>
 
-            <footer className='version'>
-                <p>Version 0.1.2</p>
-                <p>All rights reserved to Nimado organization</p>
+            <footer className='footer-bottom'>
+                <p className='copyright-nimado'>Copyright Nimado corp. All Rights Reserved.</p>
+                <p className='version-nimado'>Version 0.1.2</p>
             </footer>
         </div>
     );
