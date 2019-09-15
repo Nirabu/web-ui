@@ -1,27 +1,30 @@
 /* Split into three columns instead of two. */
 .App {
   display: grid;
-  width: 100%;
-  height: 400px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "header-top header-top"
-    "nav-nimado nav-nimado"
-    "content-nimado content-nimado"
-    "footer-bottom .";
-  grid-template-rows: 70px 55px 200px 100px;
-  grid-gap: 0.5rem;
+    ". header-top header-top header-top header-top ."
+    "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
+    "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
+    "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+  grid-template-rows: 90px 55px 660px 140px;
 
-  margin: 2rem;
+  width: 100%;
+  min-width: 900px;
+  height: 900px;
+  padding-top: 2rem;
+
 }
 
 /* Top page */
 .header-top {
   grid-area: header-top;
+
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 0;
   justify-content: center;
+
+  margin-bottom: 0;
 
   .title-nimado {
     grid-column: 1/2;
@@ -31,7 +34,7 @@
   .icon-nimado {
     grid-column: 2/3;
     grid-area: icon-nimado;
-    max-width: 4rem;
+    max-width: 2.8rem;
     margin-left: 2rem;
     margin-right: 2rem;
   }
@@ -54,27 +57,32 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  border-top: 1px solid #ededed;
+
 }
 
 /* Main */
 .content-nimado {
   grid-area: content-nimado;
-  display: flex;
+  display: grid;
+  overflow: hidden;
+
+  border: 1px solid blue;
   justify-content: center;
-  margin-left: 6.5rem;
-  background-color: #dddcde;
-  border: 1px solid pink;
+  background-color: #eeeff3;
 
 
-
-  .text {
-
+  .wise-word {
+    padding-top: 2rem;
   }
 }
 
 /* Bottom */
 .footer-bottom {
   grid-area: footer-bottom;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   .copyright-nimado {
 

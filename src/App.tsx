@@ -45,10 +45,10 @@ export const App: React.FC<AppProps> = (props) => {
             </nav>
 
             <main className='content-nimado'>
-                <nav className='text'>
+                <nav className='wise-word'>
                     <button
                         onClick={() =>
-                            props.showText({text: 'Power!'})
+                            props.showText({text: 'You begin to remove a mountain by carrying away small stones!'})
                         }
                     >
                         Show text
@@ -64,6 +64,31 @@ export const App: React.FC<AppProps> = (props) => {
 
                     <p>{props.color.text}</p>
                 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </main>
 
             <footer className='footer-bottom'>

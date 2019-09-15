@@ -3,7 +3,7 @@ import * as React from 'react';
 const SearchBox: React.FC = () => {
     return (
         <>
-            <form style={{paddingBottom: '1rem'}}>
+            <form style={{paddingBottom: '2.5rem'}}>
                 <input
                     placeholder="Nimado search"
                 />
