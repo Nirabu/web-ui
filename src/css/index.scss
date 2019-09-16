@@ -1,11 +1,12 @@
 @import './variables';
 
 @import './base/base';
-@import './base/grid';
+
+@import 'layouts/home';
+@import 'layouts/aquarium';
 
 @import './modules/buttons';
 @import './modules/navbar';
 
-@import 'layouts/aquarium';
 
 

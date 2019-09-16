@@ -5,13 +5,16 @@ import {showText, hideText} from "./redux/actions/text";
 import {Main} from "./containers/home/Main";
 import {Account} from "./presentations/components/navigations/bars/Account";
 import Temperature from "./presentations/components/display/weather/Temperature";
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import {PortalNav} from "./presentations/components/navigations/bars/PortalNav";
 import Tour from "./presentations/components/navigations/bars/Tour";
 import SearchBox from "./presentations/components/inputs/searchfields/SearchBox";
-import Circle from "./presentations/components/display/shapes/Circle";
+import Circle from "./presentations/components/graphics/shapes/Circle";
 import Biggest from "./presentations/components/display/titles/Biggest";
 import Standard from "./presentations/layouts/footer/Standard";
+import HomeBox from "./presentations/layouts/Box/HomeBox";
+import {Home} from "./containers/home/Home";
+import Box from "./presentations/components/display/titles/Box";
 
 interface AppProps {
     color: any;
@@ -25,15 +28,15 @@ export const App: React.FC<AppProps> = (props) => {
             <header className='header-top'>
                 <div className='title-nimado'>
                     <Biggest title='Nitji'/>
-                    <Circle />
+                    <Circle/>
                 </div>
 
                 <article className='search-nimado'>
-                    <SearchBox />
+                    <SearchBox/>
                 </article>
 
                 <nav className='nav-account'>
-                    <Account />
+                    <Account/>
                 </nav>
             </header>
 
@@ -44,56 +47,208 @@ export const App: React.FC<AppProps> = (props) => {
             <main className='content-nimado'>
 
                 <div className='home-top'>
-                    <h4>Top</h4>
-                    <p>Read</p>
-                    <p>Discussed</p>
+                    <div className='home-top-container'>
+                        <div className='home-top-header'>
+                            <h2 style={{color: '#383838'}}>Top</h2>
+                        </div>
+
+                        <div className='home-cafe-main'>
+                            <div className='Recipes'>
+                                <h5 style={{marginTop: 0}}>Desserts</h5>
+
+                                <p>Icecream and cake</p>
+                            </div>
+
+                            <div className='blogs'>
+                                <h5>Blogs</h5>
+                            </div>
+
+                            <div className='Corner'>
+                                <h5>Corner</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-cafe-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-cafe'>
-                    <h4>Cafe</h4>
-                    <p>Recipes</p>
-                    <p>Blogs</p>
-                    <p>Study</p>
+                    <div className='home-cafe-container'>
+                        <div className='home-cafe-header'>
+                            <h2 style={{color: '#d69f53'}}>Cafe</h2>
+                        </div>
+
+                        <div className='home-cafe-main'>
+                            <div className='Recipes'>
+                                <h5 style={{marginTop: 0}}>Desserts</h5>
+
+                                <p>Icecream and cake</p>
+                            </div>
+
+                            <div className='blogs'>
+                                <h5>Blogs</h5>
+                            </div>
+
+                            <div className='Corner'>
+                                <h5>Corner</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-cafe-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-news'>
-                    <h4>News</h4>
-                    <p>Big headlines</p>
-                    <p>Smaller headlines</p>
-                    <p>Categories</p>
+                    <div className='home-news-container'>
+                        <div className='home-news-header'>
+                            <h2 style={{color: '#6bd68e'}}>News</h2>
+                        </div>
+
+                        <div className='home-news-main'>
+                            <div className='Korea'>
+                                <h5 style={{marginTop: 0}}>Korea</h5>
+
+                                <p>Seoul</p>
+                            </div>
+
+                            <div className='Japan'>
+                                <h5>Japan</h5>
+                            </div>
+
+                            <div className='Norway'>
+                                <h5>Norway</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-news-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-shopping'>
-                    <h4>Shopping</h4>
-                    <p>Offers</p>
-                    <p>Popular</p>
+                    <div className='home-shopping-container'>
+                        <div className='home-shopping-header'>
+                            <h2 style={{color: '#4fc5d6'}}>Shopping</h2>
+                        </div>
+
+                        <div className='home-shopping-main'>
+                            <div className='Clothes'>
+                                <h5 style={{marginTop: 0}}>Clothes</h5>
+
+                                <p>Pants</p>
+                            </div>
+
+                            <div className='Sweaters'>
+                                <h5>Sweaters</h5>
+                            </div>
+
+                            <div className='Underwear'>
+                                <h5>Underwear</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-shopping-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-tv'>
-                    <h4>TV</h4>
-                    <p>New episode</p>
-                    <p>Trailers</p>
+                    <div className='home-tv-container'>
+                        <div className='home-tv-header'>
+                            <h2 style={{color: '#c68cd6'}}>TV</h2>
+                        </div>
+
+                        <div className='home-tv-main'>
+                            <div className='Clothes'>
+                                <h5 style={{marginTop: 0}}>Clips</h5>
+
+                                <p>Drama</p>
+                            </div>
+
+                            <div className='Sweaters'>
+                                <h5>Trailers</h5>
+                            </div>
+
+                            <div className='Underwear'>
+                                <h5>Episodes</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-tv-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-weather'>
-                    <h4>Weather</h4>
-                    <p>Temperature</p>
-                    <p>Weather-type</p>
-                    <p>Locations</p>
-                    <p>Predictions</p>
+                    <div className='home-weather-container'>
+                        <div className='home-weather-header'>
+                            <h2 style={{color: '#8998d6'}}>Weather</h2>
+                        </div>
+
+                        <div className='home-weather-main'>
+                            <div className='Clothes'>
+                                <h5 style={{marginTop: 0}}>Clips</h5>
+
+                                <p>Drama</p>
+                            </div>
+
+                            <div className='Sweaters'>
+                                <h5>Trailers</h5>
+                            </div>
+
+                            <div className='Underwear'>
+                                <h5>Episodes</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-weather-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <div className='home-children'>
-                    <h4>Children</h4>
-                    <p>Books</p>
-                    <p>Exercises</p>
+                    <div className='home-children-container'>
+                        <div className='home-children-header'>
+                            <h2 style={{color: '#8998d6'}}>Children</h2>
+                        </div>
+
+                        <div className='home-children-main'>
+                            <div className='Clothes'>
+                                <h5 style={{marginTop: 0}}>Books</h5>
+
+                                <p>Fairy tails</p>
+                            </div>
+
+                            <div className='Sweaters'>
+                                <h5>Toys</h5>
+                            </div>
+
+                            <div className='Underwear'>
+                                <h5>Teddybears</h5>
+                            </div>
+                        </div>
+
+                        <div className='home-children-footer'>
+                            See also
+                        </div>
+                    </div>
                 </div>
 
                 <nav className='home-wise'>
                     <button
                         onClick={() =>
-                            props.showText({text: 'You begin to remove' +
-                                    ' a mountain by carrying away small stones!'})
+                            props.showText({
+                                text: 'You begin to remove' +
+                                    ' a mountain by carrying away small stones!'
+                            })
                         }
                     >
                         Show text

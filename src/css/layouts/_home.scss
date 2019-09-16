@@ -1,0 +1,305 @@
+/* Split into three columns instead of two. */
+.App {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    ". header-top header-top header-top header-top ."
+    "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
+    "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
+    "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+  grid-template-rows: 90px 55px 1060px 140px;
+
+  width: 100%;
+  min-width: 900px;
+  height: 900px;
+  padding-top: 2rem;
+}
+
+/* Top page */
+.header-top {
+  grid-area: header-top;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  margin-bottom: 0;
+
+  .title-nimado {
+    display: flex;
+    grid-column: 1/2;
+    max-width: 6rem;
+    margin-right: 1.3rem;
+  }
+
+  .icon-nimado {
+    grid-column: 2/3;
+    grid-area: icon-nimado;
+    max-width: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .search-nimado {
+    grid-column: 3/4;
+    grid-area: search-nimado;
+    align-self: center;
+
+    margin-right: 7rem;
+  }
+
+  .nav-account {
+    grid-area: nav-account;
+  }
+}
+
+.nav-nimado {
+  grid-area: nav-nimado;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-top: 1px solid #ededed;
+}
+
+/* Main */
+.content-nimado {
+  grid-area: content-nimado;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(1, 0.5fr);
+  grid-template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
+  grid-template-areas:
+    "home-cafe home-news home-shopping home-top"
+    "home-tv home-weather home-children home-top"
+    ". home-wise . home-top";
+  grid-gap: 1rem;
+
+  padding: 1rem;
+  overflow: hidden;
+  justify-content: center;
+  background-color: #eeeff3;
+
+  .home-top {
+    grid-area: home-top;
+    background-color: #fff;
+  }
+
+  .home-cafe {
+    grid-area: home-cafe;
+    background-color: #FFF;
+
+    .home-cafe-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-cafe-header home-cafe-header home-cafe-header home-cafe-header home-cafe-header ."
+              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
+              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
+              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
+              ". home-cafe-footer home-cafe-footer home-cafe-footer home-cafe-footer home-cafe-footer ."
+              ". . . . . . .";
+
+      .home-cafe-header {
+        grid-area: home-cafe-header;
+      }
+
+      .home-cafe-main {
+        grid-area: home-cafe-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-cafe-footer {
+        grid-area: home-cafe-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .home-news {
+    grid-area: home-news;
+    background-color: #FFF;
+
+    .home-news-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-news-header home-news-header home-news-header home-news-header home-news-header ."
+              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
+              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
+              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
+              ". home-news-footer home-news-footer home-news-footer home-news-footer home-news-footer ."
+              ". . . . . . .";
+
+      .home-news-header {
+        grid-area: home-news-header;
+      }
+
+      .home-news-main {
+        grid-area: home-news-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-news-footer {
+        grid-area: home-news-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .home-shopping {
+    grid-area: home-shopping;
+    background-color: #FFF;
+
+    .home-shopping-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-shopping-header home-shopping-header home-shopping-header home-shopping-header home-shopping-header ."
+              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
+              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
+              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
+              ". home-shopping-footer home-shopping-footer home-shopping-footer home-shopping-footer home-shopping-footer ."
+              ". . . . . . .";
+
+      .home-shopping-header {
+        grid-area: home-shopping-header;
+      }
+
+      .home-shopping-main {
+        grid-area: home-shopping-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-shopping-footer {
+        grid-area: home-shopping-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .home-tv {
+    grid-area: home-tv;
+    background-color: #FFF;
+
+    .home-tv-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-tv-header home-tv-header home-tv-header home-tv-header home-tv-header ."
+              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
+              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
+              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
+              ". home-tv-footer home-tv-footer home-tv-footer home-tv-footer home-tv-footer ."
+              ". . . . . . .";
+
+      .home-tv-header {
+        grid-area: home-tv-header;
+      }
+
+      .home-tv-main {
+        grid-area: home-tv-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-tv-footer {
+        grid-area: home-tv-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .home-weather {
+    grid-area: home-weather;
+    background-color: #FFF;
+
+    .home-weather-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-weather-header home-weather-header home-weather-header home-weather-header home-weather-header ."
+              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
+              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
+              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
+              ". home-weather-footer home-weather-footer home-weather-footer home-weather-footer home-weather-footer ."
+              ". . . . . . .";
+
+      .home-weather-header {
+        grid-area: home-weather-header;
+      }
+
+      .home-weather-main {
+        grid-area: home-weather-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-weather-footer {
+        grid-area: home-weather-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .home-children {
+    grid-area: home-children;
+    background-color: #FFF;
+
+    .home-children-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      grid-template-areas:
+              ". . . . . . ."
+              ". home-children-header home-children-header home-children-header home-children-header home-children-header ."
+              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
+              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
+              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
+              ". home-children-footer home-children-footer home-children-footer home-children-footer home-children-footer ."
+              ". . . . . . .";
+
+      .home-children-header {
+        grid-area: home-children-header;
+      }
+
+      .home-children-main {
+        grid-area: home-children-main;
+        border: 1px solid lightgrey;
+      }
+
+      .home-children-footer {
+        grid-area: home-children-footer;
+        border: 1px solid lightgrey;
+      }
+    }
+  }
+
+  .wise {
+    grid-area: home-wise;
+    background-color: #dc7dd6;
+    padding-top: 2rem;
+  }
+}
+
+/* Bottom */
+.footer-bottom {
+  grid-area: footer-bottom;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .copyright-nimado {
+
+  }
+
+  .version-nimado {
+
+  }
+}
