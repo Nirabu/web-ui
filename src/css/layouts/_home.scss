@@ -59,6 +59,30 @@
   justify-content: center;
   align-items: flex-start;
   border-top: 1px solid #ededed;
+
+  .link-cafe a:hover {
+    color: #D69F53;
+  }
+
+  .link-news a:hover {
+    color: #6BD68E;
+  }
+
+  .link-shopping a:hover {
+    color: #4fc5d6;
+  }
+
+  .link-tv a:hover {
+    color: #c68cd6;
+  }
+
+  .link-weather a:hover {
+    color: #8998D6;
+  }
+
+  .link-children a:hover {
+    color: #D49AD6;
+  }
 }
 
 /* Main */
@@ -294,12 +318,4 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  .copyright-nimado {
-
-  }
-
-  .version-nimado {
-
-  }
 }

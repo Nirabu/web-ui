@@ -217,7 +217,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-children'>
                     <div className='home-children-container'>
                         <div className='home-children-header'>
-                            <h2 style={{color: '#8998d6'}}>Children</h2>
+                            <h2 style={{color: '#d49ad6'}}>Children</h2>
                         </div>
 
                         <div className='home-children-main'>
