@@ -268,7 +268,7 @@ export const App: React.FC<AppProps> = (props) => {
             </main>
 
             <footer className='footer-bottom'>
-                <Standard version={'v0.1.3'}/>
+                <Standard version={'v0.1.5'}/>
             </footer>
         </div>
     );
