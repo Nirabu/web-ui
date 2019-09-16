@@ -126,6 +126,7 @@
 
       .home-cafe-header {
         grid-area: home-cafe-header;
+        color: #d69f53;
       }
 
       .home-cafe-main {
@@ -159,11 +160,18 @@
 
       .home-news-header {
         grid-area: home-news-header;
+        color: #6bd68e;
       }
 
       .home-news-main {
         grid-area: home-news-main;
         border: 1px solid lightgrey;
+
+        .korea {
+          .seoul {
+            margin-top: 0;
+          }
+        }
       }
 
       .home-news-footer {
@@ -194,6 +202,7 @@
         grid-area: home-shopping-header;
 
         .home-shopping-header-title {
+          color: #4fc5d6;
         }
 
         .home-shopping-header-genres {
@@ -231,6 +240,7 @@
 
       .home-tv-header {
         grid-area: home-tv-header;
+        color: #c68cd6;
       }
 
       .home-tv-main {
@@ -264,6 +274,7 @@
 
       .home-weather-header {
         grid-area: home-weather-header;
+        color: #8998d6;
       }
 
       .home-weather-main {
@@ -297,6 +308,7 @@
 
       .home-children-header {
         grid-area: home-children-header;
+        color: #d49ad6;
       }
 
       .home-children-main {

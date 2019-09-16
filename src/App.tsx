@@ -49,7 +49,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-top'>
                     <div className='home-top-container'>
                         <div className='home-top-header'>
-                            <h2 style={{color: '#383838'}}>Top</h2>
+                            <Box title='Top'/>
                         </div>
 
                         <div className='home-cafe-main'>
@@ -77,11 +77,11 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-cafe'>
                     <div className='home-cafe-container'>
                         <div className='home-cafe-header'>
-                            <h2 style={{color: '#d69f53'}}>Cafe</h2>
+                            <Box title='Cafe'/>
                         </div>
 
                         <div className='home-cafe-main'>
-                            <div className='Recipes'>
+                            <div className='recipes'>
                                 <h5 style={{marginTop: 0}}>Desserts</h5>
 
                                 <p>Icecream and cake</p>
@@ -105,21 +105,20 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-news'>
                     <div className='home-news-container'>
                         <div className='home-news-header'>
-                            <h2 style={{color: '#6bd68e'}}>News</h2>
+                            <Box title='News'/>
                         </div>
 
                         <div className='home-news-main'>
-                            <div className='Korea'>
-                                <h5 style={{marginTop: 0}}>Korea</h5>
-
-                                <p>Seoul</p>
+                            <div className='korea'>
+                                <h5 className='seoul'>Seoul</h5>
+                                <h5 className='busan'>Busan</h5>
                             </div>
 
-                            <div className='Japan'>
+                            <div className='japan'>
                                 <h5>Japan</h5>
                             </div>
 
-                            <div className='Norway'>
+                            <div className='norway'>
                                 <h5>Norway</h5>
                             </div>
                         </div>
@@ -134,7 +133,7 @@ export const App: React.FC<AppProps> = (props) => {
                     <div className='home-shopping-container'>
                         <div className='home-shopping-header'>
                             <article className='home-shopping-header-title'>
-                                <h2 style={{color: '#4fc5d6'}}>Shopping</h2>
+                                <Box title='Shopping'/>
                             </article>
 
                             <section className='home-shopping-header-genres'>
@@ -167,7 +166,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-tv'>
                     <div className='home-tv-container'>
                         <div className='home-tv-header'>
-                            <h2 style={{color: '#c68cd6'}}>TV</h2>
+                            <Box title='TV'/>
                         </div>
 
                         <div className='home-tv-main'>
@@ -195,7 +194,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-weather'>
                     <div className='home-weather-container'>
                         <div className='home-weather-header'>
-                            <h2 style={{color: '#8998d6'}}>Weather</h2>
+                            <Box title='Weather'/>
                         </div>
 
                         <div className='home-weather-main'>
@@ -223,7 +222,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-children'>
                     <div className='home-children-container'>
                         <div className='home-children-header'>
-                            <h2 style={{color: '#d49ad6'}}>Children</h2>
+                            <Box title='Children'/>
                         </div>
 
                         <div className='home-children-main'>

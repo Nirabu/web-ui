@@ -15,7 +15,6 @@ const BoxPreview: React.FC<BoxPreviewProps> = (props) => {
             <div className='extra'>
 
             </div>
-
         </>
     )
 };
