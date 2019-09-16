@@ -15,6 +15,7 @@ import Standard from "./presentations/layouts/footer/Standard";
 import HomeBox from "./presentations/layouts/Box/HomeBox";
 import {Home} from "./containers/home/Home";
 import Box from "./presentations/components/display/titles/Box";
+import Switcher from "./presentations/components/navigations/Switcher";
 
 interface AppProps {
     color: any;
@@ -45,7 +46,6 @@ export const App: React.FC<AppProps> = (props) => {
             </nav>
 
             <main className='content-nimado'>
-
                 <div className='home-top'>
                     <div className='home-top-container'>
                         <div className='home-top-header'>
@@ -133,7 +133,13 @@ export const App: React.FC<AppProps> = (props) => {
                 <div className='home-shopping'>
                     <div className='home-shopping-container'>
                         <div className='home-shopping-header'>
-                            <h2 style={{color: '#4fc5d6'}}>Shopping</h2>
+                            <article className='home-shopping-header-title'>
+                                <h2 style={{color: '#4fc5d6'}}>Shopping</h2>
+                            </article>
+
+                            <section className='home-shopping-header-genres'>
+                                <Switcher genre1={'Women'} genre2={'Men'}/>
+                            </section>
                         </div>
 
                         <div className='home-shopping-main'>
