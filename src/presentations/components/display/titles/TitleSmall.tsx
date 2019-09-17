@@ -4,7 +4,7 @@ interface CategoryProps {
     title: string;
 }
 
-const Category: React.FC<CategoryProps> = (props) => {
+const TitleSmall: React.FC<CategoryProps> = (props) => {
     return (
         <>
             <h6>{props.title}</h6>
@@ -12,4 +12,4 @@ const Category: React.FC<CategoryProps> = (props) => {
     )
 };
 
-export default Category;
+export default TitleSmall;

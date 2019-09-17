@@ -2,12 +2,14 @@
 
 @import './base/base';
 
-@import 'layouts/home';
-@import 'layouts/aquarium';
+@import './layouts/home';
+@import './layouts/aquarium';
 
 @import './modules/buttons';
 @import './modules/navbar';
 @import './modules/portalnav';
+
+@import './layouts/box';
 
 
 

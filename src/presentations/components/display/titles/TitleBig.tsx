@@ -4,7 +4,7 @@ interface BiggestProps {
     title: string;
 }
 
-const Biggest: React.FC<BiggestProps> = (props) => {
+const TitleBig: React.FC<BiggestProps> = (props) => {
     return (
         <>
             <h1>{props.title}</h1>
@@ -12,4 +12,4 @@ const Biggest: React.FC<BiggestProps> = (props) => {
     )
 };
 
-export default Biggest;
+export default TitleBig;

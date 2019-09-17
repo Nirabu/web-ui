@@ -1,28 +1,30 @@
 import * as React from 'react';
-import Box from "../../components/display/titles/Box";
-import Category from "../../components/display/titles/Category";
-import SubContent from '../../components/display/content/SubContent';
+import BoxMain from "./Parts/BoxMain";
+import BoxHeader from "./Parts/BoxHeader";
+import BoxFooter from "./Parts/BoxFooter";
 
 interface HomeBoxProps {
-    title1: string;
-    content1: string;
-    title2: string;
-    content2: string;
-    title3: string;
-    content3: string;
-    title4?: string;
-    content4?: string;
+    titleHeader: string;
+    titleMain: string;
+    contentMain: string;
+    contentFooter: string;
+    color?: string;
 }
 
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
     return (
         <>
-            <Category title={props.title1}/>
-            <SubContent content={props.content1}/>
-            <Category title={props.title2}/>
-            <SubContent content={props.content2}/>
-            <Category title={props.title3}/>
-            <SubContent content={props.content3}/>
+            <header className='box-container-header'>
+                <BoxHeader title={props.titleHeader}/>
+            </header>
+
+            <main className='box-container-main'>
+                <BoxMain title={props.titleMain} content={props.contentMain}/>
+            </main>
+
+            <footer className='box-container-footer'>
+                <BoxFooter content={props.contentFooter}/>
+            </footer>
         </>
     )
 };

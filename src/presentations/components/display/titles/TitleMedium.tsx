@@ -4,12 +4,12 @@ interface BoxProps {
     title: string;
 }
 
-const Box: React.FC<BoxProps> = (props) => {
+const TitleMedium: React.FC<BoxProps> = (props) => {
     return (
         <>
-            <h2>{props.title}</h2>
+            <h3>{props.title}</h3>
         </>
     )
 };
 
-export default Box;
+export default TitleMedium;
