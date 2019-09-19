@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TitleBig from "../../../components/display/titles/TitleBig";
+import TitleBig from "../../../single/display/titles/TitleBig";
 
 interface BoxHeaderProps {
     title: string;

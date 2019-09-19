@@ -1,22 +1,18 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {showText, hideText} from "./redux/actions/text";
+import {showText, hideText} from "../redux/actions/text";
 
-import {Main} from "./containers/home/Main";
-import {Account} from "./presentations/components/navigations/bars/Account";
-import Temperature from "./presentations/components/display/weather/Temperature";
-import {withRouter} from 'react-router-dom';
-import {PortalNav} from "./presentations/components/navigations/bars/PortalNav";
-import Tour from "./presentations/components/navigations/bars/Tour";
-import SearchBox from "./presentations/components/inputs/searchfields/SearchBox";
-import Circle from "./presentations/components/graphics/shapes/Circle";
-import TitleBig from "./presentations/components/display/titles/TitleBig";
-import Standard from "./presentations/layouts/footer/Standard";
-import HomeBox from "./presentations/layouts/Box/HomeBox";
-import {Home} from "./containers/home/Home";
-import TitleMedium from "./presentations/components/display/titles/TitleMedium";
-import Switcher from "./presentations/components/navigations/Switcher";
-import BoxMain from "./presentations/layouts/Box/Parts/BoxMain";
+import {Account} from "../single/navigations/bars/Account";
+import {PortalNav} from "../single/navigations/bars/PortalNav";
+import SearchBox from "../single/inputs/searchfields/SearchBox";
+import Circle from "../single/graphics/shapes/Circle";
+import TitleBig from "../single/display/titles/TitleBig";
+import Standard from "../multiple/Standard";
+import HomeBox from "../multiple/box/HomeBox";
+import TitleMedium from "../single/display/titles/TitleMedium";
+
+import styles from '../scss/modules/exports/sections.module.scss';
+import {Switcher} from "../single/navigations/Switcher";
 
 interface AppProps {
     color: any;
@@ -81,7 +77,9 @@ export const App: React.FC<AppProps> = (props) => {
                             titleHeader={'Cafe'}
                             titleMain={'Desserts'}
                             contentMain={'Cake. Icecream.'}
-                            contentFooter={'See also'}/>
+                            contentFooter={'See also'}
+                            color={styles.cafe}
+                        />
                     </div>
                 </div>
 
@@ -91,7 +89,9 @@ export const App: React.FC<AppProps> = (props) => {
                             titleHeader={'News'}
                             titleMain={'Korea'}
                             contentMain={'Seoul. Busan.'}
-                            contentFooter={'See also'}/>
+                            contentFooter={'See also'}
+                            color={styles.news}
+                        />
                     </div>
                 </div>
 
@@ -102,6 +102,7 @@ export const App: React.FC<AppProps> = (props) => {
                             titleMain={'Clothes'}
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
+                            color={styles.shopping}
                         />
                     </div>
                 </div>
@@ -113,6 +114,7 @@ export const App: React.FC<AppProps> = (props) => {
                             titleMain={'Clothes'}
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
+                            color={styles.tv}
                         />
                     </div>
                 </div>
@@ -124,6 +126,7 @@ export const App: React.FC<AppProps> = (props) => {
                             titleMain={'Clothes'}
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
+                            color={styles.weather}
                         />
                     </div>
                 </div>
@@ -135,6 +138,7 @@ export const App: React.FC<AppProps> = (props) => {
                             titleMain={'Clothes'}
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
+                            color={styles.children}
                         />
                     </div>
                 </div>
@@ -161,6 +165,8 @@ export const App: React.FC<AppProps> = (props) => {
 
                     <p>{props.color.text}</p>
                 </nav>
+                
+                <Switcher color={'t'} showText={'test'} hideText={'test'} />
             </main>
 
             <footer className='footer-bottom'>

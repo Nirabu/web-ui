@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../css/layouts/_cinema.scss';
+import '../../scss/layouts/_cinema.scss';
 
 export const Tv: React.FC = () => {
     return (

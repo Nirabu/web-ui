@@ -3,10 +3,7 @@ import React from 'react';
 
 import {connect} from "react-redux";
 
-import '../../../css/layouts/_aquarium.scss';
-import {Account} from "../../../presentations/components/navigations/bars/Account";
-import Temperature from "../../../presentations/components/display/weather/Temperature";
-import {Main} from "../../home/Main";
+import '../../../scss/layouts/_aquarium.scss';
 
 interface AppProps {
     color: any;

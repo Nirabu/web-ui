@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../css/layouts/_news.scss';
+import '../../scss/layouts/_news.scss';
 
 export const News: React.FC = () => {
     return (

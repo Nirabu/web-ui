@@ -1,5 +1,3 @@
-import {combineReducers} from 'redux';
-
 const color = (state = {}, action:any) => {
     switch (action.type) {
         case 'SHOW':

@@ -33,14 +33,13 @@
 
     &-main {
       grid-area: box-main;
-      border: 1px solid red;
+      border: 1px solid lightgray;
       text-align: center;
       font-size: 12px;
     }
 
     &-footer {
       grid-area: box-footer;
-      border: 1px solid lightgrey;
     }
   }
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import '../../../../css/modules/_account.scss';
+import '../../../scss/modules/_account.scss';
 
 export const Account: React.FC = () => {
     return (

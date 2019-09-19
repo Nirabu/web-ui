@@ -1,12 +1,12 @@
-import './css/index.scss';
+import './scss/index.scss';
 import * as React from'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './containers/App';
+import * as serviceWorker from './maintenance/serviceWorker';
 import { Provider } from 'react-redux';
 import { store } from "./redux/store";
-import Root from "./Root";
+import Root from "./middleware/routing/Root";
 
 ReactDOM.render((
     <Root store={store}/>

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import BoxMain from "./Parts/BoxMain";
-import BoxHeader from "./Parts/BoxHeader";
-import BoxFooter from "./Parts/BoxFooter";
+import BoxMain from "./parts/BoxMain";
+import BoxHeader from "./parts/BoxHeader";
+import BoxFooter from "./parts/BoxFooter";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -14,7 +14,7 @@ interface HomeBoxProps {
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
     return (
         <>
-            <header className='box-container-header'>
+            <header className='box-container-header' style={{color: props.color}}>
                 <BoxHeader title={props.titleHeader}/>
             </header>
 
