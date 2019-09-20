@@ -32,7 +32,6 @@ export const Default: React.FC<FrontpageProps> = (props) => {
 
             <div className="end_content">
                 <footer>
-
                 </footer>
             </div>
         </div>
