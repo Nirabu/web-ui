@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../../scss/layouts/_cinema.scss';
 
-export const Tv: React.FC = () => {
+export const CinemaContainer: React.FC = () => {
     return (
         <div className='cinema'>
 

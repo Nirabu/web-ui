@@ -2,17 +2,17 @@ import React from 'react';
 import {connect} from "react-redux";
 import {showText, hideText} from "../redux/actions/text";
 
-import {Account} from "../single/navigations/bars/Account";
-import {PortalNav} from "../single/navigations/bars/PortalNav";
-import SearchBox from "../single/inputs/searchfields/SearchBox";
-import Circle from "../single/graphics/shapes/Circle";
-import TitleBig from "../single/display/titles/TitleBig";
-import Standard from "../multiple/Standard";
-import HomeBox from "../multiple/box/HomeBox";
-import TitleMedium from "../single/display/titles/TitleMedium";
+import {Account} from "../components/navigations/bars/Account";
+import {PortalNav} from "../components/navigations/bars/PortalNav";
+import SearchBox from "../components/inputs/searchfields/SearchBox";
+import Circle from "../components/graphics/shapes/Circle";
+import TitleBig from "../components/display/titles/TitleBig";
+import Standard from "../layouts/Standard";
+import HomeBox from "../layouts/box/HomeBox";
+import TitleMedium from "../components/display/titles/TitleMedium";
 
 import styles from '../scss/modules/exports/sections.module.scss';
-import {Switcher} from "../single/navigations/Switcher";
+import {Switcher} from "../components/navigations/Switcher";
 
 interface AppProps {
     color: any;

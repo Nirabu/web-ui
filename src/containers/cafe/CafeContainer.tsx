@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './Cafe.scss';
-import Tour from "../../single/navigations/bars/Tour";
+import Tour from "../../components/navigations/bars/Tour";
 
-export const Cafe: React.FC = () => {
+export const CafeContainer: React.FC = () => {
     return (
         <div className='cafe'>
 

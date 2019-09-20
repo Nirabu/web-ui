@@ -1,7 +1,7 @@
 import * as React from 'react';
 import '../../scss/layouts/_news.scss';
 
-export const News: React.FC = () => {
+export const NewsContainer: React.FC = () => {
     return (
         <div className='news'>
             <header className='theme'>

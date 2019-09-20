@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from "@storybook/react";
-import { Cafe } from "../../../src/containers/cafe/Cafe";
-import {Buttons} from "../../../src/single/multi/Buttons";
+import { CafeContainer } from "../../../src/containers/cafe/CafeContainer";
+import {Buttons} from "../../../src/components/multi/Buttons";
 
 
 storiesOf('Pages/Sections/Cafe', module)

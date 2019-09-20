@@ -4,7 +4,7 @@ import * as React from 'react';
 /* CSS */
 import './playground.scss'
 
-export const Playground: React.FC = () => {
+export const ChildrenContainer: React.FC = () => {
     return (
         <div className='entrance'>
 
