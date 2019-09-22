@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {connect} from "react-redux";
-import {hideText, showText} from "../../redux/actions/text";
 
 interface SwitcherProps {
     color: any;
@@ -42,14 +41,14 @@ const mapStateToProps = (state: any) => ({
     color: state.color,
 });
 
-const mapDispatchToProps = {
-    showText,
-    hideText
-};
+// const mapDispatchToProps = {
+//     showText,
+//     hideText
+// };
 
 const AppContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    // mapDispatchToProps
 )(Switcher);
 
 export default AppContainer;

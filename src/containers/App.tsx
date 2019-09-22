@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {showText, hideText} from "../redux/actions/text";
+import {setText, loadText} from "../redux/actions/textActions";
 
 import {Account} from "../components/navigations/bars/Account";
 import {PortalNav} from "../components/navigations/bars/PortalNav";
@@ -181,8 +181,8 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = {
-    showText,
-    hideText
+    setText,
+    loadText
 };
 
 const AppContainer = connect(
