@@ -1,13 +1,15 @@
-/* Split into three columns instead of two. */
-.App {
+.app {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    ". header-top header-top header-top header-top ."
-    "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
-    "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
-    "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
-  grid-template-rows: 90px 55px 1060px 140px;
+
+  grid: {
+    template-columns: repeat(6, 1fr);
+    template-rows: 90px 55px 1060px 140px;
+    template-areas:
+            ". header-top header-top header-top header-top ."
+            "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
+            "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
+            "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+  }
 
   width: 100%;
   min-width: 900px;
@@ -35,8 +37,10 @@
     grid-column: 2/3;
     grid-area: icon-nimado;
     max-width: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: {
+      left: 2rem;
+      right: 2rem;
+    }
   }
 
   .search-nimado {
@@ -88,13 +92,17 @@
 .content-nimado {
   grid-area: content-nimado;
   display: grid;
-  grid-template-columns: repeat(3, 1fr) repeat(1, 0.5fr);
-  grid-template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
-  grid-template-areas:
-    "home-cafe home-news home-shopping home-top"
-    "home-tv home-weather home-children home-top"
-    ". home-wise . home-top";
-  grid-gap: 1rem;
+
+  grid: {
+    template-columns: repeat(3, 1fr) repeat(1, 0.5fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
+    template-areas:
+            "home-cafe home-news home-shopping home-top"
+            "home-tv home-weather home-children home-top"
+            ". home-wise . home-top";
+  }
 
   padding: 1rem;
   overflow: hidden;
@@ -109,217 +117,31 @@
   .home-cafe {
     grid-area: home-cafe;
     background-color: #FFF;
-
-    .home-cafe-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-cafe-header home-cafe-header home-cafe-header home-cafe-header home-cafe-header ."
-              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
-              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
-              ". home-cafe-main home-cafe-main home-cafe-main home-cafe-main home-cafe-main  ."
-              ". home-cafe-footer home-cafe-footer home-cafe-footer home-cafe-footer home-cafe-footer ."
-              ". . . . . . .";
-
-      .home-cafe-header {
-        grid-area: home-cafe-header;
-        color: #d69f53;
-      }
-
-      .home-cafe-main {
-        grid-area: home-cafe-main;
-        border: 1px solid lightgrey;
-      }
-
-      .home-cafe-footer {
-        grid-area: home-cafe-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .home-news {
     grid-area: home-news;
     background-color: #FFF;
-
-    .home-news-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-news-header home-news-header home-news-header home-news-header home-news-header ."
-              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
-              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
-              ". home-news-main home-news-main home-news-main home-news-main home-news-main  ."
-              ". home-news-footer home-news-footer home-news-footer home-news-footer home-news-footer ."
-              ". . . . . . .";
-
-      .home-news-header {
-        grid-area: home-news-header;
-        color: #6bd68e;
-      }
-
-      .home-news-main {
-        grid-area: home-news-main;
-        border: 1px solid lightgrey;
-
-        .korea {
-          .seoul {
-            margin-top: 0;
-          }
-        }
-      }
-
-      .home-news-footer {
-        grid-area: home-news-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .home-shopping {
     grid-area: home-shopping;
     background-color: #FFF;
-
-    .home-shopping-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-shopping-header home-shopping-header home-shopping-header home-shopping-header home-shopping-header ."
-              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
-              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
-              ". home-shopping-main home-shopping-main home-shopping-main home-shopping-main home-shopping-main  ."
-              ". home-shopping-footer home-shopping-footer home-shopping-footer home-shopping-footer home-shopping-footer ."
-              ". . . . . . .";
-
-      .home-shopping-header {
-        grid-area: home-shopping-header;
-
-        .home-shopping-header-title {
-          color: #4fc5d6;
-        }
-
-        .home-shopping-header-genres {
-        }
-      }
-
-      .home-shopping-main {
-        grid-area: home-shopping-main;
-        border: 1px solid lightgrey;
-      }
-
-      .home-shopping-footer {
-        grid-area: home-shopping-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .home-tv {
     grid-area: home-tv;
     background-color: #FFF;
-
-    .home-tv-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-tv-header home-tv-header home-tv-header home-tv-header home-tv-header ."
-              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
-              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
-              ". home-tv-main home-tv-main home-tv-main home-tv-main home-tv-main  ."
-              ". home-tv-footer home-tv-footer home-tv-footer home-tv-footer home-tv-footer ."
-              ". . . . . . .";
-
-      .home-tv-header {
-        grid-area: home-tv-header;
-        color: #c68cd6;
-      }
-
-      .home-tv-main {
-        grid-area: home-tv-main;
-        border: 1px solid lightgrey;
-      }
-
-      .home-tv-footer {
-        grid-area: home-tv-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .home-weather {
     grid-area: home-weather;
     background-color: #FFF;
-
-    .home-weather-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-weather-header home-weather-header home-weather-header home-weather-header home-weather-header ."
-              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
-              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
-              ". home-weather-main home-weather-main home-weather-main home-weather-main home-weather-main  ."
-              ". home-weather-footer home-weather-footer home-weather-footer home-weather-footer home-weather-footer ."
-              ". . . . . . .";
-
-      .home-weather-header {
-        grid-area: home-weather-header;
-        color: #8998d6;
-      }
-
-      .home-weather-main {
-        grid-area: home-weather-main;
-        border: 1px solid lightgrey;
-      }
-
-      .home-weather-footer {
-        grid-area: home-weather-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .home-children {
     grid-area: home-children;
     background-color: #FFF;
-
-    .home-children-container {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-areas:
-              ". . . . . . ."
-              ". home-children-header home-children-header home-children-header home-children-header home-children-header ."
-              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
-              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
-              ". home-children-main home-children-main home-children-main home-children-main home-children-main  ."
-              ". home-children-footer home-children-footer home-children-footer home-children-footer home-children-footer ."
-              ". . . . . . .";
-
-      .home-children-header {
-        grid-area: home-children-header;
-        color: #d49ad6;
-      }
-
-      .home-children-main {
-        grid-area: home-children-main;
-        border: 1px solid lightgrey;
-      }
-
-      .home-children-footer {
-        grid-area: home-children-footer;
-        border: 1px solid lightgrey;
-      }
-    }
   }
 
   .wise {

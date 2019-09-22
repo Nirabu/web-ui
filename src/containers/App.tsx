@@ -22,7 +22,7 @@ interface AppProps {
 
 export const App: React.FC<AppProps> = (props) => {
     return (
-        <div className='App'>
+        <div className='app'>
             <header className='header-top'>
                 <div className='title-nimado'>
                     <TitleBig title='Nitji'/>
@@ -52,7 +52,6 @@ export const App: React.FC<AppProps> = (props) => {
                         <div className='home-cafe-main'>
                             <div className='Recipes'>
                                 <h5 style={{marginTop: 0}}>Desserts</h5>
-
                                 <p>Icecream and cake</p>
                             </div>
 
