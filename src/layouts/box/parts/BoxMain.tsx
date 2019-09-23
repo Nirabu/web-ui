@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TitleMedium from "../../../components/display/titles/TitleMedium";
+import TitleMedium from "../../../presentationals/display/titles/TitleMedium";
 
 interface RecipesProps {
     title: string;

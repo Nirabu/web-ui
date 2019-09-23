@@ -1,23 +1,23 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {setText, loadText} from "../redux/actions/textActions";
+import {showBoth, showWomen, showMen} from "../redux/actions/switchActions";
 
-import {Account} from "../components/navigations/bars/Account";
-import {PortalNav} from "../components/navigations/bars/PortalNav";
-import SearchBox from "../components/inputs/searchfields/SearchBox";
-import Circle from "../components/graphics/shapes/Circle";
-import TitleBig from "../components/display/titles/TitleBig";
+import {Account} from "../presentationals/navigations/bars/Account";
+import {PortalNav} from "../presentationals/navigations/bars/PortalNav";
+import SearchBox from "../presentationals/inputs/searchfields/SearchBox";
+import Circle from "../presentationals/graphics/shapes/Circle";
+import TitleBig from "../presentationals/display/titles/TitleBig";
 import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
-import TitleMedium from "../components/display/titles/TitleMedium";
+import TitleMedium from "../presentationals/display/titles/TitleMedium";
 
 import styles from '../scss/modules/exports/sections.module.scss';
-import {Switcher} from "../components/navigations/Switcher";
+import {Switcher} from "../presentationals/navigations/Switcher";
 
 interface AppProps {
-    color: any;
-    showText: any;
-    hideText: any;
+    item: any;
+    addItem: any;
+    toggleItem: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
@@ -145,7 +145,7 @@ export const App: React.FC<AppProps> = (props) => {
                 <nav className='home-wise'>
                     <button
                         onClick={() =>
-                            props.showText({
+                            props.addItem({
                                 text: 'You begin to remove' +
                                     ' a mountain by carrying away small stones!'
                             })
@@ -156,20 +156,19 @@ export const App: React.FC<AppProps> = (props) => {
 
                     <button
                         onClick={() =>
-                            props.hideText()
+                            props.toggleItem
                         }
                     >
                         Hide text
                     </button>
-
-                    <p>{props.color.text}</p>
+                    <p>{props.item}</p>
                 </nav>
                 
                 <Switcher color={'t'} showText={'test'} hideText={'test'} />
             </main>
 
             <footer className='footer-bottom'>
-                <Standard version={'v0.1.5'}/>
+                <Standard version={'v0.1.6'}/>
             </footer>
         </div>
     );
@@ -177,12 +176,13 @@ export const App: React.FC<AppProps> = (props) => {
 
 // AppContainer.js
 const mapStateToProps = (state: any) => ({
-    color: state.color,
+    item: state.item,
 });
 
 const mapDispatchToProps = {
-    setText,
-    loadText
+    showBoth,
+    showWomen,
+    showMen
 };
 
 const AppContainer = connect(

@@ -1,7 +1,18 @@
-import {DisplayFilter} from './constants/constants';
+import {GenresFilter} from './constants/constants';
 
 /* action creators */
-export const changeContent = (text:string) => ({
-    type: DisplayFilter.SHOW_ACTIVE,
+/* shopping */
+export const showBoth = (text:string) => ({
+    type: GenresFilter.SHOW_TEXT_BOTH,
+    text
+});
+
+export const showWomen = (text: string) => ({
+    type: GenresFilter.SHOW_TEXT_WOMEN,
+    text
+});
+
+export const showMen = (text: string) => ({
+    type: GenresFilter.SHOW_TEXT_MEN,
     text
 });
