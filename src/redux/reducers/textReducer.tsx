@@ -2,7 +2,7 @@ import {GenresFilter, ADD_ITEM, TOGGLE_ITEM, SET_VISIBILITY_FILTER} from "../act
 
 const initialState = {
     value: '',
-    text: []
+    text: ''
 };
 
 export const textApp = (state = {initialState}, action: any) => {
@@ -10,7 +10,7 @@ export const textApp = (state = {initialState}, action: any) => {
         case ADD_ITEM:
             return {
                 ...state, value: action.text
-            }
+            };
         default:
             return state;
     }

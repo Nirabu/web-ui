@@ -9,6 +9,8 @@ interface HomeBoxProps {
     contentMain: string;
     contentFooter: string;
     color?: string;
+    value?: string;
+    showBoth?: any;
 }
 
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
@@ -23,10 +25,16 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
             </main>
 
             <footer className='box-container-footer'>
-                <BoxFooter content={props.contentFooter}/>
+                <button onClick={props.showBoth}>Redux-button</button>
+                <p>{props.value}</p>
+                <BoxFooter content={props.showBoth}/>
             </footer>
         </>
     )
+};
+
+HomeBox.defaultProps = {
+    value: 'It is default now'
 };
 
 export default HomeBox;

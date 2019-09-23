@@ -1,23 +1,25 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {showBoth, showWomen, showMen} from "../redux/actions/switchActions";
-
-import {Account} from "../presentationals/navigations/bars/Account";
-import {PortalNav} from "../presentationals/navigations/bars/PortalNav";
-import SearchBox from "../presentationals/inputs/searchfields/SearchBox";
-import Circle from "../presentationals/graphics/shapes/Circle";
-import TitleBig from "../presentationals/display/titles/TitleBig";
+import {ADD_ITEM, TOGGLE_ITEM, GenresFilter, SET_VISIBILITY_FILTER} from "../redux/actions/constants/constants";
+import {showBoth} from "../redux/actions/switchActions";
+import {Account} from "../components/navigations/bars/Account";
+import {PortalNav} from "../components/navigations/bars/PortalNav";
+import SearchBox from "../components/inputs/searchfields/SearchBox";
+import Circle from "../components/graphics/shapes/Circle";
+import TitleBig from "../components/display/titles/TitleBig";
 import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
-import TitleMedium from "../presentationals/display/titles/TitleMedium";
+import TitleMedium from "../components/display/titles/TitleMedium";
 
 import styles from '../scss/modules/exports/sections.module.scss';
-import {Switcher} from "../presentationals/navigations/Switcher";
+import {Switcher} from "../components/navigations/Switcher";
 
 interface AppProps {
     item: any;
     addItem: any;
     toggleItem: any;
+    value: string;
+    showBoth: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
@@ -78,6 +80,8 @@ export const App: React.FC<AppProps> = (props) => {
                             contentMain={'Cake. Icecream.'}
                             contentFooter={'See also'}
                             color={styles.cafe}
+                            value={props.value}
+                            showBoth={props.showBoth}
                         />
                     </div>
                 </div>
@@ -90,6 +94,7 @@ export const App: React.FC<AppProps> = (props) => {
                             contentMain={'Seoul. Busan.'}
                             contentFooter={'See also'}
                             color={styles.news}
+                            value={props.value}
                         />
                     </div>
                 </div>
@@ -102,6 +107,7 @@ export const App: React.FC<AppProps> = (props) => {
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
                             color={styles.shopping}
+                            value={props.value}
                         />
                     </div>
                 </div>
@@ -138,6 +144,7 @@ export const App: React.FC<AppProps> = (props) => {
                             contentMain={'Pants. Sweaters.'}
                             contentFooter={'See also'}
                             color={styles.children}
+                            value={props.value}
                         />
                     </div>
                 </div>
@@ -163,8 +170,8 @@ export const App: React.FC<AppProps> = (props) => {
                     </button>
                     <p>{props.item}</p>
                 </nav>
-                
-                <Switcher color={'t'} showText={'test'} hideText={'test'} />
+
+                <Switcher color={'t'} showText={'test'} hideText={'test'}/>
             </main>
 
             <footer className='footer-bottom'>
@@ -174,17 +181,31 @@ export const App: React.FC<AppProps> = (props) => {
     );
 };
 
-// AppContainer.js
+/*
+ *  Transfers the current Redux store state into the props,
+ *  that you want to pass to the presentational components
+ *  -- props for the presentational components from the container --
+ */
 const mapStateToProps = (state: any) => ({
-    item: state.item,
+    text: state.text,
+    value: state.value
 });
 
-const mapDispatchToProps = {
-    showBoth,
-    showWomen,
-    showMen
+/*
+ * Receives from dispatch and,
+ * that you want to inject into
+ * presentational components.
+ * -- reducer functions for the presentational components from the container --
+ */
+const mapDispatchToProps = (dispatch: any) => {
+    return ({
+        showBoth: (txt:string) => {dispatch(showBoth(txt))},
+        showWomen: () => {dispatch(GenresFilter.SHOW_TEXT_WOMEN)},
+        showMen: () => {dispatch(GenresFilter.SHOW_TEXT_MEN)}
+    })
 };
 
+// Connect both props and functions.
 const AppContainer = connect(
     mapStateToProps,
     mapDispatchToProps
