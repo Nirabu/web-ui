@@ -1,4 +1,4 @@
-import {ItemFilter, ADD_ITEM, CHANGE_ITEM} from "../actions/constants/constants";
+import {ItemFilter, ADD_ITEM, CHANGE_ITEM, CHANGE_ITEM2} from "../actions/constants/constants";
 
 const initialState = {
     value: 'default',
@@ -13,7 +13,11 @@ const textApp = (state = initialState, action: any) => {
             };
         case CHANGE_ITEM:
             return {
-                ...state, value: action.text
+                ...state, text: action.text
+            };
+        case CHANGE_ITEM2:
+            return {
+                ...state, text: action.text
             };
         default:
             return state;

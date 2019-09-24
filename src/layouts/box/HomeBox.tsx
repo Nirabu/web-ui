@@ -11,11 +11,17 @@ interface HomeBoxProps {
     value?: string;
     add?: any;
     prop?: any;
+    button1: string;
+    button2: string;
 }
 
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
-        props.add('new');
+        props.add('changed to new');
+    }
+
+    function textEventHandler2() {
+        props.add('back to old');
     }
 
     return (
@@ -29,8 +35,8 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
             </main>
 
             <footer className='box-container-footer'>
-                <button onClick={() => textEventHandler()}>Redux-button</button>
-                <p>{props.value}</p>
+                <button onClick={() => textEventHandler()}>{props.button1}</button>
+                <button onClick={() => textEventHandler2()}>{props.button2}</button>
             </footer>
         </>
     )

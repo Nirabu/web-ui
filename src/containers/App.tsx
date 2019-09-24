@@ -10,10 +10,7 @@ import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
 import TitleMedium from "../components/display/titles/TitleMedium";
 import store from '../redux/store';
-
 import styles from '../scss/modules/exports/sections.module.scss';
-import {Switcher} from "../components/navigations/Switcher";
-import {ADD_ITEM} from "../redux/actions/constants/constants";
 
 interface AppProps {
     item: any;
@@ -85,12 +82,13 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'Cafe'}
                             titleMain={'Desserts'}
-                            contentMain={'Cake. Icecream.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
-                            color={styles.cafe}
+                            color={styles.news}
                             value={props.value}
                             add={props.add}
-                            prop={props}
+                            button1={'Sweets'}
+                            button2={'Drinks'}
                         />
                     </div>
                 </div>
@@ -100,10 +98,13 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'News'}
                             titleMain={'Korea'}
-                            contentMain={'Seoul. Busan.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
                             color={styles.news}
                             value={props.value}
+                            add={props.add}
+                            button1={'Local'}
+                            button2={'Abroad'}
                         />
                     </div>
                 </div>
@@ -113,10 +114,13 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'Shopping'}
                             titleMain={'Clothes'}
-                            contentMain={'Pants. Sweaters.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
                             color={styles.shopping}
                             value={props.value}
+                            add={props.add}
+                            button1={'Women'}
+                            button2={'Men'}
                         />
                     </div>
                 </div>
@@ -126,9 +130,13 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'TV'}
                             titleMain={'Clothes'}
-                            contentMain={'Pants. Sweaters.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
                             color={styles.tv}
+                            add={props.add}
+                            prop={props}
+                            button1={'Trailers'}
+                            button2={'Clips'}
                         />
                     </div>
                 </div>
@@ -138,9 +146,13 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'Weather'}
                             titleMain={'Clothes'}
-                            contentMain={'Pants. Sweaters.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
                             color={styles.weather}
+                            add={props.add}
+                            prop={props}
+                            button1={'Women'}
+                            button2={'Men'}
                         />
                     </div>
                 </div>
@@ -150,15 +162,17 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'Children'}
                             titleMain={'Clothes'}
-                            contentMain={'Pants. Sweaters.'}
+                            contentMain={props.text}
                             contentFooter={'See also'}
                             color={styles.children}
                             value={props.value}
+                            add={props.add}
+                            prop={props}
+                            button1={'Books'}
+                            button2={'Toys'}
                         />
                     </div>
                 </div>
-                <Switcher color={'t'} showText={'test'} hideText={'test'}/>
-                <button onClick={() => showState()}>State</button>
             </main>
 
             <footer className='footer-bottom'>

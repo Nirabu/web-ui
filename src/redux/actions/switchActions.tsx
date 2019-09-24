@@ -1,4 +1,4 @@
-import {ADD_ITEM, CHANGE_ITEM, ItemFilter} from './constants/constants';
+import {ADD_ITEM, CHANGE_ITEM, CHANGE_ITEM2, ItemFilter} from './constants/constants';
 
 /* Primarily action creators. */
 export const addItem = (text: string) => ({
@@ -8,6 +8,11 @@ export const addItem = (text: string) => ({
 
 export const changeItem = (text: string) => ({
     type: CHANGE_ITEM,
+    text
+});
+
+export const changeItem2 = (text: string) => ({
+    type: CHANGE_ITEM2,
     text
 });
 
