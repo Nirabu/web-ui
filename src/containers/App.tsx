@@ -22,7 +22,6 @@ interface AppProps {
 }
 
 export const App: React.FC<AppProps> = (props) => {
-
     function showState() {
         console.log(store.getState());
         console.log(props.value);
@@ -84,7 +83,7 @@ export const App: React.FC<AppProps> = (props) => {
                             titleMain={'Desserts'}
                             contentMain={props.text}
                             contentFooter={'See also'}
-                            color={styles.news}
+                            color={styles.cafe}
                             value={props.value}
                             add={props.add}
                             button1={'Sweets'}
@@ -151,8 +150,8 @@ export const App: React.FC<AppProps> = (props) => {
                             color={styles.weather}
                             add={props.add}
                             prop={props}
-                            button1={'Women'}
-                            button2={'Men'}
+                            button1={'Today'}
+                            button2={'Tomorrow'}
                         />
                     </div>
                 </div>
