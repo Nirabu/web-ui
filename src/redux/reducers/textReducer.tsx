@@ -1,11 +1,11 @@
-import {GenresFilter, ADD_ITEM, TOGGLE_ITEM, SET_VISIBILITY_FILTER} from "../actions/constants/constants";
+import {ItemFilter, ADD_ITEM, CHANGE_ITEM} from "../actions/constants/constants";
 
 const initialState = {
-    value: '',
-    text: ''
+    value: 'default',
+    text: 'default'
 };
 
-export const textApp = (state = {initialState}, action: any) => {
+const textApp = (state = {initialState}, action: any) => {
     switch (action.type) {
         case ADD_ITEM:
             return {
@@ -15,4 +15,6 @@ export const textApp = (state = {initialState}, action: any) => {
             return state;
     }
 };
+
+export default textApp;
 

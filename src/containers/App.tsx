@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {ADD_ITEM, TOGGLE_ITEM, GenresFilter, SET_VISIBILITY_FILTER} from "../redux/actions/constants/constants";
-import {showBoth} from "../redux/actions/switchActions";
+import {addItem} from "../redux/actions/switchActions";
 import {Account} from "../components/navigations/bars/Account";
 import {PortalNav} from "../components/navigations/bars/PortalNav";
 import SearchBox from "../components/inputs/searchfields/SearchBox";
@@ -10,19 +9,22 @@ import TitleBig from "../components/display/titles/TitleBig";
 import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
 import TitleMedium from "../components/display/titles/TitleMedium";
+import {store} from '../redux/store';
 
 import styles from '../scss/modules/exports/sections.module.scss';
 import {Switcher} from "../components/navigations/Switcher";
+import {ADD_ITEM} from "../redux/actions/constants/constants";
 
 interface AppProps {
     item: any;
     addItem: any;
     toggleItem: any;
     value: string;
-    showBoth: any;
+    add: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
+    console.log(props);
     return (
         <div className='app'>
             <header className='header-top'>
@@ -81,7 +83,8 @@ export const App: React.FC<AppProps> = (props) => {
                             contentFooter={'See also'}
                             color={styles.cafe}
                             value={props.value}
-                            showBoth={props.showBoth}
+                            add={props.add}
+                            prop={props}
                         />
                     </div>
                 </div>
@@ -148,29 +151,6 @@ export const App: React.FC<AppProps> = (props) => {
                         />
                     </div>
                 </div>
-
-                <nav className='home-wise'>
-                    <button
-                        onClick={() =>
-                            props.addItem({
-                                text: 'You begin to remove' +
-                                    ' a mountain by carrying away small stones!'
-                            })
-                        }
-                    >
-                        Show text
-                    </button>
-
-                    <button
-                        onClick={() =>
-                            props.toggleItem
-                        }
-                    >
-                        Hide text
-                    </button>
-                    <p>{props.item}</p>
-                </nav>
-
                 <Switcher color={'t'} showText={'test'} hideText={'test'}/>
             </main>
 
@@ -186,10 +166,13 @@ export const App: React.FC<AppProps> = (props) => {
  *  that you want to pass to the presentational components
  *  -- props for the presentational components from the container --
  */
-const mapStateToProps = (state: any) => ({
-    text: state.text,
-    value: state.value
-});
+const mapStateToProps = (state: any) => {
+    console.log('state text is: ' + state.text);
+    return {
+        text: state.text,
+        value: state.value
+    };
+};
 
 /*
  * Receives from dispatch and,
@@ -198,11 +181,9 @@ const mapStateToProps = (state: any) => ({
  * -- reducer functions for the presentational components from the container --
  */
 const mapDispatchToProps = (dispatch: any) => {
-    return ({
-        showBoth: (txt:string) => {dispatch(showBoth(txt))},
-        showWomen: () => {dispatch(GenresFilter.SHOW_TEXT_WOMEN)},
-        showMen: () => {dispatch(GenresFilter.SHOW_TEXT_MEN)}
-    })
+    return {
+        add: (text:string) => dispatch(addItem(text))
+    }
 };
 
 // Connect both props and functions.

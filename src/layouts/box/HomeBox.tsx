@@ -2,6 +2,7 @@ import * as React from 'react';
 import BoxMain from "./parts/BoxMain";
 import BoxHeader from "./parts/BoxHeader";
 import BoxFooter from "./parts/BoxFooter";
+import {store} from "../../redux/store";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -10,10 +11,17 @@ interface HomeBoxProps {
     contentFooter: string;
     color?: string;
     value?: string;
-    showBoth?: any;
+    add?: any;
+    prop?: any;
 }
 
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
+    function textEventHandler() {
+        props.add('new');
+        console.log(store.getState());
+        console.log(props.prop);
+    }
+
     return (
         <>
             <header className='box-container-header' style={{color: props.color}}>
@@ -25,16 +33,15 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
             </main>
 
             <footer className='box-container-footer'>
-                <button onClick={props.showBoth}>Redux-button</button>
+                <button onClick={() => textEventHandler()}>Redux-button</button>
                 <p>{props.value}</p>
-                <BoxFooter content={props.showBoth}/>
             </footer>
         </>
     )
 };
 
-HomeBox.defaultProps = {
-    value: 'It is default now'
-};
+// HomeBox.defaultProps = {
+//     value: 'It is default now'
+// };
 
 export default HomeBox;
