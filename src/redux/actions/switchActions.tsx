@@ -3,11 +3,12 @@ import {ADD_ITEM, CHANGE_ITEM, ItemFilter} from './constants/constants';
 /* Primarily action creators. */
 export const addItem = (text: string) => ({
     type: ADD_ITEM,
-    text: text
+    text
 });
 
 export const changeItem = (text: string) => ({
-    type: CHANGE_ITEM
+    type: CHANGE_ITEM,
+    text
 });
 
 /* Secondary action creators (categories). */

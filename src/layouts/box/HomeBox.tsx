@@ -1,8 +1,6 @@
 import * as React from 'react';
 import BoxMain from "./parts/BoxMain";
 import BoxHeader from "./parts/BoxHeader";
-import BoxFooter from "./parts/BoxFooter";
-import {store} from "../../redux/store";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -18,8 +16,6 @@ interface HomeBoxProps {
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
         props.add('new');
-        console.log(store.getState());
-        console.log(props.prop);
     }
 
     return (

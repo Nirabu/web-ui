@@ -10,10 +10,17 @@ import reducers from "./reducers/index";
 *  and return those.
 *  If no changes are needed, it should return the existing state as-is.
 */
-export function configureStore(initialState = {}) {
-    const store = createStore(reducers, initialState);
-    return store;
-}
 
-export const store = configureStore();
+const store = createStore(reducers);
+
+// export function configureStore(initialState = {}) {
+//     const store = createStore(reducers, initialState);
+//     return store;
+// }
+// export const store = configureStore();
+
+
 console.log(store.getState());
+
+
+export default store;

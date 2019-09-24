@@ -5,9 +5,13 @@ const initialState = {
     text: 'default'
 };
 
-const textApp = (state = {initialState}, action: any) => {
+const textApp = (state = initialState, action: any) => {
     switch (action.type) {
         case ADD_ITEM:
+            return {
+                ...state, third: action.text
+            };
+        case CHANGE_ITEM:
             return {
                 ...state, value: action.text
             };

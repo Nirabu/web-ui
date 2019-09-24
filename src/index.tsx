@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import App from './containers/App';
 import * as serviceWorker from './progressive/serviceWorker';
 import { Provider } from 'react-redux';
-import { store } from "./redux/store";
+import store from "./redux/store";
 import Root from "./middleware/routing/Root";
 
 ReactDOM.render((

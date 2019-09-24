@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {addItem} from "../redux/actions/switchActions";
+import {addItem, changeItem} from "../redux/actions/switchActions";
 import {Account} from "../components/navigations/bars/Account";
 import {PortalNav} from "../components/navigations/bars/PortalNav";
 import SearchBox from "../components/inputs/searchfields/SearchBox";
@@ -9,7 +9,7 @@ import TitleBig from "../components/display/titles/TitleBig";
 import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
 import TitleMedium from "../components/display/titles/TitleMedium";
-import {store} from '../redux/store';
+import store from '../redux/store';
 
 import styles from '../scss/modules/exports/sections.module.scss';
 import {Switcher} from "../components/navigations/Switcher";
@@ -20,11 +20,17 @@ interface AppProps {
     addItem: any;
     toggleItem: any;
     value: string;
+    text: string;
     add: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
-    console.log(props);
+
+    function showState() {
+        console.log(store.getState());
+        console.log(props.value);
+    }
+
     return (
         <div className='app'>
             <header className='header-top'>
@@ -152,6 +158,7 @@ export const App: React.FC<AppProps> = (props) => {
                     </div>
                 </div>
                 <Switcher color={'t'} showText={'test'} hideText={'test'}/>
+                <button onClick={() => showState()}>State</button>
             </main>
 
             <footer className='footer-bottom'>
@@ -167,11 +174,10 @@ export const App: React.FC<AppProps> = (props) => {
  *  -- props for the presentational components from the container --
  */
 const mapStateToProps = (state: any) => {
-    console.log('state text is: ' + state.text);
     return {
-        text: state.text,
-        value: state.value
-    };
+        text: state.textApp.text,
+        value: state.textApp.value
+    }
 };
 
 /*
@@ -182,7 +188,7 @@ const mapStateToProps = (state: any) => {
  */
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        add: (text:string) => dispatch(addItem(text))
+        add: (text:string) => dispatch(changeItem(text))
     }
 };
 

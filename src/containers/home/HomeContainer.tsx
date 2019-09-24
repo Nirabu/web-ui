@@ -6,8 +6,6 @@ export const HomeContainer: React.FC = () => {
     return (
         <div>
             <header className='portal_header'>
-
-
                 <div className="search">
                     <h1 className='search_name'>Nimado</h1>
                     <form className='search_felt'>
