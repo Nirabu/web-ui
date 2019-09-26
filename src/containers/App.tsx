@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {addItem, changeItem} from "../redux/actions/switchActions";
+import {addCake, addCoffee, deleteCake, deleteCoffee} from "../redux/actions/sections/cafeActions";
+
 import {Account} from "../components/navigations/bars/Account";
 import {PortalNav} from "../components/navigations/bars/PortalNav";
 import SearchBox from "../components/inputs/searchfields/SearchBox";
@@ -19,6 +21,8 @@ interface AppProps {
     value: string;
     text: string;
     add: any;
+    coffee: string;
+    addCoffee: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
@@ -81,13 +85,15 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeBox
                             titleHeader={'Cafe'}
                             titleMain={'Desserts'}
-                            contentMain={props.text}
+                            contentMain={props.coffee}
                             contentFooter={'See also'}
                             color={styles.cafe}
                             value={props.value}
-                            add={props.add}
+                            add={props.addCoffee}
                             button1={'Sweets'}
                             button2={'Drinks'}
+                            text1={'New cakes'}
+                            text2={'New coffee'}
                         />
                     </div>
                 </div>
@@ -104,6 +110,8 @@ export const App: React.FC<AppProps> = (props) => {
                             add={props.add}
                             button1={'Local'}
                             button2={'Abroad'}
+                            text1={'New local'}
+                            text2={'New abroad'}
                         />
                     </div>
                 </div>
@@ -120,6 +128,8 @@ export const App: React.FC<AppProps> = (props) => {
                             add={props.add}
                             button1={'Women'}
                             button2={'Men'}
+                            text1={'Women'}
+                            text2={'Men'}
                         />
                     </div>
                 </div>
@@ -136,6 +146,8 @@ export const App: React.FC<AppProps> = (props) => {
                             prop={props}
                             button1={'Trailers'}
                             button2={'Clips'}
+                            text1={'Movies'}
+                            text2={'Shows'}
                         />
                     </div>
                 </div>
@@ -152,6 +164,8 @@ export const App: React.FC<AppProps> = (props) => {
                             prop={props}
                             button1={'Today'}
                             button2={'Tomorrow'}
+                            text1={'Today'}
+                            text2={'Tomorrow'}
                         />
                     </div>
                 </div>
@@ -169,6 +183,8 @@ export const App: React.FC<AppProps> = (props) => {
                             prop={props}
                             button1={'Books'}
                             button2={'Toys'}
+                            text1={'New cakes'}
+                            text2={'New coffee'}
                         />
                     </div>
                 </div>
@@ -189,7 +205,8 @@ export const App: React.FC<AppProps> = (props) => {
 const mapStateToProps = (state: any) => {
     return {
         text: state.textApp.text,
-        value: state.textApp.value
+        value: state.textApp.value,
+        coffee: state.cafeReducer.coffee
     }
 };
 
@@ -201,7 +218,8 @@ const mapStateToProps = (state: any) => {
  */
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        add: (text:string) => dispatch(changeItem(text))
+        add: (text:string) => dispatch(changeItem(text)),
+        addCoffee: (coffee:string) => dispatch(addCoffee(coffee))
     }
 };
 

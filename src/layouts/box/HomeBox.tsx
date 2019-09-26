@@ -13,15 +13,17 @@ interface HomeBoxProps {
     prop?: any;
     button1: string;
     button2: string;
+    text1?: string;
+    text2?: string;
 }
 
 const HomeBox: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
-        props.add('changed to new');
+        props.add(props.text1);
     }
 
     function textEventHandler2() {
-        props.add('back to old');
+        props.add(props.text2);
     }
 
     return (
