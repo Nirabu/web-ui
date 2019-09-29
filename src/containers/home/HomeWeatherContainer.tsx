@@ -1,29 +1,29 @@
 import * as React from 'react';
 import HomeBox from "../../layouts/box/HomeBox";
 
-interface HomeTVContainerProps {
-    text: string;
+interface HomeWeatherContainerProps {
     color: string;
     add: any;
+    text: string;
 }
 
-const HomeTVContainer: React.FC<HomeTVContainerProps> = (props) => {
+const HomeWeatherContainer: React.FC<HomeWeatherContainerProps> = (props) => {
     return (
         <>
             <HomeBox
-                titleHeader={'TV'}
+                titleHeader={'Weather'}
                 titleMain={'Clothes'}
                 contentMain={props.text}
                 contentFooter={'See also'}
                 color={props.color}
                 add={props.add}
-                button1={'Trailers'}
-                button2={'Clips'}
-                text1={'Movies'}
-                text2={'Shows'}
+                button1={'Today'}
+                button2={'Tomorrow'}
+                text1={'Today'}
+                text2={'Tomorrow'}
             />
         </>
     )
 };
 
-export default HomeTVContainer;
+export default HomeWeatherContainer;

@@ -1,24 +1,27 @@
 import React from 'react';
+
+/* Redux */
+import store from '../redux/store';
 import {connect} from "react-redux";
+import {addLocal, addAbroad, deleteAbroad, deleteLocal} from "../redux/actions/sections/newsActions";
 import {addItem, changeItem} from "../redux/actions/switchActions";
 import {addCake, addCoffee, deleteCake, deleteCoffee} from "../redux/actions/sections/cafeActions";
-import {addLocal, addAbroad, deleteAbroad, deleteLocal} from "../redux/actions/sections/newsActions";
 
-import {Account} from "../components/navigations/bars/Account";
-import {PortalNav} from "../components/navigations/bars/PortalNav";
-import SearchBox from "../components/inputs/searchfields/SearchBox";
-import Circle from "../components/graphics/shapes/Circle";
-import TitleBig from "../components/display/titles/TitleBig";
+/* Components and layouts */
 import Standard from "../layouts/Standard";
 import HomeBox from "../layouts/box/HomeBox";
-import TitleMedium from "../components/display/titles/TitleMedium";
-import store from '../redux/store';
 import styles from '../scss/modules/exports/sections.module.scss';
 
 /* Containers */
 import HomeCafeContainer from "./home/HomeCafeContainer";
 import HomeNewsContainer from "./home/HomeNewsContainer";
-
+import HomeShoppingContainer from "./home/HomeShoppingContainer";
+import HomePreviewContainer from "./home/HomePreviewContainer";
+import HomeNavigationContainer from "./home/HomeNavigationContainer";
+import HomeHeaderContainer from "./home/HomeHeaderContainer";
+import HomeTVContainer from "./home/HomeTVContainer";
+import HomeWeatherContainer from "./home/HomeWeatherContainer";
+import HomeChildrenContainer from "./home/HomeChildrenContainer";
 
 interface AppProps {
     item: any;
@@ -42,49 +45,17 @@ export const App: React.FC<AppProps> = (props) => {
     return (
         <div className='app'>
             <header className='header-top'>
-                <div className='title-nimado'>
-                    <TitleBig title='Nitji'/>
-                    <Circle/>
-                </div>
-
-                <article className='search-nimado'>
-                    <SearchBox/>
-                </article>
-
-                <nav className='nav-account'>
-                    <Account/>
-                </nav>
+                <HomeHeaderContainer />
             </header>
 
             <nav className='nav-nimado'>
-                <PortalNav/>
+                <HomeNavigationContainer />
             </nav>
 
             <main className='content-nimado'>
                 <div className='home-top'>
                     <div className='home-top-container'>
-                        <div className='home-top-header'>
-                            <TitleMedium title='Top'/>
-                        </div>
-
-                        <div className='home-cafe-main'>
-                            <div className='Recipes'>
-                                <h5 style={{marginTop: 0}}>Desserts</h5>
-                                <p>Icecream and cake</p>
-                            </div>
-
-                            <div className='blogs'>
-                                <h5>Blogs</h5>
-                            </div>
-
-                            <div className='Corner'>
-                                <h5>Corner</h5>
-                            </div>
-                        </div>
-
-                        <div className='home-cafe-footer'>
-                            See also
-                        </div>
+                        <HomePreviewContainer/>
                     </div>
                 </div>
 
@@ -93,6 +64,7 @@ export const App: React.FC<AppProps> = (props) => {
                         <HomeCafeContainer
                             coffee={props.coffee}
                             value={props.value}
+                            color={styles.cafe}
                             addCoffee={props.addCoffee}/>
                     </div>
                 </div>
@@ -101,6 +73,7 @@ export const App: React.FC<AppProps> = (props) => {
                     <div className='box-news box-container'>
                         <HomeNewsContainer
                             local={props.local}
+                            color={styles.weather}
                             value={props.value}
                             addLocal={props.addLocal}
                         />
@@ -109,90 +82,54 @@ export const App: React.FC<AppProps> = (props) => {
 
                 <div className='home-shopping'>
                     <div className='box-shopping box-container'>
-                        <HomeBox
-                            titleHeader={'Shopping'}
-                            titleMain={'Clothes'}
-                            contentMain={props.text}
-                            contentFooter={'See also'}
+                        <HomeShoppingContainer
+                            text={props.text}
                             color={styles.shopping}
                             value={props.value}
                             add={props.add}
-                            button1={'Women'}
-                            button2={'Men'}
-                            text1={'Women'}
-                            text2={'Men'}
                         />
                     </div>
                 </div>
 
                 <div className='home-tv'>
                     <div className='box-tv box-container'>
-                        <HomeBox
-                            titleHeader={'TV'}
-                            titleMain={'Clothes'}
-                            contentMain={props.text}
-                            contentFooter={'See also'}
+                        <HomeTVContainer
+                            text={props.text}
                             color={styles.tv}
                             add={props.add}
-                            prop={props}
-                            button1={'Trailers'}
-                            button2={'Clips'}
-                            text1={'Movies'}
-                            text2={'Shows'}
                         />
                     </div>
                 </div>
 
                 <div className='home-weather'>
                     <div className='box-weather box-container'>
-                        <HomeBox
-                            titleHeader={'Weather'}
-                            titleMain={'Clothes'}
-                            contentMain={props.text}
-                            contentFooter={'See also'}
+                        <HomeWeatherContainer
                             color={styles.weather}
                             add={props.add}
-                            prop={props}
-                            button1={'Today'}
-                            button2={'Tomorrow'}
-                            text1={'Today'}
-                            text2={'Tomorrow'}
+                            text={props.text}
                         />
                     </div>
                 </div>
 
                 <div className='home-children'>
                     <div className='box-children box-container'>
-                        <HomeBox
-                            titleHeader={'Children'}
-                            titleMain={'Clothes'}
-                            contentMain={props.text}
-                            contentFooter={'See also'}
+                        <HomeChildrenContainer
+                            text={props.text}
                             color={styles.children}
                             value={props.value}
                             add={props.add}
-                            prop={props}
-                            button1={'Books'}
-                            button2={'Toys'}
-                            text1={'New cakes'}
-                            text2={'New coffee'}
                         />
                     </div>
                 </div>
             </main>
 
             <footer className='footer-bottom'>
-                <Standard version={'v0.1.6'}/>
+                <Standard version={'v0.1.7'}/>
             </footer>
         </div>
     );
 };
 
-/*
- *  Transfers the current Redux store state into the props,
- *  that you want to pass to the presentational components
- *  -- props for the presentational components from the container --
- */
 const mapStateToProps = (state: any) => {
     return {
         text: state.textApp.text,
@@ -202,12 +139,6 @@ const mapStateToProps = (state: any) => {
     }
 };
 
-/*
- * Receives from dispatch and,
- * that you want to inject into
- * presentational components.
- * -- reducer functions for the presentational components from the container --
- */
 const mapDispatchToProps = (dispatch: any) => {
     return {
         add: (text: string) => dispatch(changeItem(text)),
@@ -216,7 +147,6 @@ const mapDispatchToProps = (dispatch: any) => {
     }
 };
 
-// Connect both props and functions.
 const AppContainer = connect(
     mapStateToProps,
     mapDispatchToProps

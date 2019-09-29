@@ -6,6 +6,7 @@ interface HomeNewsContainerProps {
     local: string;
     value: string;
     addLocal: any;
+    color: string;
 }
 
 const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
@@ -17,7 +18,7 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
                 contentMain={props.local}
                 contentFooter={'See also'}
                 color={styles.news}
-                value={props.value}
+                value={props.color}
                 add={props.addLocal}
                 button1={'Local'}
                 button2={'Abroad'}

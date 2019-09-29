@@ -2,11 +2,13 @@ import * as React from 'react';
 import HomeBox from "../../layouts/box/HomeBox";
 import {addCoffee} from "../../redux/actions/sections/cafeActions";
 import {connect} from "react-redux";
+import styles from "../../scss/modules/exports/sections.module.scss";
 
 interface HomeCafeContainerProps {
     coffee: string;
     value: string;
     addCoffee: any;
+    color: string;
 }
 
 export const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
@@ -17,6 +19,7 @@ export const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
                 titleMain={'Desserts'}
                 contentMain={props.coffee}
                 contentFooter={'See also'}
+                color={props.color}
                 value={props.value}
                 add={props.addCoffee}
                 button1={'Sweets'}

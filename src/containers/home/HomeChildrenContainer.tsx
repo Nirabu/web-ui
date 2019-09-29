@@ -1,31 +1,32 @@
 import * as React from 'react';
 import HomeBox from "../../layouts/box/HomeBox";
 
-interface HomeShoppingContainerProps {
+interface HomeChildrenContainerProps {
     text: string;
     color: string;
     value: string;
     add: any;
 }
 
-const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
+const HomeChildrenContainer: React.FC<HomeChildrenContainerProps> = (props) => {
     return (
         <>
             <HomeBox
-                titleHeader={'Shopping'}
+                titleHeader={'Children'}
                 titleMain={'Clothes'}
                 contentMain={props.text}
                 contentFooter={'See also'}
                 color={props.color}
                 value={props.value}
                 add={props.add}
-                button1={'Women'}
-                button2={'Men'}
-                text1={'Women'}
-                text2={'Men'}
+                prop={props}
+                button1={'Books'}
+                button2={'Toys'}
+                text1={'New cakes'}
+                text2={'New coffee'}
             />
         </>
     )
 };
 
-export default HomeShoppingContainer;
+export default HomeChildrenContainer;

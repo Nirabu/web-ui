@@ -3,7 +3,7 @@
 
   grid: {
     template-columns: repeat(6, 1fr);
-    template-rows: 90px 55px 1060px 140px;
+    template-rows: 90px 55px 1660px 140px;
     template-areas:
             ". header-top header-top header-top header-top ."
             "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
@@ -95,7 +95,7 @@
 
   grid: {
     template-columns: repeat(3, 1fr) repeat(1, 0.5fr);
-    row-gap: 1rem;
+    row-gap: 20rem;
     column-gap: 1rem;
     template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
     template-areas:
