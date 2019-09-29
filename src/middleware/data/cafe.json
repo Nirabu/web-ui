@@ -1,0 +1,10 @@
+{
+  "desserts": {
+    "icecream": "icecream",
+    "cake": "cake"
+  },
+  "drinks": {
+    "coffee": "coffee",
+    "tea": "tea"
+  }
+}

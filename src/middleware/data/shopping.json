@@ -1,0 +1,34 @@
+{
+  "women": {
+    "dresses": {
+      "short": "short",
+      "long": "long"
+    },
+    "shirts": {
+      "pattern": "pattern",
+      "plain": "plain"
+    },
+    "pants": {
+      "jeans": "jeans",
+      "cotton": "cutton"
+    },
+    "sweaters": {
+      "hoodie": "hoodie",
+      "fine": "fine"
+    }
+  },
+  "men": {
+    "shirts": {
+      "pattern": "pattern",
+      "plain": "plain"
+    },
+    "pants": {
+      "jeans": "jeans",
+      "cotton": "cutton"
+    },
+    "sweaters": {
+      "hoodie": "hoodie",
+      "fine": "fine"
+    }
+  }
+}

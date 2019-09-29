@@ -6,7 +6,7 @@ const initialState = {
     cake: 'cake'
 };
 
-const cafeReducer = (state = initialState, action: any) => {
+const cafeReducer = (state = {}, action: any) => {
     switch (action.type) {
         case ADD_COFFEE:
             return {

@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import {addItem, changeItem} from "../redux/actions/switchActions";
 import {addCake, addCoffee, deleteCake, deleteCoffee} from "../redux/actions/sections/cafeActions";
+import {addLocal, addAbroad, deleteAbroad, deleteLocal} from "../redux/actions/sections/newsActions";
 
 import {Account} from "../components/navigations/bars/Account";
 import {PortalNav} from "../components/navigations/bars/PortalNav";
@@ -14,6 +15,11 @@ import TitleMedium from "../components/display/titles/TitleMedium";
 import store from '../redux/store';
 import styles from '../scss/modules/exports/sections.module.scss';
 
+/* Containers */
+import HomeCafeContainer from "./home/HomeCafeContainer";
+import HomeNewsContainer from "./home/HomeNewsContainer";
+
+
 interface AppProps {
     item: any;
     addItem: any;
@@ -23,6 +29,8 @@ interface AppProps {
     add: any;
     coffee: string;
     addCoffee: any;
+    local: string;
+    addLocal: any;
 }
 
 export const App: React.FC<AppProps> = (props) => {
@@ -82,36 +90,19 @@ export const App: React.FC<AppProps> = (props) => {
 
                 <div className='home-cafe'>
                     <div className='box-cafe box-container'>
-                        <HomeBox
-                            titleHeader={'Cafe'}
-                            titleMain={'Desserts'}
-                            contentMain={props.coffee}
-                            contentFooter={'See also'}
-                            color={styles.cafe}
+                        <HomeCafeContainer
+                            coffee={props.coffee}
                             value={props.value}
-                            add={props.addCoffee}
-                            button1={'Sweets'}
-                            button2={'Drinks'}
-                            text1={'New cakes'}
-                            text2={'New coffee'}
-                        />
+                            addCoffee={props.addCoffee}/>
                     </div>
                 </div>
 
                 <div className='home-news'>
                     <div className='box-news box-container'>
-                        <HomeBox
-                            titleHeader={'News'}
-                            titleMain={'Korea'}
-                            contentMain={props.text}
-                            contentFooter={'See also'}
-                            color={styles.news}
+                        <HomeNewsContainer
+                            local={props.local}
                             value={props.value}
-                            add={props.add}
-                            button1={'Local'}
-                            button2={'Abroad'}
-                            text1={'New local'}
-                            text2={'New abroad'}
+                            addLocal={props.addLocal}
                         />
                     </div>
                 </div>
@@ -206,7 +197,8 @@ const mapStateToProps = (state: any) => {
     return {
         text: state.textApp.text,
         value: state.textApp.value,
-        coffee: state.cafeReducer.coffee
+        coffee: state.cafeReducer.coffee,
+        local: state.newsReducer.local
     }
 };
 
@@ -218,8 +210,9 @@ const mapStateToProps = (state: any) => {
  */
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        add: (text:string) => dispatch(changeItem(text)),
-        addCoffee: (coffee:string) => dispatch(addCoffee(coffee))
+        add: (text: string) => dispatch(changeItem(text)),
+        addCoffee: (coffee: string) => dispatch(addCoffee(coffee)),
+        addLocal: (local: string) => dispatch(addLocal(local))
     }
 };
 

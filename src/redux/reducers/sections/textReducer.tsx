@@ -1,4 +1,4 @@
-import {ItemFilter, ADD_ITEM, CHANGE_ITEM, CHANGE_ITEM2} from "../actions/constants/constants";
+import {ItemFilter, ADD_ITEM, CHANGE_ITEM, CHANGE_ITEM2} from "../../actions/constants/constants";
 
 const initialState = {
     value: 'default',
