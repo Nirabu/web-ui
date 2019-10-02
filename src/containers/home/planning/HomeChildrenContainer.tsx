@@ -1,5 +1,5 @@
 import * as React from 'react';
-import HomeBox from "../../layouts/box/HomeBox";
+import HomeBox from "../../../layouts/box/HomeBox";
 
 interface HomeChildrenContainerProps {
     text: string;

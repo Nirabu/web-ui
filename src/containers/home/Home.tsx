@@ -13,15 +13,15 @@ import HomeBox from "../../layouts/box/HomeBox";
 import styles from '../../scss/modules/exports/sections.module.scss';
 
 /* Containers */
-import HomeCafeContainer from "./sections/HomeCafeContainer";
-import HomeNewsContainer from "./sections/HomeNewsContainer";
-import HomeShoppingContainer from "./sections/HomeShoppingContainer";
+import HomeCafeContainer from "./sections/main/HomeCafeContainer";
+import HomeNewsContainer from "./sections/main/HomeNewsContainer";
+import HomeShoppingContainer from "./sections/main/HomeShoppingContainer";
 import HomePreviewContainer from "./HomePreviewContainer";
 import HomeNavigationContainer from "./HomeNavigationContainer";
 import HomeHeaderContainer from "./HomeHeaderContainer";
-import HomeTVContainer from "./sections/HomeTVContainer";
-import HomeWeatherContainer from "./sections/HomeWeatherContainer";
-import HomeChildrenContainer from "./HomeChildrenContainer";
+import HomeTVContainer from "./sections/main/HomeTVContainer";
+import HomeWeatherContainer from "./sections/main/HomeWeatherContainer";
+import HomeChildrenContainer from "./planning/HomeChildrenContainer";
 
 interface AppProps {
     item: any;
