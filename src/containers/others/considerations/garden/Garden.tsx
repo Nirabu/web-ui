@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../../scss/garden.scss';
+import '../../../../scss/containers/garden.scss';
 
 export const Garden: React.FC = () => {
     return (

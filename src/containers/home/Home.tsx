@@ -8,7 +8,7 @@ import {addItem, changeItem} from "../../redux/actions/switchActions";
 import {addCake, addCoffee, deleteCake, deleteCoffee} from "../../redux/actions/sections/cafeActions";
 
 /* Components and layouts */
-import Standard from "../../layouts/Standard";
+import Standard from "../../layouts/StandardFooter";
 import HomeBox from "../../layouts/box/HomeBox";
 import styles from '../../scss/modules/exports/sections.module.scss';
 
@@ -18,10 +18,11 @@ import HomeNewsContainer from "./sections/main/HomeNewsContainer";
 import HomeShoppingContainer from "./sections/main/HomeShoppingContainer";
 import HomePreviewContainer from "./HomePreviewContainer";
 import HomeNavigationContainer from "./HomeNavigationContainer";
-import HomeHeaderContainer from "./HomeHeaderContainer";
+import StandardHeader from "../../layouts/StandardHeader";
 import HomeTVContainer from "./sections/main/HomeTVContainer";
 import HomeWeatherContainer from "./sections/main/HomeWeatherContainer";
 import HomeChildrenContainer from "./planning/HomeChildrenContainer";
+import StandardFooter from "../../layouts/StandardFooter";
 
 interface AppProps {
     item: any;
@@ -45,7 +46,7 @@ export const Home: React.FC<AppProps> = (props) => {
     return (
         <div className='app'>
             <header className='header-top'>
-                <HomeHeaderContainer />
+                <StandardHeader />
             </header>
 
             <nav className='nav-nimado'>
@@ -93,7 +94,7 @@ export const Home: React.FC<AppProps> = (props) => {
             </main>
 
             <footer className='footer-bottom'>
-                <Standard version={'v0.1.8'}/>
+                <StandardFooter version={'v0.1.8'}/>
             </footer>
         </div>
     );
