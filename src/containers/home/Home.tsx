@@ -93,7 +93,7 @@ export const Home: React.FC<AppProps> = (props) => {
             </main>
 
             <footer className='footer-bottom'>
-                <Standard version={'v0.1.7'}/>
+                <Standard version={'v0.1.8'}/>
             </footer>
         </div>
     );
