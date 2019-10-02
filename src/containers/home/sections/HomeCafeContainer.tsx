@@ -1,8 +1,10 @@
 import * as React from 'react';
-import HomeBox from "../../layouts/box/HomeBox";
-import {addCoffee} from "../../redux/actions/sections/cafeActions";
-import {connect} from "react-redux";
-import styles from "../../scss/modules/exports/sections.module.scss";
+import HomeBox from "../../../layouts/box/HomeBox";
+
+const exampleData = {
+    coffee: 'coffee',
+    tea: 'tea'
+};
 
 interface HomeCafeContainerProps {
     coffee: string;

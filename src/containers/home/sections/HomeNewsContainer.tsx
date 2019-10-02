@@ -1,6 +1,6 @@
 import * as React from 'react';
-import HomeBox from "../../layouts/box/HomeBox";
-import styles from "../../scss/modules/exports/sections.module.scss";
+import HomeBox from "../../../layouts/box/HomeBox";
+import styles from "../../../scss/modules/exports/sections.module.scss";
 
 interface HomeNewsContainerProps {
     local: string;

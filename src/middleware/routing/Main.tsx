@@ -6,10 +6,10 @@ import {
 } from 'react-router-dom';
 
 import {HomeContainer} from "../../containers/home/HomeContainer";
-import {ChildrenContainer} from "../../containers/children/ChildrenContainer";
+import {ChildrenContainer} from "../../containers/planning/children/ChildrenContainer";
 import {Aquarium} from "../../containers/considerations/aquarium/Aquarium";
 import {CafeContainer} from "../../containers/cafe/CafeContainer";
-import {CinemaContainer} from "../../containers/cinema/CinemaContainer";
+import {CinemaContainer} from "../../containers/planning/cinema/CinemaContainer";
 import {Garden} from "../../containers/considerations/garden/Garden";
 import {NewsContainer} from "../../containers/news/NewsContainer";
 

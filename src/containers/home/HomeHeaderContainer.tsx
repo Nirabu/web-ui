@@ -7,15 +7,15 @@ import {Account} from "../../components/navigations/bars/Account";
 const HomeHeaderContainer: React.FC = () => {
     return (
         <>
-            <header>
+            <header className='header-top'>
                 <TitleBig title='Nitji'/>
             </header>
 
-            <article>
+            <article className='header-search'>
                 <SearchBox/>
             </article>
 
-            <nav>
+            <nav className='header-account'>
                 <Account/>
             </nav>
         </>

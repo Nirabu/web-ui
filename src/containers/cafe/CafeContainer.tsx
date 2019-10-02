@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './Cafe.scss';
+import '../../scss/containers/Cafe.scss';
 import Tour from "../../components/navigations/bars/Tour";
 
 export const CafeContainer: React.FC = () => {

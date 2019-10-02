@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../scss/layouts/_cinema.scss';
+import '../../../scss/modules/layouts/_cinema.scss';
 
 export const CinemaContainer: React.FC = () => {
     return (

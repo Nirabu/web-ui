@@ -6,7 +6,7 @@ import {Categories } from "../../../src/components/display/subtitle/Categories";
 import { Buttons } from "../../../src/components/multi/Buttons";
 import {Tour} from "../../../src/containers/considerations/other/types/Tour";
 
-import '../../../src/scss/Default.scss'
+import '../../../src/scss/modules/layouts/default.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(

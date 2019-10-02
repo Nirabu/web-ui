@@ -2,7 +2,7 @@ import './scss/index.scss';
 import * as React from'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import App from './containers/home/Home';
 import * as serviceWorker from './progressive/serviceWorker';
 import { Provider } from 'react-redux';
 import store from "./redux/store";

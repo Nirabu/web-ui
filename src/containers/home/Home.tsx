@@ -1,27 +1,27 @@
 import React from 'react';
 
 /* Redux */
-import store from '../redux/store';
+import store from '../../redux/store';
 import {connect} from "react-redux";
-import {addLocal, addAbroad, deleteAbroad, deleteLocal} from "../redux/actions/sections/newsActions";
-import {addItem, changeItem} from "../redux/actions/switchActions";
-import {addCake, addCoffee, deleteCake, deleteCoffee} from "../redux/actions/sections/cafeActions";
+import {addLocal, addAbroad, deleteAbroad, deleteLocal} from "../../redux/actions/sections/newsActions";
+import {addItem, changeItem} from "../../redux/actions/switchActions";
+import {addCake, addCoffee, deleteCake, deleteCoffee} from "../../redux/actions/sections/cafeActions";
 
 /* Components and layouts */
-import Standard from "../layouts/Standard";
-import HomeBox from "../layouts/box/HomeBox";
-import styles from '../scss/modules/exports/sections.module.scss';
+import Standard from "../../layouts/Standard";
+import HomeBox from "../../layouts/box/HomeBox";
+import styles from '../../scss/modules/exports/sections.module.scss';
 
 /* Containers */
-import HomeCafeContainer from "./home/HomeCafeContainer";
-import HomeNewsContainer from "./home/HomeNewsContainer";
-import HomeShoppingContainer from "./home/HomeShoppingContainer";
-import HomePreviewContainer from "./home/HomePreviewContainer";
-import HomeNavigationContainer from "./home/HomeNavigationContainer";
-import HomeHeaderContainer from "./home/HomeHeaderContainer";
-import HomeTVContainer from "./home/HomeTVContainer";
-import HomeWeatherContainer from "./home/HomeWeatherContainer";
-import HomeChildrenContainer from "./home/HomeChildrenContainer";
+import HomeCafeContainer from "./sections/HomeCafeContainer";
+import HomeNewsContainer from "./sections/HomeNewsContainer";
+import HomeShoppingContainer from "./sections/HomeShoppingContainer";
+import HomePreviewContainer from "./HomePreviewContainer";
+import HomeNavigationContainer from "./HomeNavigationContainer";
+import HomeHeaderContainer from "./HomeHeaderContainer";
+import HomeTVContainer from "./sections/HomeTVContainer";
+import HomeWeatherContainer from "./sections/HomeWeatherContainer";
+import HomeChildrenContainer from "./HomeChildrenContainer";
 
 interface AppProps {
     item: any;
@@ -36,7 +36,7 @@ interface AppProps {
     addLocal: any;
 }
 
-export const App: React.FC<AppProps> = (props) => {
+export const Home: React.FC<AppProps> = (props) => {
     function showState() {
         console.log(store.getState());
         console.log(props.value);
@@ -90,37 +90,6 @@ export const App: React.FC<AppProps> = (props) => {
                         />
                     </div>
                 </div>
-
-                <div className='home-tv'>
-                    <div className='box-tv box-container'>
-                        <HomeTVContainer
-                            text={props.text}
-                            color={styles.tv}
-                            add={props.add}
-                        />
-                    </div>
-                </div>
-
-                <div className='home-weather'>
-                    <div className='box-weather box-container'>
-                        <HomeWeatherContainer
-                            color={styles.weather}
-                            add={props.add}
-                            text={props.text}
-                        />
-                    </div>
-                </div>
-
-                <div className='home-children'>
-                    <div className='box-children box-container'>
-                        <HomeChildrenContainer
-                            text={props.text}
-                            color={styles.children}
-                            value={props.value}
-                            add={props.add}
-                        />
-                    </div>
-                </div>
             </main>
 
             <footer className='footer-bottom'>
@@ -150,7 +119,7 @@ const mapDispatchToProps = (dispatch: any) => {
 const AppContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(App);
+)(Home);
 
 export default AppContainer;
 
