@@ -12,12 +12,10 @@ interface TemperatureProps {
     humid: number;
 }
 
-const Temperature: React.FC<TemperatureProps> = () => {
+export const Temperature: React.FC<TemperatureProps> = (props) => {
     return (
         <div>
-            <p>31 Celsius</p>
+            <p>Temperature: {props.degrees}</p>
         </div>
     )
 };
-
-export default Temperature;

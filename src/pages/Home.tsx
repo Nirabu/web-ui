@@ -25,8 +25,9 @@ import {
 import DefaultHeader from "../layouts/default/DefaultHeader";
 import DefaultFooter from "../layouts/default/DefaultFooter";
 import BoxContainer from "../containers/BoxContainer";
-import TitleBig from "../components/titles/TitleBig";
-import TitleMedium from "../components/titles/TitleMedium";
+import {TitleMedium} from "../components/Titles";
+import {TitleBig} from "../components/Titles";
+
 import BoxContent from "./../layouts/BoxContent";
 
 interface AppProps {

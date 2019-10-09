@@ -1,8 +1,9 @@
 import * as React from 'react';
-import TitleBig from "../../components/titles/TitleBig";
-import Circle from "../../components/shapes/Circle";
-import SearchBox from "../../components/inputs/SearchBox";
-import {Account} from "../../components/bars/Account";
+import {TitleBig} from "../../components/Titles";
+
+import {Circle} from "../../components/Shapes";
+import {SearchBox} from "../../components/Search";
+import {NavAccount} from "../../components/Navigations";
 
 interface DefaultHeader {
     title: string;
@@ -20,7 +21,7 @@ const DefaultHeader: React.FC<DefaultHeader> = (props) => {
             </article>
 
             <nav className='default-header-account'>
-                <Account/>
+                <NavAccount/>
             </nav>
         </>
     )

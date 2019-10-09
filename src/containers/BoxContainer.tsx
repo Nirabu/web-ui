@@ -1,5 +1,5 @@
 import * as React from "react";
-import TitleMedium from "../components/titles/TitleMedium";
+import {TitleMedium} from "../components/Titles";
 
 interface BoxContainerProps {
     title: string;

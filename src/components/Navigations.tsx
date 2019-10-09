@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {NavLink} from "react-router-dom";
 
-export const homeBar: React.FC = () => {
+export const NavHome: React.FC = () => {
     return (
         <ul>
             <li><a href={"default.asp"}>Home</a></li>
@@ -11,7 +11,7 @@ export const homeBar: React.FC = () => {
     )
 };
 
-export const Account: React.FC = () => {
+export const NavAccount: React.FC = () => {
     return (
         <ul>
             <li><NavLink to='/signup'>Sign up</NavLink></li>
@@ -22,7 +22,7 @@ export const Account: React.FC = () => {
     )
 };
 
-export const Tour: React.FC = () => {
+export const NavTour: React.FC = () => {
     return (
         <ul>
             <li><NavLink to='/'>Portal</NavLink></li>

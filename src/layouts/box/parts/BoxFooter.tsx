@@ -1,5 +1,6 @@
 import * as React from 'react';
-import TitleSmall from "../../../components/titles/TitleSmall";
+import {TitleSmall} from "../../../components/Titles";
+
 interface BoxFooterProps {
 
     content: string;

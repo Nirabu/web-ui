@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const SearchBox: React.FC = () => {
+export const SearchBox: React.FC = () => {
     return (
         <>
             <form>
@@ -12,5 +12,4 @@ const SearchBox: React.FC = () => {
     )
 };
 
-export default SearchBox;
 
