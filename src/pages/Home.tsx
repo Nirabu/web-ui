@@ -59,13 +59,14 @@ export const Home: React.FC<AppProps> = props => {
                 <div className="home-main-header">
                     <div className="home-main-header-title"> </div>
                 </div>
-
+                
+                {/*TODO: Add picture, description and icon to box*/}
                 <div className="home-main-cafe">
                     <div className="box-cafe">
                         <BoxContent
                             titleHeader="Cafe content"
-                            button1={"Confirm"}
-                            button2={"Cancel"}
+                            button1={"Recipe"}
+                            button2={"Pictures"}
                             contentData={'New type of cake'}
                         />
                     </div>
@@ -75,8 +76,8 @@ export const Home: React.FC<AppProps> = props => {
                     <div className="box-news">
                         <BoxContent
                             titleHeader="News content"
-                            button1={"Confirm"}
-                            button2={"Cancel"}
+                            button1={"Read more"}
+                            button2={"Read later"}
                             contentData={'Busan opened a new bridge!'}
                         />
                     </div>
@@ -86,8 +87,8 @@ export const Home: React.FC<AppProps> = props => {
                     <div className="box-shopping">
                         <BoxContent
                             titleHeader="Shopping content"
-                            button1={"Confirm"}
-                            button2={"Cancel"}
+                            button1={"Buy"}
+                            button2={"Wishlist"}
                             contentData={'New shoes available!'}
                         />
                     </div>
