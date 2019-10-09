@@ -20,7 +20,7 @@ const DefaultHeader: React.FC<DefaultHeader> = (props) => {
                 <SearchBox/>
             </article>
 
-            <nav className='default-header-account'>
+            <nav style={{display: 'flex', alignContent: 'center'}}>
                 <NavAccount/>
             </nav>
         </>
