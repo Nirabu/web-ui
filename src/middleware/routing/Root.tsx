@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch as RouterSwitch} from 'react-router-dom';
-import Home from '../../containers/home/Home';
-import Shopping from "../../containers/shopping/Shopping";
-import Cafe from "../../containers/cafe/Cafe";
-import News from "../../containers/news/News";
+
+/* pages */
+import Home from '../../pages/Home';
+import Cafe from "../../pages/Cafe";
+import News from "../../pages/News";
+import Shopping from '../../pages/Shopping';
 
 interface RootProps {
     store: any;
 }
+
 const Root: React.FC<RootProps> = ({store}) => (
     <Provider store={store}>
         <Router>

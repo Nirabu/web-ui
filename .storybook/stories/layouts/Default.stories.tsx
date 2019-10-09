@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Default } from "../../../src/layouts/Default";
+import { Default } from "../../../src/layouts/default/Default";
 
-import {Categories } from "../../../src/components/display/subtitle/Categories";
-import { Buttons } from "../../../src/components/multi/Buttons";
-import {Tour} from "../../../src/containers/others/considerations/other/types/Tour";
+import { Buttons } from "../../../src/components/Buttons";
 
 import '../../../src/scss/modules/layouts/default.scss'
 
@@ -13,7 +11,6 @@ storiesOf('Pages/Main-pages', module)
         'Front-page',
         () => (
             <Default
-                header={<Categories category={Tour.Aquarium} />}
                 nav={<Buttons text={'Click here'}/>}
             />
         )
@@ -22,7 +19,6 @@ storiesOf('Pages/Main-pages', module)
         'About-page',
     () => (
         <Default
-            header={<Categories category={Tour.Aquarium} />}
             nav={<Buttons text={'Click here'}/>}
         />
     )

@@ -4,7 +4,7 @@ interface StandardProps {
     version: string;
 }
 
-const StandardFooter: React.FC<StandardProps> = (props) => {
+const DefaultFooter: React.FC<StandardProps> = (props) => {
     return (
         <>
             <p className='copyright-nitji'>Copyright Nitji corp. All Rights Reserved.</p>
@@ -13,4 +13,4 @@ const StandardFooter: React.FC<StandardProps> = (props) => {
     )
 };
 
-export default StandardFooter;
+export default DefaultFooter;

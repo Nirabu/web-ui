@@ -1,10 +1,10 @@
 import * as React from 'react';
-import TitleBig from "../components/display/titles/TitleBig";
-import Circle from "../components/graphics/shapes/Circle";
-import SearchBox from "../components/inputs/searchfields/SearchBox";
-import {Account} from "../components/navigations/bars/Account";
+import TitleBig from "../../components/titles/TitleBig";
+import Circle from "../../components/shapes/Circle";
+import SearchBox from "../../components/inputs/SearchBox";
+import {Account} from "../../components/bars/Account";
 
-const StandardHeader: React.FC = () => {
+const DefaultHeader: React.FC = () => {
     return (
         <>
             <header className='header-top'>
@@ -22,4 +22,4 @@ const StandardHeader: React.FC = () => {
     )
 };
 
-export default StandardHeader;
+export default DefaultHeader;

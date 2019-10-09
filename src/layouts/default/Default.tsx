@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface FrontpageProps {
-    header: JSX.Element;
+    header?: JSX.Element;
     nav: JSX.Element;
 }
 

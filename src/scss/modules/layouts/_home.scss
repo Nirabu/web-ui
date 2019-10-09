@@ -6,8 +6,8 @@
     template-rows: 90px 55px 1660px 140px;
     template-areas:
             ". header-top header-top header-top header-top ."
-            "nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado nav-nimado"
-            "content-nimado content-nimado content-nimado content-nimado content-nimado content-nimado"
+            "nav-nitji nav-nitji nav-nitji nav-nitji nav-nitji nav-nitji"
+            "content-nitji content-nitji content-nitji content-nitji content-nitji content-nitji"
             "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
   }
 
@@ -38,7 +38,7 @@
 
   .header-icon {
     grid-column: 2/3;
-    grid-area: icon-nimado;
+    grid-area: icon-nitji;
     max-width: 2rem;
     margin: {
       left: 2rem;
@@ -48,7 +48,7 @@
 
   .header-search {
     grid-column: 3/4;
-    grid-area: search-nimado;
+    grid-area: search-nitji;
     align-self: flex-start;
     padding-top: 0.8rem;
     padding-left: 2rem;
@@ -56,17 +56,15 @@
     margin-right: 10rem;
   }
 
-  .header-account {
-
-  }
-
+  .header-account { }
+  
   .header-nav {
     grid-area: nav-account;
   }
 }
 
-.nav-nimado {
-  grid-area: nav-nimado;
+.nav-nitji {
+  grid-area: nav-nitji;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -98,8 +96,8 @@
 }
 
 /* Main */
-.content-nimado {
-  grid-area: content-nimado;
+.content-nitji {
+  grid-area: content-nitji;
   display: grid;
 
   grid: {

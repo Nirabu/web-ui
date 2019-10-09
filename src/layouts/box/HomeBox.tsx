@@ -7,7 +7,6 @@ interface HomeBoxProps {
     titleMain: string;
     contentMain: string;
     contentFooter: string;
-    color?: string;
     value?: string;
     add?: any;
     prop?: any;
@@ -28,7 +27,7 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
 
     return (
         <>
-            <header className='box-container-header' style={{color: props.color}}>
+            <header className='box-container-header'>
                 <BoxHeader title={props.titleHeader}/>
             </header>
 
