@@ -4,8 +4,8 @@ import BoxHeader from "./box/parts/BoxHeader";
 
 interface HomeBoxProps {
     titleHeader: string;
+    contentData: string;
     titleMain?: string;
-    contentMain?: string;
     contentFooter?: string;
     value?: string;
     add?: any;
@@ -32,7 +32,7 @@ const BoxContent: React.FC<HomeBoxProps> = (props) => {
             </header>
 
             <main className='boxContent-main'>
-                <BoxMain content='test' />
+                <BoxMain content={props.contentData} />
             </main>
 
             <footer className='boxContent-footer'>

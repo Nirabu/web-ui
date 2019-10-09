@@ -2,7 +2,7 @@
   display: grid;
   grid: {
     template-columns: repeat(6, 1fr);
-    template-rows: 25% 50% 25%;
+    template-rows: 1fr 8fr 1fr;
     template-areas:
             ". home-header home-header home-header home-header ."
             "home-main home-main home-main home-main home-main home-main"
@@ -10,8 +10,8 @@
   }
 
   width: 100%;
+  height: 100vh;
   min-width: 900px;
-  height: 900px;
   padding-top: 2rem;
 }
 

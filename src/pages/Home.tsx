@@ -66,6 +66,7 @@ export const Home: React.FC<AppProps> = props => {
                             titleHeader="Cafe content"
                             button1={"Confirm"}
                             button2={"Cancel"}
+                            contentData={'New type of cake'}
                         />
                     </div>
                 </div>
@@ -76,6 +77,7 @@ export const Home: React.FC<AppProps> = props => {
                             titleHeader="News content"
                             button1={"Confirm"}
                             button2={"Cancel"}
+                            contentData={'Busan opened a new bridge!'}
                         />
                     </div>
                 </div>
@@ -86,6 +88,7 @@ export const Home: React.FC<AppProps> = props => {
                             titleHeader="Shopping content"
                             button1={"Confirm"}
                             button2={"Cancel"}
+                            contentData={'New shoes available!'}
                         />
                     </div>
                 </div>
