@@ -8,8 +8,6 @@ import {addItem, changeItem} from "../redux/actions/switchActions";
 import {addCake, addCoffee, deleteCake, deleteCoffee} from "../redux/actions/sections/cafeActions";
 
 /* Components and layouts */
-import Standard from "../layouts/default/DefaultFooter";
-import HomeBox from "../layouts/box/HomeBox";
 
 /* functions */
 import {addition, divide} from './../functions/calculations/addtion';
@@ -40,42 +38,42 @@ export const Home: React.FC<AppProps> = (props) => {
     }
 
     return (
-        <div className='app'>
-            <header className='header-top'>
+        <div className='home'>
+            <header className='home-header'>
                 <DefaultHeader/>
             </header>
 
-            <nav className='nav-nitji'>
+            <nav className='home-nav'>
 
             </nav>
 
-            <main className='content-nitji'>
-                <div className='home-top'>
-                    <div className='home-top-container'>
+            <main className='home-main'>
+                <div className='home-main-top'>
+                    <div className='home-main-top-container'>
 
                     </div>
                 </div>
 
-                <div className='home-cafe'>
+                <div className='home-main-cafe'>
                     <div className='box-cafe box-container'>
-                        <BoxContainer title='Home'/>
+                        <BoxContainer title='Cafe'/>
                     </div>
                 </div>
 
-                <div className='home-news'>
+                <div className='home-main-news'>
                     <div className='box-news box-container'>
                         <BoxContainer title='News'/>
                     </div>
                 </div>
 
-                <div className='home-shopping'>
+                <div className='home-main-shopping'>
                     <div className='box-shopping box-container'>
                         <BoxContainer title='Shopping'/>
                     </div>
                 </div>
             </main>
 
-            <footer className='footer-bottom'>
+            <footer className='home-footer'>
                 <DefaultFooter version={'v0.1.8'}/>
             </footer>
         </div>
