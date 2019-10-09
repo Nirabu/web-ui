@@ -1,0 +1,28 @@
+.boxContent {
+  display: grid;
+  grid: {
+    template-columns: 1fr 1fr 1fr;
+    template-rows: 1fr 1fr 1fr;
+    template-areas:
+            ". boxContent-header ."
+            ". boxContent-main ."
+            ". boxContent-footer .";
+  }
+
+  &-header {
+    grid-area: boxContent-header;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-main {
+    grid-area: boxContent-main;
+
+  }
+
+  &-footer {
+    grid-area: boxContent-footer;
+    float: right;
+
+  }
+}

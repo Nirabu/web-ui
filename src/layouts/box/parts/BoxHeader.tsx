@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TitleBig} from "../../../components/Titles";
+import {TitleBig, TitleMedium} from "../../../components/Titles";
 
 interface BoxHeaderProps {
     title: string;
@@ -8,7 +8,7 @@ interface BoxHeaderProps {
 const BoxHeader: React.FC<BoxHeaderProps> = (props) => {
     return (
         <header className='box-header'>
-            <TitleBig title={props.title}/>
+            <TitleMedium title={props.title}/>
         </header>
     )
 };

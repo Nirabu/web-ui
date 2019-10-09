@@ -55,8 +55,6 @@ export const Home: React.FC<AppProps> = props => {
                 <DefaultHeader title={"Nitji"}/>
             </header>
 
-            <nav className="home-nav"> </nav>
-
             <main className="home-main">
                 <div className="home-main-header">
                     <div className="home-main-header-title"> </div>

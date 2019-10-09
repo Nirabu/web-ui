@@ -26,20 +26,20 @@ const BoxContent: React.FC<HomeBoxProps> = (props) => {
     }
 
     return (
-        <>
-            <header className='box-header'>
+        <div className='boxContent'>
+            <header className='boxContent-header'>
                 <BoxHeader title={props.titleHeader}/>
             </header>
 
-            <main className='box-main'>
+            <main className='boxContent-main'>
                 <BoxMain content='test' />
             </main>
 
-            <footer className='box-footer'>
+            <footer className='boxContent-footer'>
                 <button onClick={() => textEventHandler()}>{props.button1}</button>
                 <button onClick={() => textEventHandler2()}>{props.button2}</button>
             </footer>
-        </>
+        </div>
     )
 };
 
