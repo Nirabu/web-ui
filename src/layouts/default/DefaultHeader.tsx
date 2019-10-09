@@ -4,11 +4,15 @@ import Circle from "../../components/shapes/Circle";
 import SearchBox from "../../components/inputs/SearchBox";
 import {Account} from "../../components/bars/Account";
 
-const DefaultHeader: React.FC = () => {
+interface DefaultHeader {
+    title: string;
+}
+
+const DefaultHeader: React.FC<DefaultHeader> = (props) => {
     return (
         <>
             <header className='header-top'>
-                <TitleBig title='Nitji'/>
+                <TitleBig title={props.title}/>
             </header>
 
             <article className='header-search'>

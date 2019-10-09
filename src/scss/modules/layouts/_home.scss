@@ -4,9 +4,9 @@
     template-columns: repeat(6, 1fr);
     template-rows: 90px 55px 1660px 140px;
     template-areas: ". home-header home-header home-header home-header ."
-    "home-nav home-nav home-nav home-nav home-nav home-nav"
-    "home-main home-main home-main home-main home-main home-main"
-    "home-footer home-footer home-footer home-footer home-footer home-footer";
+      "home-nav home-nav home-nav home-nav home-nav home-nav"
+      "home-main home-main home-main home-main home-main home-main"
+      "home-footer home-footer home-footer home-footer home-footer home-footer";
   }
 
   width: 100%;
@@ -51,7 +51,6 @@
 
     margin-right: 10rem;
   }
-
 
   .home-header-nav {
     grid-area: nav-account;
@@ -100,7 +99,8 @@
     row-gap: 1rem;
     column-gap: 1rem;
     template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
-    template-areas: ". home-cafe home-news home-shopping ." ". home-top home-top home-top ." ". home-wise home-wise home-wise .";
+    template-areas: ". home-cafe home-news home-shopping ."
+      ". home-top home-top home-top ." ". home-wise home-wise home-wise .";
   }
 
   padding: 1rem;
@@ -140,7 +140,7 @@
 
   .home-main-play {
     grid-area: home-main-play;
-    background-color: #FFF;
+    background-color: #fff;
   }
 
   .home-main-wise {
