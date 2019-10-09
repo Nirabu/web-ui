@@ -11,15 +11,15 @@ interface DefaultHeader {
 const DefaultHeader: React.FC<DefaultHeader> = (props) => {
     return (
         <>
-            <header className='header-top'>
+            <header className='default-header-title'>
                 <TitleBig title={props.title}/>
             </header>
 
-            <article className='header-search'>
+            <article className='default-header-search'>
                 <SearchBox/>
             </article>
 
-            <nav className='header-account'>
+            <nav className='default-header-account'>
                 <Account/>
             </nav>
         </>

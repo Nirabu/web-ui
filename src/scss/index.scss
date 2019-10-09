@@ -3,13 +3,14 @@
 @import './base/base';
 
 @import 'modules/layouts/home';
-
 @import './modules/buttons';
 @import './modules/navbar';
 @import './modules/portalnav';
 @import './modules/headlines';
-
 @import 'modules/box';
+
+@import './../scss/modules/layouts/defaultHeader';
+
 
 
 

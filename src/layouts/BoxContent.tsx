@@ -1,12 +1,12 @@
 import * as React from 'react';
-import BoxMain from "./parts/BoxMain";
-import BoxHeader from "./parts/BoxHeader";
+import BoxMain from "./box/parts/BoxMain";
+import BoxHeader from "./box/parts/BoxHeader";
 
 interface HomeBoxProps {
     titleHeader: string;
-    titleMain: string;
-    contentMain: string;
-    contentFooter: string;
+    titleMain?: string;
+    contentMain?: string;
+    contentFooter?: string;
     value?: string;
     add?: any;
     prop?: any;
@@ -16,7 +16,7 @@ interface HomeBoxProps {
     text2?: string;
 }
 
-const HomeBox: React.FC<HomeBoxProps> = (props) => {
+const BoxContent: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
         props.add(props.text1);
     }
@@ -27,15 +27,15 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
 
     return (
         <>
-            <header className='box-container-header'>
+            <header className='box-header'>
                 <BoxHeader title={props.titleHeader}/>
             </header>
 
-            <main className='box-container-main'>
-                <BoxMain title={props.titleMain} content={props.contentMain}/>
+            <main className='box-main'>
+                <BoxMain content='test' />
             </main>
 
-            <footer className='box-container-footer'>
+            <footer className='box-footer'>
                 <button onClick={() => textEventHandler()}>{props.button1}</button>
                 <button onClick={() => textEventHandler2()}>{props.button2}</button>
             </footer>
@@ -47,4 +47,4 @@ const HomeBox: React.FC<HomeBoxProps> = (props) => {
 //     value: 'It is default now'
 // };
 
-export default HomeBox;
+export default BoxContent;

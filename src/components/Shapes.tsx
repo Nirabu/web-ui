@@ -4,7 +4,7 @@ interface BoxProps {
     title?: string;
 }
 
-const Box: React.FC<BoxProps> = (props) => {
+export const Square: React.FC<BoxProps> = (props) => {
     return (
         <div className='box'>
             <div className='title'>
@@ -17,3 +17,13 @@ const Box: React.FC<BoxProps> = (props) => {
         </div>
     )
 };
+
+export const Circle: React.FC = () => {
+    return (
+        <svg>
+            <circle cx={20} cy={20} r={10} fill="#A497EB" />
+        </svg>
+    )
+};
+
+
