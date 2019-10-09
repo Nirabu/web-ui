@@ -2,10 +2,9 @@
   display: grid;
   grid: {
     template-columns: repeat(6, 1fr);
-    template-rows: 20px 55px 1500px 140px;
+    template-rows: 25% 50% 25%;
     template-areas:
             ". home-header home-header home-header home-header ."
-            "home-nav home-nav home-nav home-nav home-nav home-nav"
             "home-main home-main home-main home-main home-main home-main"
             "home-footer home-footer home-footer home-footer home-footer home-footer";
   }
@@ -92,6 +91,7 @@
 .home-main {
   grid-area: home-main;
   display: grid;
+  border: 1px solid red;
 
   grid: {
     template-columns: repeat(1, 1fr) repeat(3, 4fr) repeat(1, 1fr);
@@ -159,7 +159,7 @@
 /* Bottom */
 .home-footer {
   grid-area: home-footer;
-  display: flex;
   justify-content: center;
   flex-direction: column;
+  border: 1px solid orange;
 }
