@@ -49,32 +49,32 @@ export const Home: React.FC<AppProps> = (props) => {
 
             <main className='home-main'>
                 <div className='home-main-top'>
-                    <div className='home-main-top-container'>
+                    <div className='top-container'>
 
                     </div>
                 </div>
 
                 <div className='home-main-cafe'>
-                    <div className='box-cafe box-container'>
+                    <div className='box-cafe'>
                         <BoxContainer title='Cafe'/>
                     </div>
                 </div>
 
                 <div className='home-main-news'>
-                    <div className='box-news box-container'>
+                    <div className='box-news'>
                         <BoxContainer title='News'/>
                     </div>
                 </div>
 
                 <div className='home-main-shopping'>
-                    <div className='box-shopping box-container'>
+                    <div className='box-shopping'>
                         <BoxContainer title='Shopping'/>
                     </div>
                 </div>
             </main>
 
             <footer className='home-footer'>
-                <DefaultFooter version={'v0.1.8'}/>
+                <DefaultFooter version={'v0.1.9'}/>
             </footer>
         </div>
     );

@@ -1,14 +1,12 @@
-.app {
+.home {
   display: grid;
-
   grid: {
     template-columns: repeat(6, 1fr);
     template-rows: 90px 55px 1660px 140px;
-    template-areas:
-            ". header-top header-top header-top header-top ."
-            "nav-home nav-home nav-home nav-home nav-home nav-home"
-            "content-home content-home content-home content-home content-home content-home"
-            "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+    template-areas: ". home-header home-header home-header home-header ."
+    "home-nav home-nav home-nav home-nav home-nav home-nav"
+    "home-main home-main home-main home-main home-main home-main"
+    "home-footer home-footer home-footer home-footer home-footer home-footer";
   }
 
   width: 100%;
@@ -18,8 +16,8 @@
 }
 
 /* Top page */
-.header-top {
-  grid-area: header-top;
+.home-header {
+  grid-area: home-header;
 
   display: flex;
   flex-wrap: nowrap;
@@ -29,16 +27,15 @@
 
   margin-bottom: 0;
 
-  .header-title {
+  .header-header-title {
     display: flex;
     grid-column: 1/2;
     max-width: 7rem;
     margin-right: 2rem;
   }
 
-  .header-icon {
+  .header-header-icon {
     grid-column: 2/3;
-    grid-area: icon-nitji;
     max-width: 2rem;
     margin: {
       left: 2rem;
@@ -46,9 +43,8 @@
     }
   }
 
-  .header-search {
+  .header-header-search {
     grid-column: 3/4;
-    grid-area: search-nitji;
     align-self: flex-start;
     padding-top: 0.8rem;
     padding-left: 2rem;
@@ -56,15 +52,14 @@
     margin-right: 10rem;
   }
 
-  .header-account { }
-  
-  .header-nav {
+
+  .home-header-nav {
     grid-area: nav-account;
   }
 }
 
-.nav-nitji {
-  grid-area: nav-nitji;
+.home-nav {
+  grid-area: home;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -96,8 +91,8 @@
 }
 
 /* Main */
-.content-nitji {
-  grid-area: content-nitji;
+.home-main {
+  grid-area: home-main;
   display: grid;
 
   grid: {
@@ -105,10 +100,7 @@
     row-gap: 1rem;
     column-gap: 1rem;
     template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
-    template-areas:
-            ". home-cafe home-news home-shopping ."
-            ". home-top home-top home-top ."
-            ". home-wise home-wise home-wise .";
+    template-areas: ". home-cafe home-news home-shopping ." ". home-top home-top home-top ." ". home-wise home-wise home-wise .";
   }
 
   padding: 1rem;
@@ -116,42 +108,42 @@
   justify-content: center;
   background-color: #eeeff3;
 
-  .home-top {
-    grid-area: home-top;
-    background-color: #fff;
+  .home-main-header {
+    grid-area: home-main-header;
+    background-color: white;
   }
 
-  .home-cafe {
-    grid-area: home-cafe;
+  .home-main-cafe {
+    grid-area: home-main-cafe;
+    background-color: white;
+  }
+
+  .home-main-news {
+    grid-area: home-main-news;
+    background-color: white;
+  }
+
+  .home-main-shopping {
+    grid-area: home-main-shopping;
+    background-color: white;
+  }
+
+  .home-main-tv {
+    grid-area: home-main-tv;
+    background-color: white;
+  }
+
+  .home-main-weather {
+    grid-area: home-main-weather;
+    background-color: white;
+  }
+
+  .home-main-play {
+    grid-area: home-main-play;
     background-color: #FFF;
   }
 
-  .home-news {
-    grid-area: home-news;
-    background-color: #FFF;
-  }
-
-  .home-shopping {
-    grid-area: home-shopping;
-    background-color: #FFF;
-  }
-
-  .home-tv {
-    grid-area: home-tv;
-    background-color: #FFF;
-  }
-
-  .home-weather {
-    grid-area: home-weather;
-    background-color: #FFF;
-  }
-
-  .home-children {
-    grid-area: home-children;
-    background-color: #FFF;
-  }
-
-  .wise {
+  .home-main-wise {
     grid-area: home-wise;
     background-color: #dc7dd6;
     padding-top: 2rem;
@@ -159,8 +151,8 @@
 }
 
 /* Bottom */
-.footer-bottom {
-  grid-area: footer-bottom;
+.home-footer {
+  grid-area: home-footer;
   display: flex;
   justify-content: center;
   flex-direction: column;

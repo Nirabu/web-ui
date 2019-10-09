@@ -4,7 +4,7 @@ import { Default } from "../../../src/layouts/default/Default";
 
 import { Buttons } from "../../../src/components/Buttons";
 
-import '../../../src/scss/modules/layouts/default.scss'
+import '../../../src/scss/modules/layouts/others/default.scss'
 
 storiesOf('Pages/Main-pages', module)
     .add(
