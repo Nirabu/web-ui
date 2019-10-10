@@ -8,8 +8,8 @@ Body message is recommended.
 
 
 # Organization
-Nimado main color is blue: #A1B8FF
-Subpages from Nimado has other colors. 
+Nitji main color is blue: #A1B8FF
+Subpages from Nitji has other colors. 
 
 
 # Documentation

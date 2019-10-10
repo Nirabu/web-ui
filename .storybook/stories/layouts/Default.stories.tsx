@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Default } from "../../../src/layouts/default/Default";
 
-import { Buttons } from "../../../src/components/Buttons";
+import { ButtonNormal } from "../../../src/components/Buttons";
 
 import '../../../src/scss/modules/layouts/others/default.scss'
 
@@ -11,7 +11,7 @@ storiesOf('Pages/Main-pages', module)
         'Front-page',
         () => (
             <Default
-                nav={<Buttons text={'Click here'}/>}
+                nav={<ButtonNormal text={'Click here'}/>}
             />
         )
     )
@@ -19,7 +19,7 @@ storiesOf('Pages/Main-pages', module)
         'About-page',
     () => (
         <Default
-            nav={<Buttons text={'Click here'}/>}
+            nav={<ButtonNormal text={'Click here'}/>}
         />
     )
 );

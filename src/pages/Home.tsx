@@ -1,46 +1,47 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 /* Redux */
 import store from "../redux/store";
 import {connect} from "react-redux";
-import {
-    addLocal,
-    addAbroad,
-    deleteAbroad,
-    deleteLocal
-} from "../redux/actions/sections/newsActions";
+
 import {addItem, changeItem} from "../redux/actions/switchActions";
 import {
-    addCake,
-    addCoffee,
-    deleteCake,
-    deleteCoffee
-} from "../redux/actions/sections/cafeActions";
+    changeCake,
+    changeCoffee,
+    changeShoes,
+    changeSeoul
+} from "../redux/actions/sections/homeActions";
 
 /* Components and layouts */
-
 /* functions */
-
 /* Containers */
-import DefaultHeader from "../layouts/default/DefaultHeader";
-import DefaultFooter from "../layouts/default/DefaultFooter";
-import BoxContainer from "../containers/BoxContainer";
-import {TitleMedium} from "../components/Titles";
-import {TitleBig} from "../components/Titles";
-
+import DefaultHeader from "./../layouts/default/DefaultHeader";
+import DefaultFooter from "./../layouts/default/DefaultFooter";
 import BoxContent from "./../layouts/BoxContent";
+import { changeBusan } from './../redux/actions/sections/homeActions';
+
+/* images */
+const cakeImage = require('../multimedia/images/cake.jpg');
+const shoesImage = require('../multimedia/images/shoes.jpg');
+const busanImage = require('../multimedia/images/busan.jpg');
 
 interface AppProps {
     item: any;
     addItem: any;
     toggleItem: any;
     value: string;
-    text: string;
-    add: any;
+
     coffee: string;
-    addCoffee: any;
-    local: string;
-    addLocal: any;
+    cake: string;
+    shoes: string;
+    dress: string;
+    busan: string;
+    seoul: string;
+
+    changeCoffee: any;
+    changeCake: any;
+    changeShoes: any;
+    changeBusan: any;
 }
 
 export const Home: React.FC<AppProps> = props => {
@@ -68,17 +69,8 @@ export const Home: React.FC<AppProps> = props => {
                             button1={"Recipe"}
                             button2={"Pictures"}
                             contentData={'New type of cake'}
-                        />
-                    </div>
-                </div>
-
-                <div className="home-main-news">
-                    <div className="box-news">
-                        <BoxContent
-                            titleHeader="News content"
-                            button1={"Read more"}
-                            button2={"Read later"}
-                            contentData={'Busan opened a new bridge!'}
+                            image={cakeImage}
+                            changeItem={props.changeCake}
                         />
                     </div>
                 </div>
@@ -90,9 +82,24 @@ export const Home: React.FC<AppProps> = props => {
                             button1={"Buy"}
                             button2={"Wishlist"}
                             contentData={'New shoes available!'}
+                            image={shoesImage}
+                            changeItem={props.changeShoes}
                         />
                     </div>
                 </div>
+
+                <div className="home-main-news">
+                    <div className="box-news">
+                        <BoxContent
+                            titleHeader="News content"
+                            button1={"Read more"}
+                            button2={"Read later"}
+                            contentData={'Busan opened a new bridge!'}
+                            image={props.changeBusan}
+                        />
+                    </div>
+                </div>
+
             </main>
 
             <footer className="home-footer">
@@ -102,20 +109,25 @@ export const Home: React.FC<AppProps> = props => {
     );
 };
 
+// TODO: contain changing data.
 const mapStateToProps = (state: any) => {
     return {
-        text: state.textApp.text,
-        value: state.textApp.value,
         coffee: state.cafeReducer.coffee,
-        local: state.newsReducer.local
+        cake: state.cafeReducer.cake,
+        shoes: state.shoppingReducer.shoes,
+        dress: state.shoppingReducer.dress,
+        seoul: state.newsReducer.seoul,
+        busan: state.newsReducer.busan,
     };
 };
 
+// TODO: These reducers change from default to new state.
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        add: (text: string) => dispatch(changeItem(text)),
-        addCoffee: (coffee: string) => dispatch(addCoffee(coffee)),
-        addLocal: (local: string) => dispatch(addLocal(local))
+        changeCoffee: (text: string) => dispatch(changeCoffee(text)),
+        changeCake: (text: string) => dispatch(changeCake(text)),
+        changeShoes: (text: string) => dispatch(changeShoes(text)),
+        changeBusan: (text: string) => dispatch(changeBusan(text))
     };
 };
 

@@ -5,6 +5,8 @@ import BoxHeader from "./box/parts/BoxHeader";
 interface HomeBoxProps {
     titleHeader: string;
     contentData: string;
+    changeItem?: any;
+    image?: any;
     titleMain?: string;
     contentFooter?: string;
     value?: string;
@@ -18,7 +20,7 @@ interface HomeBoxProps {
 
 const BoxContent: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
-        props.add(props.text1);
+        props.changeItem('test');
     }
 
     function textEventHandler2() {
@@ -33,6 +35,7 @@ const BoxContent: React.FC<HomeBoxProps> = (props) => {
 
             <main className='boxContent-main'>
                 <BoxMain content={props.contentData} />
+                <img src={props.image} width="200" height="200" alt='cannot display'/>
             </main>
 
             <footer className='boxContent-footer'>

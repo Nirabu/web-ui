@@ -15,3 +15,6 @@ export const ButtonSmall: React.FC<ButtonsProps> = (props) => {
         <button className='button button__color'>{props.text}</button>
     )
 };
+
+
+

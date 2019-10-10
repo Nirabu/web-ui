@@ -4,10 +4,10 @@ interface CategoriesProps {
     categories: any;
 }
 
-export const ChangeCategory: React.FC<CategoriesProps> = (props) => {
+export const UserSwitcher: React.FC<CategoriesProps> = (props) => {
     return (
         <>
-            
+
 
         </>
     )

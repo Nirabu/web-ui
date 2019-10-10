@@ -1,24 +1,38 @@
 import * as React from 'react';
 
-export const addCoffee = (coffee: string) => {
+/* cafe */
+export const changeCoffee = (coffee: string) => {
     return {
         coffee
     }
 };
 
-export const addCake = (cake: string) => {
+export const changeCake = (cake: string) => {
+
+};
+
+/* shopping */
+export const changeShoes = (shoes: string) => {
     return {
-        cake
+
     }
 };
 
-export const deleteCoffee = (coffee: string) => {
+export const changeDress = (dress: string) => {
     return {
+
     }
 };
 
-export const deleteCake = (cake: string) => {
+/* News */
+export const changeBusan = (busan: string) => {
     return {
+
     }
 };
 
+export const changeSeoul = (seoul: string) => {
+    return {
+
+    }
+};

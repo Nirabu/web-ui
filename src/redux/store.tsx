@@ -1,5 +1,6 @@
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import reducers from "./reducers/index";
+import thunk from 'redux-thunk';
 
 /* Create the store, only one reducer function,
 *  the first time the reducer is called, value will be undefined.
@@ -11,7 +12,7 @@ import reducers from "./reducers/index";
 *  If no changes are needed, it should return the existing state as-is.
 */
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(thunk));
 
 // export function configureStore(initialState = {}) {
 //     const store = createStore(reducers, initialState);
