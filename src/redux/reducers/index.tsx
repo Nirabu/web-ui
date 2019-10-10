@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {combineReducers} from 'redux';
-import textApp from "./sections/textReducer";
 import cafeReducer from "./sections/cafeReducer";
 import newsReducer from "./sections/newsReducer";
+import shoppingReducer from "./sections/shoppingReducer";
 
 const reducers = combineReducers({
-    textApp,
     cafeReducer,
-    newsReducer
+    newsReducer,
+    shoppingReducer
 });
 
 export default reducers;

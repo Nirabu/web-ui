@@ -1,39 +1,22 @@
-/* Action types */
-export const ADD_ITEM  = 'ADD_ITEM';
-export const CHANGE_ITEM = 'CHANGE_ITEM';
-export const CHANGE_ITEM2 = 'CHANGE_ITEM2';
-
 /* Cafe */
-export const ADD_COFFEE = 'ADD_CAFE';
-export const DELETE_COFFEE = 'REMOVE_CAFE';
-export const ADD_CAKE = 'ADD_CAKE';
-export const DELETE_CAKE = 'REMOVE_CAKE';
-
-/* News */
-export const ADD_LOCAL = 'ADD_LOCAL';
-export const DELETE_LOCAL = 'DELETE_LOCAL';
-export const ADD_ABROAD = 'ADD_ABROAD';
-export const DELETE_ABROAD = 'DELETE_ABROAD';
+export const CHANGE_COFFEE = 'CHANGE_COFFEE';
+export const CHANGE_CAKE = 'CHANGE_CAKE';
+export const CHANGE_MENU = 'CHANGE_MENU';
 
 /* Shopping */
-export const ADD_CLOTH = 'ADD_CLOTH';
-export const DELETE_CLOTH = 'DELETE_CLOTH';
-export const CHANGE_CLOTH = 'CHANGE_CLOTH';
+export const CHANGE_SHOES = 'CHANGE_SHOES';
+export const CHANGE_DRESS = 'CHANGE_DRESS';
+export const CHANGE_GENDER = 'CHANGE_GENDER';
 
-/* Weather */
-export const ADD_TODAY = 'ADD_TODAY';
-export const DELETE_TODAY = 'ADD_TODAY';
-export const ADD_TOMORROW = 'ADD_TOMORROW';
-export const DELETE_TOMORROW = 'DELETE_TOMORROW';
+/* News */
+export const CHANGE_BUSAN = 'CHANGE_BUSAN';
+export const CHANGE_SEOUL = 'CHANGE_SEOUL';
+export const CHANGE_COUNTRY = 'CHANGE_COUNTRY';
 
-/* TV */
-
-
-/* */
-/* Constants */
-export const ItemFilter = {
-    SHOW_TEXT_WOMEN: 'SHOW_TEXT_WOMEN',
-    SHOW_TEXT_MEN: 'SHOW_TEXT_MEN',
-    SHOW_TEXT_BOTH: 'SHOW_TEXT_BOTH'
-};
+/* example */
+// export const ItemFilter = {
+//     SHOW_TEXT_WOMEN: 'SHOW_TEXT_WOMEN',
+//     SHOW_TEXT_MEN: 'SHOW_TEXT_MEN',
+//     SHOW_TEXT_BOTH: 'SHOW_TEXT_BOTH'
+// };
 

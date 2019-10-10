@@ -1,6 +1,10 @@
 import * as React from 'react';
-import {storiesOf} from '@storybook/react';
-import {Buttons} from "../../../src/components/Buttons";
+import { storiesOf } from '@storybook/react';
+import { ButtonNormal, ButtonSmall } from './../../../src/components/Buttons';
 
-storiesOf('Components/Buttons', module)
-    .add('Ok button', () => <Buttons text={'Ok'}/>);
+storiesOf('Components/Buttons', module) 
+.add('Default button', () => <ButtonNormal text='Normal button' />)
+.add('Small button', () => <ButtonSmall text='Small button' />)
+
+
+

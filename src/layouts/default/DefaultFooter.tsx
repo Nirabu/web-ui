@@ -6,9 +6,9 @@ interface StandardProps {
 
 const DefaultFooter: React.FC<StandardProps> = (props) => {
     return (
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-            <p className='copyright-nitji'>Copyright Nitji corp. All Rights Reserved.</p>
-            <p className='version-nimado'>{props.version}</p>
+        <div>
+            <p style={{textAlign: "center"}}>{props.version}</p>
+            <p style={{textAlign: "center"}}>Copyrighted Nitji. All Rights Reserved.</p>
         </div>
     )
 };

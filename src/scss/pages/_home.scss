@@ -1,0 +1,143 @@
+.home {
+  display: grid;
+  grid: {
+    template-columns: repeat(6, 1fr);
+    template-rows: 1fr 2000px 1.5fr;
+    template-areas:
+            ". home-header home-header home-header home-header ."
+            "home-main home-main home-main home-main home-main home-main"
+            "home-footer home-footer home-footer home-footer home-footer home-footer";
+  }
+
+  padding-top: 2rem;
+
+  /* Top page */
+  .home-header {
+    grid-area: home-header;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+
+    .header-header-title {
+      display: flex;
+      grid-column: 1/2;
+      max-width: 7rem;
+      margin-right: 2rem;
+    }
+
+    .header-header-icon {
+      grid-column: 2/3;
+      max-width: 2rem;
+      margin: {
+        left: 2rem;
+        right: 2rem;
+      }
+    }
+
+    .header-header-search {
+      grid-column: 3/4;
+      align-self: flex-start;
+      padding-top: 0.8rem;
+      padding-left: 2rem;
+
+      margin-right: 10rem;
+    }
+
+    .home-header-nav {
+      grid-area: nav-account;
+    }
+  }
+
+  .home-nav {
+    grid-area: home;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid #ededed;
+
+    .link-cafe a:hover {
+      color: $cafe;
+    }
+
+    .link-news a:hover {
+      color: $news;
+    }
+
+    .link-shopping a:hover {
+      color: $shopping;
+    }
+
+    .link-tv a:hover {
+      color: $tv;
+    }
+
+    .link-weather a:hover {
+      color: $weather;
+    }
+
+    .link-children a:hover {
+      color: $children;
+    }
+  }
+
+  /* Main */
+  .home-main {
+    grid-area: home-main;
+    display: grid;
+    border-top: 1px solid rgb(248, 168, 77);
+    border-bottom: 1px solid rgb(248, 168, 77);
+    overflow: hidden;
+
+    grid: {
+      template-columns: repeat(1, 1fr) repeat(3, 4fr) repeat(1, 1fr);
+      row-gap: 1rem;
+      column-gap: 1rem;
+      template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
+      template-areas:
+              ". home-main-cafe home-main-cafe home-main-shopping ."
+              ". home-main-news home-main-news home-main-shopping ."
+              ". home-footer home-footer home-footer .";
+    }
+
+    padding: 1rem;
+    justify-content: center;
+    background-color: #eeeff3;
+
+    .home-main-header {
+      grid-area: home-main-header;
+      background-color: white;
+    }
+
+    .home-main-cafe {
+      grid-area: home-main-cafe;
+      background-color: white;
+      border: 1px solid #ffc891;
+    }
+
+    .home-main-news {
+      grid-area: home-main-news;
+      background-color: white;
+      border: 1px solid #ffc891;
+
+    }
+
+    .home-main-shopping {
+      grid-area: home-main-shopping;
+      background-color: white;
+      border: 1px solid #ffc891;
+
+    }
+  }
+
+  /* Bottom */
+  .home-footer {
+    grid-area: home-footer;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid orange;
+  }
+
+}

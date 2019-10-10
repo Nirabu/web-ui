@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ADD_COFFEE, DELETE_COFFEE, ADD_CAKE, DELETE_CAKE} from "../../actions/constants/constants";
+import { CHANGE_COFFEE, CHANGE_CAKE } from './../../actions/constants/constants';
 
 const initialState = {
     coffee: 'coffee',
@@ -8,23 +8,14 @@ const initialState = {
 
 const cafeReducer = (state = {}, action: any) => {
     switch (action.type) {
-        case ADD_COFFEE:
+        case CHANGE_COFFEE:
             return {
                 ...state, coffee: action.coffee
             };
-        case DELETE_COFFEE:
+        case CHANGE_CAKE:
             return {
                 ...state, coffee: null
             };
-        case ADD_CAKE:
-            return {
-                ...state, cake: action.cake
-            };
-        case DELETE_CAKE: {
-            return {
-                ...state, cake: null
-            }
-        }
         default:
             return state;
     }
