@@ -56,7 +56,7 @@ export const Home: React.FC<AppProps> = props => {
                 <DefaultHeader title={"Nitji"}/>
             </header>
 
-            <main className="home-main">
+            <main className="home-main">`
                 <div className="home-main-header">
                     <div className="home-main-header-title"> </div>
                 </div>
@@ -103,7 +103,7 @@ export const Home: React.FC<AppProps> = props => {
             </main>
 
             <footer className="home-footer">
-                <DefaultFooter version={`v0.2.0`}/>
+                <DefaultFooter version={`v0.2.1`}/>
             </footer>
         </div>
     );
