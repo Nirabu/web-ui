@@ -95,7 +95,7 @@ export const Home: React.FC<AppProps> = props => {
                             button1={"Read more"}
                             button2={"Read later"}
                             contentData={'Busan opened a new bridge!'}
-                            image={props.changeBusan}
+                            image={busanImage}
                         />
                     </div>
                 </div>
