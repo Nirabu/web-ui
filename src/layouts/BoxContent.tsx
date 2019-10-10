@@ -1,6 +1,7 @@
 import * as React from 'react';
 import BoxMain from "./box/parts/BoxMain";
 import BoxHeader from "./box/parts/BoxHeader";
+import store from "../redux/store";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -21,6 +22,7 @@ interface HomeBoxProps {
 const BoxContent: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
         props.changeItem('test');
+        console.log(store.getState());
     }
 
     function textEventHandler2() {

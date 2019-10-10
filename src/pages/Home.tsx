@@ -96,10 +96,10 @@ export const Home: React.FC<AppProps> = props => {
                             button2={"Read later"}
                             contentData={'Busan opened a new bridge!'}
                             image={busanImage}
+                            changeItem={props.changeBusan}
                         />
                     </div>
                 </div>
-
             </main>
 
             <footer className="home-footer">
