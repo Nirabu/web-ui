@@ -1,12 +1,14 @@
 import * as React from "react";
-import {TitleMedium} from "../components/Titles";
+import {TitleMedium} from "../../components/Titles";
 import {useEffect} from "react";
 
 interface BoxContainerProps {
     title: string;
 }
 
-const BoxContainer: React.FC<BoxContainerProps> = (props) => {
+const CafeContainer: React.FC<BoxContainerProps> = (props) => {
+    
+
     useEffect(() => {
 
     });
@@ -18,4 +20,4 @@ const BoxContainer: React.FC<BoxContainerProps> = (props) => {
     )
 };
 
-export default BoxContainer;
+export default CafeContainer;
