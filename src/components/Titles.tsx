@@ -1,7 +1,18 @@
 import * as React from "react";
+import {Component} from 'react';
 
 interface TitlesProps {
     title: string;
+}
+
+class test extends Component {
+    render() {
+        return (
+            <div>
+
+            </div>
+        );
+    }
 }
 
 export const TitleSmall: React.FC<TitlesProps> = (props) => {

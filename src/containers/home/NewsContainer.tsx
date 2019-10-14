@@ -14,16 +14,16 @@ const NewsContainer: React.FC<BoxContainerProps> = (props) => {
     // const [reposPerPage] = useState(4);
 
     // Fetching and loading
-    useEffect(() => {
-        () => {
+    useEffect(() => {{
             const fetchData = async () => {
+
+
 
             }
         }
     });
 
     // Get current repos
-
     return (
         <>
             <TitleMedium title={props.title}/>

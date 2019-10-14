@@ -18,7 +18,7 @@ import {
 import DefaultHeader from "./../layouts/default/DefaultHeader";
 import DefaultFooter from "./../layouts/default/DefaultFooter";
 import BoxContent from "./../layouts/BoxContent";
-import { changeBusan } from './../redux/actions/sections/homeActions';
+import { changeBusan } from '../redux/actions/sections/homeActions';
 
 /* images */
 const cakeImage = require('../multimedia/images/cake.jpg');

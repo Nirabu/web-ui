@@ -8,6 +8,7 @@ interface HomeBoxProps {
     contentData: string;
     changeItem?: any;
     image?: any;
+
     titleMain?: string;
     contentFooter?: string;
     value?: string;
@@ -26,7 +27,7 @@ const BoxContent: React.FC<HomeBoxProps> = (props) => {
     }
 
     function textEventHandler2() {
-        props.add(props.text2);
+        props.changeItem('test');
     }
 
     return (
