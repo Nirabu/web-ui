@@ -17,8 +17,11 @@ import {
 /* Containers */
 import DefaultHeader from "./../layouts/default/DefaultHeader";
 import DefaultFooter from "./../layouts/default/DefaultFooter";
-import BoxContent from "./../layouts/BoxContent";
+import BoxLayout from "../layouts/BoxLayout";
 import { changeBusan } from '../redux/actions/sections/homeActions';
+import HomeCafeContainer from "../containers/home/HomeCafeContainer";
+import HomeNewsContainer from "../containers/home/HomeNewsContainer";
+import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
 
 /* images */
 const cakeImage = require('../multimedia/images/cake.jpg');
@@ -64,11 +67,7 @@ export const Home: React.FC<AppProps> = props => {
                 {/*TODO: Add picture, description and icon to box*/}
                 <div className="home-main-cafe">
                     <div className="box-cafe">
-                        <BoxContent
-                            titleHeader="Cafe content"
-                            button1={"Recipe"}
-                            button2={"Pictures"}
-                            contentData={'New type of cake'}
+                        <HomeCafeContainer
                             image={cakeImage}
                             changeItem={props.changeCake}
                         />
@@ -77,11 +76,7 @@ export const Home: React.FC<AppProps> = props => {
 
                 <div className="home-main-shopping">
                     <div className="box-shopping">
-                        <BoxContent
-                            titleHeader="Shopping content"
-                            button1={"Buy"}
-                            button2={"Wishlist"}
-                            contentData={'New shoes available!'}
+                        <HomeShoppingContainer
                             image={shoesImage}
                             changeItem={props.changeShoes}
                         />
@@ -90,11 +85,7 @@ export const Home: React.FC<AppProps> = props => {
 
                 <div className="home-main-news">
                     <div className="box-news">
-                        <BoxContent
-                            titleHeader="News content"
-                            button1={"Read more"}
-                            button2={"Read later"}
-                            contentData={'Busan opened a new bridge!'}
+                        <HomeNewsContainer
                             image={busanImage}
                             changeItem={props.changeBusan}
                         />

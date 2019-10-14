@@ -2,6 +2,7 @@ import * as React from 'react';
 import BoxMain from "./box/parts/BoxMain";
 import BoxHeader from "./box/parts/BoxHeader";
 import store from "../redux/store";
+import {useEffect} from "react";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -20,14 +21,20 @@ interface HomeBoxProps {
     text2?: string;
 }
 
-const BoxContent: React.FC<HomeBoxProps> = (props) => {
+/* imports json data. TODO: Replace with API later. */
+let cafeData = require('../middleware/data/cafe.json');
+
+const BoxLayout: React.FC<HomeBoxProps> = (props) => {
+
+
     function textEventHandler() {
-        props.changeItem('test');
+        props.changeItem('test1');
         console.log(store.getState());
     }
 
     function textEventHandler2() {
-        props.changeItem('test');
+        props.changeItem('test2');
+        console.log(store.getState());
     }
 
     return (
@@ -53,4 +60,4 @@ const BoxContent: React.FC<HomeBoxProps> = (props) => {
 //     value: 'It is default now'
 // };
 
-export default BoxContent;
+export default BoxLayout;
