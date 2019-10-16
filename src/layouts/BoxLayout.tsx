@@ -7,7 +7,7 @@ import {useEffect} from "react";
 interface HomeBoxProps {
     titleHeader: string;
     contentData: string;
-    changeItem?: any;
+    changeItem: any;
     image?: any;
 
     titleMain?: string;
@@ -25,8 +25,6 @@ interface HomeBoxProps {
 let cafeData = require('../middleware/data/cafe.json');
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
-
-
     function textEventHandler() {
         props.changeItem('test1');
         console.log(store.getState());

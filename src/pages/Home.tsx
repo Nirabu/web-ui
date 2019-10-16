@@ -1,16 +1,7 @@
-import React, {useEffect} from "react";
+import * as React from "react";
 
 /* Redux */
 import store from "../redux/store";
-import {connect} from "react-redux";
-
-import {addItem, changeItem} from "../redux/actions/switchActions";
-import {
-    changeCake,
-    changeCoffee,
-    changeShoes,
-    changeSeoul
-} from "../redux/actions/sections/homeActions";
 
 /* Components and layouts */
 /* functions */
@@ -18,7 +9,7 @@ import {
 import DefaultHeader from "./../layouts/default/DefaultHeader";
 import DefaultFooter from "./../layouts/default/DefaultFooter";
 import BoxLayout from "../layouts/BoxLayout";
-import { changeBusan } from '../redux/actions/sections/homeActions';
+import {changeBusan} from '../redux/actions/sections/homeActions';
 import HomeCafeContainer from "../containers/home/HomeCafeContainer";
 import HomeNewsContainer from "../containers/home/HomeNewsContainer";
 import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
@@ -30,24 +21,12 @@ const busanImage = require('../multimedia/images/busan.jpg');
 
 interface AppProps {
     item: any;
-    addItem: any;
-    toggleItem: any;
-    value: string;
-
-    coffee: string;
-    cake: string;
-    shoes: string;
-    dress: string;
-    busan: string;
-    seoul: string;
-
-    changeCoffee: any;
-    changeCake: any;
-    changeShoes: any;
-    changeBusan: any;
+    addItem?: any;
+    toggleItem?: any;
+    value?: string;
 }
 
-export const Home: React.FC<AppProps> = props => {
+const Home: React.FC<AppProps> = props => {
     function showState() {
         console.log(store.getState());
         console.log(props.value);
@@ -63,13 +42,12 @@ export const Home: React.FC<AppProps> = props => {
                 <div className="home-main-header">
                     <div className="home-main-header-title"> </div>
                 </div>
-                
+
                 {/*TODO: Add picture, description and icon to box*/}
                 <div className="home-main-cafe">
                     <div className="box-cafe">
                         <HomeCafeContainer
                             image={cakeImage}
-                            changeItem={props.changeCake}
                         />
                     </div>
                 </div>
@@ -78,7 +56,6 @@ export const Home: React.FC<AppProps> = props => {
                     <div className="box-shopping">
                         <HomeShoppingContainer
                             image={shoesImage}
-                            changeItem={props.changeShoes}
                         />
                     </div>
                 </div>
@@ -87,7 +64,6 @@ export const Home: React.FC<AppProps> = props => {
                     <div className="box-news">
                         <HomeNewsContainer
                             image={busanImage}
-                            changeItem={props.changeBusan}
                         />
                     </div>
                 </div>
@@ -100,31 +76,5 @@ export const Home: React.FC<AppProps> = props => {
     );
 };
 
-// TODO: contain changing data.
-const mapStateToProps = (state: any) => {
-    return {
-        coffee: state.cafeReducer.coffee,
-        cake: state.cafeReducer.cake,
-        shoes: state.shoppingReducer.shoes,
-        dress: state.shoppingReducer.dress,
-        seoul: state.newsReducer.seoul,
-        busan: state.newsReducer.busan,
-    };
-};
+export default Home;
 
-// TODO: These reducers change from default to new state.
-const mapDispatchToProps = (dispatch: any) => {
-    return {
-        changeCoffee: (text: string) => dispatch(changeCoffee(text)),
-        changeCake: (text: string) => dispatch(changeCake(text)),
-        changeShoes: (text: string) => dispatch(changeShoes(text)),
-        changeBusan: (text: string) => dispatch(changeBusan(text))
-    };
-};
-
-const AppContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Home);
-
-export default AppContainer;

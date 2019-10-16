@@ -2,15 +2,20 @@ import * as React from "react";
 import {useEffect} from "react";
 import {Box} from "@material-ui/core";
 import BoxLayout from "../../layouts/BoxLayout";
+import {changeCoffee, changeCake} from "../../redux/actions/sections/homeActions";
+import {connect} from "react-redux";
 
 let homeCafeData = require('./../../middleware/data/cafe.json');
 
-interface CafeContainerProps {
+interface HomeCafeContainerProps {
     image: any;
-    changeItem: any;
+    cake: string;
+    coffee: string;
+    changeCoffee: any;
+    changeCake: any;
 }
 
-const HomeCafeContainer: React.FC<CafeContainerProps> = (props) => {
+export const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
     /* On upload, but stopped at refresh. */
     useEffect(() => {
 
@@ -19,17 +24,39 @@ const HomeCafeContainer: React.FC<CafeContainerProps> = (props) => {
     return (
         <>
             <BoxLayout
-                titleHeader="Cafe content"
+                titleHeader={"Cafe content"}
                 button1={"Recipe"}
                 button2={"Pictures"}
                 contentData={'New type of cake'}
                 image={props.image}
-                changeItem={props.changeItem}
+                changeItem={props.changeCake}
+
             />
+            <button
+            >
+                {props.cake}
+            </button>
         </>
     )
 };
 
-/* Enable redux here instead of sending down everything (?). */
+const mapStateToProps = (state: any) => {
+    return {
+        coffee: state.cafeReducer.coffee,
+        cake: state.cafeReducer.cake
+    };
+};
 
-export default HomeCafeContainer;
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+        changeCoffee: (text: string) => dispatch(changeCoffee(text)),
+        changeCake: (text: string) => dispatch(changeCake(text))
+    }
+};
+
+const HomeCafeState = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(HomeCafeContainer);
+
+export default HomeCafeState;

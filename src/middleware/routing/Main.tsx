@@ -4,7 +4,7 @@ import {
     Switch as RouterSwitch
 } from 'react-router-dom';
 
-import {Home} from "../../pages/Home";
+import Home from "../../pages/Home";
 
 export const Main = () => (
     <RouterSwitch>
