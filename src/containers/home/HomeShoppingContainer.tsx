@@ -1,15 +1,20 @@
 import * as React from "react";
 import {useEffect} from "react";
-import {Box} from "@material-ui/core";
-import BoxLayout from "../../layouts/BoxLayout";
-import {changeDress, changeShoes} from "../../redux/actions/sections/homeActions";
-import {connect} from "react-redux";
 
+/* redux */
+import {connect} from "react-redux";
+import {changeDress, changeShoes} from "../../redux/actions/sections/homeActions";
+
+/* layouts */
+import BoxLayout from "../../layouts/BoxLayout";
+
+/* json */
 let homeShoppingData = require('./../../middleware/data/shopping.json');
 
-interface HomeShoppingContainerProps {
-    image: any;
+/* images */
+const shoesImage = require('../../multimedia/images/shoes.jpg');
 
+interface HomeShoppingContainerProps {
     shoes: string;
     dress: string;
     changeDress: any;
@@ -18,8 +23,15 @@ interface HomeShoppingContainerProps {
 
 const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
     /* On upload, but stopped at refresh. */
-    useEffect(() => {
 
+    useEffect(() => {
+        const fetchComment = async () => {
+            // setLoading(true);
+            // const res = await axiosl.get('url')
+            // *change state*
+            // setLoading(false);
+
+        }
     }, []);
 
     return (
@@ -29,7 +41,7 @@ const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
                 button1={"Recipe"}
                 button2={"Pictures"}
                 contentData={'New type of cake'}
-                image={props.image}
+                image={shoesImage}
                 changeItem={props.changeShoes}
             />
         </>

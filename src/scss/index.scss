@@ -3,6 +3,10 @@
 @import './base/base';
 @import './base/fonts';
 
+@import 'mediaqueries/mediaqueries';
+
+@import 'mixins/_homeMixin';
+
 @import 'pages/home';
 @import './modules/layouts/defaultHeader';
 @import './modules/layouts/boxContent';

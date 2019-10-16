@@ -2,12 +2,5 @@
   width: 5rem;
   height: 2rem;
 
-  &__aquarium {
-  }
-  &__cafe {
-  }
-  &__garden {
-  }
-  &__playground {
-  }
+  @include buttonMixin($cafe);
 }

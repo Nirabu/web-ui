@@ -1,0 +1,6 @@
+// Global mixin for buttons
+@mixin buttonMixin($color: #cecece) {
+  background-color: $color;
+}
+
+

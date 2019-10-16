@@ -1,13 +1,20 @@
 import * as React from "react";
 import {useEffect} from "react";
-import BoxLayout from "../../layouts/BoxLayout";
-import {changeBusan, changeSeoul} from "../../redux/actions/sections/homeActions";
-import {connect} from "react-redux";
 
+/* redux */
+import {connect} from "react-redux";
+import {changeBusan, changeSeoul} from "../../redux/actions/sections/homeActions";
+
+/* layouts */
+import BoxLayout from "../../layouts/BoxLayout";
+
+/* json data */
 let homeNewsData = require('./../../middleware/data/news.json');
 
+/* images */
+const busanImage = require('../../multimedia/images/busan.jpg');
+
 interface HomeNewsContainerProps {
-    image: any;
     seoul: string;
     busan: string;
     changeBusan: any;
@@ -17,7 +24,13 @@ interface HomeNewsContainerProps {
 const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
     /* On upload, but stopped at refresh. */
     useEffect(() => {
+        const fetchComment = async () => {
+            // setLoading(true);
+            // const res = await axiosl.get('url')
+            // *change state*
+            // setLoading(false);
 
+        }
     }, []);
 
     return (
@@ -27,7 +40,7 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
                 button1={"Recipe"}
                 button2={"Pictures"}
                 contentData={'New type of cake'}
-                image={props.image}
+                image={busanImage}
                 changeItem={props.changeBusan}
             />
         </>

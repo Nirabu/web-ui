@@ -1,24 +1,33 @@
 import * as React from "react";
 import {useEffect} from "react";
-import {Box} from "@material-ui/core";
-import BoxLayout from "../../layouts/BoxLayout";
-import {changeCoffee, changeCake} from "../../redux/actions/sections/homeActions";
 import {connect} from "react-redux";
 
+/* Layouts. */
+import BoxLayout from "../../layouts/BoxLayout";
+import {changeCoffee, changeCake} from "../../redux/actions/sections/homeActions";
+
+/* Json data. */
 let homeCafeData = require('./../../middleware/data/cafe.json');
 
+/* Images. */
+const cakeImage = require('../../multimedia/images/cake.jpg');
+
 interface HomeCafeContainerProps {
-    image: any;
     cake: string;
     coffee: string;
     changeCoffee: any;
     changeCake: any;
 }
 
-export const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
+const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
     /* On upload, but stopped at refresh. */
     useEffect(() => {
-
+        const fetchComment = async () => {
+            // setLoading(true);
+            // const res = await axiosl.get('url')
+            // *change state*
+            // setLoading(false);
+        }
     }, []);
 
     return (
@@ -28,11 +37,11 @@ export const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
                 button1={"Recipe"}
                 button2={"Pictures"}
                 contentData={'New type of cake'}
-                image={props.image}
+                image={cakeImage}
                 changeItem={props.changeCake}
-
             />
             <button
+                className='button'
             >
                 {props.cake}
             </button>

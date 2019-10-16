@@ -21,9 +21,6 @@ interface HomeBoxProps {
     text2?: string;
 }
 
-/* imports json data. TODO: Replace with API later. */
-let cafeData = require('../middleware/data/cafe.json');
-
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
     function textEventHandler() {
         props.changeItem('test1');

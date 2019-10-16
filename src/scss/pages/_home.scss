@@ -11,6 +11,11 @@
 
   padding-top: 2rem;
 
+  //@include breakpoint(medium) {
+  //  width: 100%;
+  //  background: blue;
+  //}
+
   /* Top page */
   .home-header {
     grid-area: home-header;
