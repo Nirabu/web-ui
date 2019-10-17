@@ -3,7 +3,7 @@
 @import './base/base';
 @import './base/fonts';
 
-@import 'mediaqueries/mediaqueries';
+@import 'mixins/mediaqueries';
 
 @import './mixins/_homeMixin';
 @import './mixins/_mobileFirst';
