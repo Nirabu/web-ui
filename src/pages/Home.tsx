@@ -54,7 +54,7 @@ const Home: React.FC<AppProps> = props => {
             </main>
 
             <footer className="home-footer">
-                <DefaultFooter version={`v0.2.2`}/>
+                <DefaultFooter version={`v0.2.3`}/>
             </footer>
         </div>
     );
