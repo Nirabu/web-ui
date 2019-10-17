@@ -30,27 +30,27 @@ const Home: React.FC<AppProps> = props => {
             </header>
 
             <main className="home-main">
-                <div className="home-main-header">
+                <header className="home-main-header">
                     <div className="home-main-header-title"> </div>
-                </div>
+                </header>
 
-                <div className="home-main-cafe">
+                <section className="home-main-cafe">
                     <div className="box-cafe">
                         <HomeCafeContainer/>
                     </div>
-                </div>
+                </section>
 
-                <div className="home-main-shopping">
+                <section className="home-main-shopping">
                     <div className="box-shopping">
                         <HomeShoppingContainer/>
                     </div>
-                </div>
+                </section>
 
-                <div className="home-main-news">
+                <section className="home-main-news">
                     <div className="box-news">
                         <HomeNewsContainer/>
                     </div>
-                </div>
+                </section>
             </main>
 
             <footer className="home-footer">

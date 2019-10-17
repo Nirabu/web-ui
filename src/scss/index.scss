@@ -5,7 +5,10 @@
 
 @import 'mediaqueries/mediaqueries';
 
-@import 'mixins/_homeMixin';
+@import './mixins/_homeMixin';
+@import './mixins/_mobileFirst';
+@import './mixins/_desktopFirst';
+
 
 @import 'pages/home';
 @import './modules/layouts/defaultHeader';
