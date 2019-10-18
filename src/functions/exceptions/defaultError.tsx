@@ -1,5 +1,5 @@
 import * as React from 'react';
 
-export function defaultError() {
+export function defaultError(): null {
     return null;
 }

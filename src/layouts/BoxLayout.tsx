@@ -7,18 +7,11 @@ import {useEffect} from "react";
 interface HomeBoxProps {
     titleHeader: string;
     contentData: string;
-    changeItem: any;
-    image?: any;
+    changeItem: (text: string) => string;
+    image?: string;
 
-    titleMain?: string;
-    contentFooter?: string;
-    value?: string;
-    add?: any;
-    prop?: any;
     button1: string;
     button2: string;
-    text1?: string;
-    text2?: string;
 }
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
@@ -39,17 +32,21 @@ const BoxLayout: React.FC<HomeBoxProps> = (props) => {
             </header>
 
             <main className='boxContent-main'>
-                <BoxMain content={props.contentData} />
+                <BoxMain content={props.contentData}/>
                 <picture>
-                    <source srcSet={props.image} media="(max-width: 24em)" />
+                    <source srcSet={props.image} media="(max-width: 24em)"/>
                     <img src={props.image} alt="picture" width="200" height="200"/>
                 </picture>
 
                 <div className='boxContent-video'>
                     <div className='embed-container'>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dx3GxpitvbY" frameBorder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen> </iframe>
+                        <iframe
+                            width="560"
+                            height="315" src="https://www.youtube.com/embed/dx3GxpitvbY"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen>
+                        </iframe>
                     </div>
                 </div>
             </main>

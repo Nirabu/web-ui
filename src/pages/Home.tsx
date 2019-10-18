@@ -13,7 +13,6 @@ import HomeNewsContainer from "../containers/home/HomeNewsContainer";
 import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
 
 interface AppProps {
-    item: any;
     value?: string;
 }
 

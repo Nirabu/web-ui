@@ -17,8 +17,8 @@ const busanImage = require('../../multimedia/images/busan.jpg');
 interface HomeNewsContainerProps {
     seoul: string;
     busan: string;
-    changeBusan: any;
-    changeSeoul: any;
+    changeBusan: (text: string) => string;
+    changeSeoul: (text: string) => string;
 }
 
 const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {

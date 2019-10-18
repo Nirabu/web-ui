@@ -15,8 +15,8 @@ const cakeImage = require('../../multimedia/images/cake.jpg');
 interface HomeCafeContainerProps {
     cake: string;
     coffee: string;
-    changeCoffee: any;
-    changeCake: any;
+    changeCoffee: (text:string) => string;
+    changeCake: (text:string) => string;
 }
 
 const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {

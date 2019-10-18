@@ -17,8 +17,8 @@ const shoesImage = require('../../multimedia/images/shoes.jpg');
 interface HomeShoppingContainerProps {
     shoes: string;
     dress: string;
-    changeDress: any;
-    changeShoes: any;
+    changeDress: (text: string) => string;
+    changeShoes: (text: string) => string;
 }
 
 const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
@@ -27,7 +27,7 @@ const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
     useEffect(() => {
         const fetchComment = async () => {
             // setLoading(true);
-            // const res = await axiosl.get('url')
+            // const res = await axios.get('url')
             // *change state*
             // setLoading(false);
 
