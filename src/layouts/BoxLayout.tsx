@@ -32,23 +32,16 @@ const BoxLayout: React.FC<HomeBoxProps> = (props) => {
             </header>
 
             <main className='boxContent-main'>
-                <BoxMain content={props.contentData}/>
-                <picture>
-                    <source srcSet={props.image} media="(max-width: 24em)"/>
-                    <img src={props.image} alt="picture" width="200" height="200"/>
-                </picture>
+                <section className='boxContent-main-picture'>
+                    <picture>
+                        <source srcSet={props.image} media="(max-width: 24em)"/>
+                        <img src={props.image} alt="picture" width="150" height="150"/>
+                    </picture>
+                </section>
 
-                <div className='boxContent-video'>
-                    <div className='embed-container'>
-                        <iframe
-                            width="560"
-                            height="315" src="https://www.youtube.com/embed/dx3GxpitvbY"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-                </div>
+                <section className='boxContent-main-data'>
+                    <BoxMain content={props.contentData}/>
+                </section>
             </main>
 
             <footer className='boxContent-footer'>

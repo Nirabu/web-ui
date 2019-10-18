@@ -2,7 +2,7 @@
   display: grid;
   grid: {
     template-columns: 1fr 1fr 1fr;
-    template-rows: 1fr 1fr 1fr;
+    template-rows: 80px 1fr 22px;
     template-areas:
             ". boxContent-header ."
             ". boxContent-main ."
@@ -18,12 +18,32 @@
 
   &-main {
     grid-area: boxContent-main;
+    grid: {
+      template-columns: 1fr 1fr 1fr;
+      template-rows: 1fr 1fr;
+      template-areas:
+              ". boxContent-main-picture ."
+              ". boxContent-main-data .";
+    }
 
+
+    &-picture {
+      grid-area: boxContent-main-picture;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-data {
+      grid-area: boxContent-main-data;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &-footer {
     grid-area: boxContent-footer;
-    float: right;
+    display: flex;
+    justify-content: center;
 
   }
 }
