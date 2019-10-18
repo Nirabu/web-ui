@@ -38,8 +38,8 @@ const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
         <>
             <BoxLayout
                 titleHeader="Cafe content"
-                button1={"Recipe"}
-                button2={"Pictures"}
+                buttonName1={"Recipe"}
+                buttonName2={"Pictures"}
                 contentData={'New type of cake'}
                 image={shoesImage}
                 changeItem={props.changeShoes}

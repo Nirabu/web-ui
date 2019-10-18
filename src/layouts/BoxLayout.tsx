@@ -10,8 +10,8 @@ interface HomeBoxProps {
     changeItem: (text: string) => string;
     image?: string;
 
-    button1: string;
-    button2: string;
+    buttonName1: string;
+    buttonName2: string;
 }
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
@@ -52,8 +52,8 @@ const BoxLayout: React.FC<HomeBoxProps> = (props) => {
             </main>
 
             <footer className='boxContent-footer'>
-                <button onClick={() => textEventHandler()}>{props.button1}</button>
-                <button onClick={() => textEventHandler2()}>{props.button2}</button>
+                <button onClick={() => textEventHandler()}>{props.buttonName1}</button>
+                <button onClick={() => textEventHandler2()}>{props.buttonName2}</button>
             </footer>
         </div>
     )
