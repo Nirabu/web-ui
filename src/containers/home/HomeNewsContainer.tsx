@@ -19,6 +19,7 @@ interface HomeNewsContainerProps {
     busan: string;
     changeBusan: (text: string) => string;
     changeSeoul: (text: string) => string;
+    loading: boolean;
 }
 
 const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
@@ -41,6 +42,7 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
                 contentData={props.busan}
                 image={busanImage}
                 changeItem={props.changeBusan}
+                loading={props.loading}
             />
         </>
     )
@@ -50,6 +52,7 @@ const mapStateToProps = (state: any) => {
     return {
         seoul: state.newsReducer.seoul,
         busan: state.newsReducer.busan,
+        loading: state.loadingReducer.loading
     }
 };
 

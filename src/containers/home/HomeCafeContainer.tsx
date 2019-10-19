@@ -1,10 +1,15 @@
 import * as React from "react";
 import {useEffect} from "react";
 import {connect} from "react-redux";
+import axios from 'axios';
 
 /* Layouts. */
 import BoxLayout from "../../layouts/BoxLayout";
 import {changeCoffee, changeCake} from "../../redux/actions/sections/homeActions";
+import store from "../../redux/store";
+import {setLoading} from "../../redux/actions/loadingActions";
+import {Simulate} from "react-dom/test-utils";
+import {loadingReducer} from "../../redux/reducers/loadingReducers";
 
 /* Json data. */
 let homeCafeData = require('./../../middleware/data/cafe.json');
@@ -15,19 +20,28 @@ const cakeImage = require('../../multimedia/images/cake.jpg');
 interface HomeCafeContainerProps {
     cake: string;
     coffee: string;
+    loading: boolean;
     changeCoffee: (text:string) => string;
     changeCake: (text:string) => string;
+    setLoading: (loading: boolean) => boolean;
 }
 
 const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
     /* On upload, but stopped at refresh. */
     useEffect(() => {
-        const fetchComment = async () => {
+        const fetchTitle = async () => {
             // setLoading(true);
             // const res = await axiosl.get('url')
             // *change state*
-            // setLoading(false);
-        }
+            // setLoading(false); https://jsonplaceholder.typicode.com/photos/1
+            props.setLoading(true);
+            const res = await
+                axios.get('https://jsonplaceholder.typicode.com/photos/1');
+            props.changeCake(res.data.title);
+            props.setLoading(false);
+        };
+
+        fetchTitle();
     }, []);
 
     return (
@@ -39,22 +53,29 @@ const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
                 contentData={props.cake}
                 image={cakeImage}
                 changeItem={props.changeCake}
+                loading={props.loading}
             />
         </>
     )
 };
 
 const mapStateToProps = (state: any) => {
+    console.log(store.getState());
+    console.log('loading reducer');
+    console.log(state.loadingReducer.loading);
+
     return {
         coffee: state.cafeReducer.coffee,
-        cake: state.cafeReducer.cake
+        cake: state.cafeReducer.cake,
+        loading: state.loadingReducer.loading
     };
 };
 
 const mapDispatchToProps = (dispatch: any) => {
     return {
         changeCoffee: (text: string) => dispatch(changeCoffee(text)),
-        changeCake: (text: string) => dispatch(changeCake(text))
+        changeCake: (text: string) => dispatch(changeCake(text)),
+        setLoading: (loading: boolean) => dispatch(setLoading(loading))
     }
 };
 

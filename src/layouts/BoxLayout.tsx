@@ -8,12 +8,18 @@ interface HomeBoxProps {
     contentData: string;
     changeItem: (text: string) => string;
     image?: string;
+    loading: boolean;
 
     buttonName1: string;
     buttonName2: string;
 }
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
+
+    if (props.loading) {
+        return <h3>Loading</h3>
+    }
+
     function textEventHandler() {
         props.changeItem('test1');
         console.log(store.getState());

@@ -13,6 +13,9 @@ export const CHANGE_BUSAN = 'CHANGE_BUSAN';
 export const CHANGE_SEOUL = 'CHANGE_SEOUL';
 export const CHANGE_COUNTRY = 'CHANGE_COUNTRY';
 
+/* Utilities */
+export const SET_LOADING = 'SET_LOADING';
+
 /* example */
 // export const ItemFilter = {
 //     SHOW_TEXT_WOMEN: 'SHOW_TEXT_WOMEN',
