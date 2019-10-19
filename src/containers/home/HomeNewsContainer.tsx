@@ -29,17 +29,16 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
             // const res = await axiosl.get('url')
             // *change state*
             // setLoading(false);
-
         }
     }, []);
 
     return (
         <>
             <BoxLayout
-                titleHeader="Cafe content"
+                titleHeader="News content"
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
-                contentData={'New type of cake'}
+                contentData={props.busan}
                 image={busanImage}
                 changeItem={props.changeBusan}
             />

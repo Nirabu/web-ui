@@ -36,15 +36,10 @@ const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
                 titleHeader={"Cafe content"}
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
-                contentData={'New type of cake'}
+                contentData={props.cake}
                 image={cakeImage}
                 changeItem={props.changeCake}
             />
-            <button
-                className='button'
-            >
-                {props.cake}
-            </button>
         </>
     )
 };

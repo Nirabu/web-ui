@@ -29,10 +29,6 @@ const Home: React.FC<AppProps> = props => {
             </header>
 
             <main className="home-main">
-                <header className="home-main-header">
-                    <div className="home-main-header-title"> </div>
-                </header>
-
                 <section className="home-main-cafe">
                     <div className="box-cafe">
                         <HomeCafeContainer/>

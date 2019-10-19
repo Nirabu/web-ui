@@ -2,7 +2,6 @@ import * as React from 'react';
 import BoxMain from "./box/parts/BoxMain";
 import BoxHeader from "./box/parts/BoxHeader";
 import store from "../redux/store";
-import {useEffect} from "react";
 
 interface HomeBoxProps {
     titleHeader: string;

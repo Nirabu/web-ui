@@ -40,7 +40,7 @@ const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
                 titleHeader="Cafe content"
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
-                contentData={'New type of cake'}
+                contentData={props.shoes}
                 image={shoesImage}
                 changeItem={props.changeShoes}
             />
