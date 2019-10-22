@@ -27,13 +27,8 @@ interface HomeCafeContainerProps {
 }
 
 const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
-    /* On upload, but stopped at refresh. */
     useEffect(() => {
         const fetchTitle = async () => {
-            // setLoading(true);
-            // const res = await axiosl.get('url')
-            // *change state*
-            // setLoading(false); https://jsonplaceholder.typicode.com/photos/1
             props.setLoading(true);
             const res = await
                 axios.get('https://jsonplaceholder.typicode.com/photos/1');
@@ -47,7 +42,7 @@ const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
     return (
         <>
             <BoxLayout
-                titleHeader={"Cafe content"}
+                titleHeader={"Cafe"}
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
                 contentData={props.cake}

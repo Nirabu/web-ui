@@ -1,5 +1,6 @@
 import * as React from "react";
 import {useEffect} from "react";
+import axios from 'axios';
 
 /* redux */
 import {connect} from "react-redux";
@@ -7,6 +8,7 @@ import {changeDress, changeShoes} from "../../redux/actions/sections/homeActions
 
 /* layouts */
 import BoxLayout from "../../layouts/BoxLayout";
+import {setLoading} from "../../redux/actions/loadingActions";
 
 /* json */
 let homeShoppingData = require('./../../middleware/data/shopping.json');
@@ -20,26 +22,27 @@ interface HomeShoppingContainerProps {
     loading: boolean;
     changeDress: (text: string) => string;
     changeShoes: (text: string) => string;
+    setLoading: (loading: boolean) => boolean;
 
 }
 
 const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
-    /* On upload, but stopped at refresh. */
-
     useEffect(() => {
-        const fetchComment = async () => {
-            // setLoading(true);
-            // const res = await axios.get('url')
-            // *change state*
-            // setLoading(false);
+        const fetchTitle = async () => {
+            props.setLoading(true);
+            const res = await
+                axios.get('https://jsonplaceholder.typicode.com/photos/3');
+            props.changeShoes(res.data.title);
+            props.setLoading(false);
+        };
 
-        }
+        fetchTitle();
     }, []);
 
     return (
         <>
             <BoxLayout
-                titleHeader="Cafe content"
+                titleHeader="Shopping"
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
                 contentData={props.shoes}
@@ -62,7 +65,8 @@ const mapStateToProps = (state: any) => {
 const mapDispatchToProps = (dispatch: any) => {
     return {
         changeShoes: (text: string) => dispatch(changeShoes(text)),
-        changeDress: (text: string) => dispatch(changeDress(text))
+        changeDress: (text: string) => dispatch(changeDress(text)),
+        setLoading: (loading: boolean) => dispatch(setLoading(loading))
     }
 };
 
