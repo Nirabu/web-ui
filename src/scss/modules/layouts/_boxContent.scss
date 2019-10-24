@@ -40,7 +40,6 @@ $boxContent__footer: "boxContent__footer";
       grid-area: box_header_pagination;
       display: flex;
       align-self: center;
-
     }
   }
 
@@ -49,7 +48,7 @@ $boxContent__footer: "boxContent__footer";
     background-color: #c68cd6;
     display: grid;
     grid: {
-      template-columns: repeat(2, 1fr);
+      template-columns: 170px 1fr;
       template-rows: 1fr 1fr;
       template-areas:
               "boxContent-main-image boxContent-main-data"
@@ -58,13 +57,11 @@ $boxContent__footer: "boxContent__footer";
 
     &__picture {
       grid-area: boxContent-main-image;
-      display: flex;
       justify-content: center;
     }
 
     &__data {
       grid-area: boxContent-main-data;
-      display: flex;
       justify-content: center;
     }
   }
