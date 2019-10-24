@@ -2,7 +2,7 @@ import * as React from "react";
 
 const VideoContainer: React.FC = () => {
     return (
-        <div className='boxContent-video'>
+        <div className='boxContent__video'>
             <div className='embed-container'>
                 <iframe
                     width="560"

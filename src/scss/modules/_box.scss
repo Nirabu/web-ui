@@ -1,19 +1,19 @@
 .box {
   background-color: #fff;
 
-  &-cafe {
+  &__cafe {
     grid-area: home-cafe;
   }
 
-  &-news {
+  &__news {
     grid-area: home-news;
   }
 
-  &-shopping {
+  &__shopping {
     grid-area: home-shopping;
   }
 
-  &-container {
+  &__container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -26,19 +26,19 @@
       ". box-footer box-footer box-footer box-footer box-footer ."
       ". . . . . . .";
 
-    &-header {
+    &__header {
       grid-area: box-header;
       color: #d69f53;
     }
 
-    &-main {
+    &__main {
       grid-area: box-main;
       border: 1px solid lightgray;
       text-align: center;
       font-size: 0.8em;
     }
 
-    &-footer {
+    &__footer {
       grid-area: box-footer;
     }
   }

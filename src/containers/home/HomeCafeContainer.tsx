@@ -55,10 +55,6 @@ const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
 };
 
 const mapStateToProps = (state: any) => {
-    console.log(store.getState());
-    console.log('loading reducer');
-    console.log(state.loadingReducer.loading);
-
     return {
         coffee: state.cafeReducer.coffee,
         cake: state.cafeReducer.cake,

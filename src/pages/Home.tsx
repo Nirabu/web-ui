@@ -18,39 +18,39 @@ interface AppProps {
 
 const Home: React.FC<AppProps> = props => {
     function showState() {
-        console.log(store.getState());
-        console.log(props.value);
+        console.log('Result:')
     }
-
     return (
         <div className="home">
-            <header className="home-header">
+            <header className="home__header">
                 <DefaultHeader title={"Nitji"}/>
             </header>
 
-            <main className="home-main">
-                <section className="home-main-cafe">
-                    <div className="box-cafe">
+            <main className="home__main">
+                <section className="home__main__cafe">
+                    <div className="box__cafe">
                         <HomeCafeContainer/>
                     </div>
                 </section>
 
-                <section className="home-main-shopping">
-                    <div className="box-shopping">
+                <section className="home__main__shopping">
+                    <div className="box__shopping">
                         <HomeShoppingContainer/>
                     </div>
                 </section>
 
-                <section className="home-main-news">
-                    <div className="box-news">
+                <section className="home__main__news">
+                    <div className="box__news">
                         <HomeNewsContainer/>
                     </div>
                 </section>
             </main>
 
-            <footer className="home-footer">
+            <footer className="home__footer">
                 <DefaultFooter version={`v0.2.4`}/>
             </footer>
+
+            {showState()}
         </div>
     );
 };

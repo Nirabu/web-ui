@@ -1,10 +1,30 @@
 {
   "desserts": {
-    "icecream": "icecream",
-    "cake": "cake"
+    "icecream": {
+      "name": "snow",
+      "price": 10
+    },
+    "cake": {
+      "name": "cream",
+      "price": 8
+    },
+    "muffin": {
+      "name": "muff",
+      "price": 5
+    }
   },
   "drinks": {
-    "coffee": "coffee",
-    "tea": "tea"
+    "tea": {
+      "black": {
+        "name": "lady",
+        "price": 20,
+        "sugar": false
+      },
+      "green": {
+        "name": "miss",
+        "price": 25,
+        "sugar": true
+      }
+    }
   }
 }

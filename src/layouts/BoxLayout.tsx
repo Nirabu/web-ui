@@ -2,6 +2,7 @@ import * as React from 'react';
 import BoxMain from "./box/parts/BoxMain";
 import BoxHeader from "./box/parts/BoxHeader";
 import store from "../redux/store";
+import {HomeBoxPagination} from "../components/Paginations";
 
 interface HomeBoxProps {
     titleHeader: string;
@@ -9,13 +10,11 @@ interface HomeBoxProps {
     changeItem: (text: string) => string;
     image?: string;
     loading: boolean;
-
     buttonName1: string;
     buttonName2: string;
 }
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
-
     if (props.loading) {
         return <h3>Loading</h3>
     }
@@ -32,24 +31,34 @@ const BoxLayout: React.FC<HomeBoxProps> = (props) => {
 
     return (
         <div className='boxContent'>
-            <header className='boxContent-header'>
-                <BoxHeader title={props.titleHeader}/>
+            <header className='boxContent__header'>
+                <section className='boxContent__header__title'>
+                    <BoxHeader title={props.titleHeader}/>
+                </section>
+
+                <section className='boxContent__header__pagination'>
+                    <HomeBoxPagination
+                        link0={'cafe'}
+                        link1={'cafe1'}
+                        link2={'cafe2'}
+                    />
+                </section>
             </header>
 
-            <main className='boxContent-main'>
-                <section className='boxContent-main-picture'>
+            <main className='boxContent__main'>
+                <section className='boxContent__main__picture'>
                     <picture>
                         <source srcSet={props.image} media="(max-width: 24em)"/>
                         <img src={props.image} alt="picture" width="150" height="150"/>
                     </picture>
                 </section>
 
-                <section className='boxContent-main-data'>
+                <section className='boxContent__main__data'>
                     <BoxMain content={props.contentData}/>
                 </section>
             </main>
 
-            <footer className='boxContent-footer'>
+            <footer className='boxContent__footer'>
                 <button onClick={() => textEventHandler()}>{props.buttonName1}</button>
                 <button onClick={() => textEventHandler2()}>{props.buttonName2}</button>
             </footer>

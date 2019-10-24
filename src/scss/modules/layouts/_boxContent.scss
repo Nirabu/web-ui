@@ -1,43 +1,76 @@
+$boxContent__header: "boxContent__header";
+
+$boxContent__main: "boxContent__main";
+$boxContent_main_image: "boxContent_main_image";
+$boxContent_main_data: "boxContent_main_data";
+
+$boxContent__footer: "boxContent__footer";
+
 .boxContent {
   display: grid;
   grid: {
     template-columns: 1fr 1fr 1fr;
-    template-rows: 80px 1fr 22px;
-    template-areas: ". boxContent-header ." ". boxContent-main ." ". boxContent-footer .";
+    template-rows: 1fr 680px 30px;
+    template-areas:
+            "boxContent__header boxContent__header boxContent_header"
+            "boxContent__main boxContent__main boxContent__main"
+            ". boxContent-footer .";
   }
 
-  &-header {
-    grid-area: boxContent-header;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.7rem;
-  }
+  &__header {
+    grid-area: boxContent__header;
+    margin: 0.7rem;
+    display: grid;
 
-  &-main {
-    grid-area: boxContent-main;
     grid: {
-      template-columns: 1fr 1fr 1fr;
-      template-rows: 1fr 1fr;
-      template-areas: ". boxContent-main-picture ." ". boxContent-main-data .";
+      template-columns: 100px 1fr;
+      template-rows: 70px;
+      template-areas:
+                "box_header_title box_header_pagination";
     }
 
-    &-picture {
-      grid-area: boxContent-main-picture;
+    &__title {
+      grid-area: box_header_title;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    &__pagination {
+      grid-area: box_header_pagination;
+      display: flex;
+      align-self: center;
+    }
+  }
+
+  &__main {
+    grid-area: boxContent__main;
+    background-color: #c68cd6;
+    display: grid;
+    grid: {
+      template-columns: repeat(2, 1fr);
+      template-rows: 1fr 1fr;
+      template-areas:
+              "boxContent-main-image boxContent-main-data"
+              "boxContent-main-image boxContent-main-data";
+    }
+
+    &__picture {
+      grid-area: boxContent-main-image;
       display: flex;
       justify-content: center;
     }
 
-    &-data {
+    &__data {
       grid-area: boxContent-main-data;
       display: flex;
       justify-content: center;
     }
   }
 
-  &-footer {
+  &__footer {
     grid-area: boxContent-footer;
     display: flex;
     justify-content: center;
-
   }
 }

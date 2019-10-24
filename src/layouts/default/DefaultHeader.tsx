@@ -12,11 +12,11 @@ interface DefaultHeader {
 const DefaultHeader: React.FC<DefaultHeader> = (props) => {
     return (
         <>
-            <header className='default-header-title'>
+            <header className='default__header__title'>
                 <TitleBig title={props.title}/>
             </header>
 
-            <article className='default-header-search'>
+            <article className='default__header__search'>
                 <SearchBox/>
             </article>
 

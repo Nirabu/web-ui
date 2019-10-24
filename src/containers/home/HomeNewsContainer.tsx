@@ -33,7 +33,7 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
                 axios.get('https://jsonplaceholder.typicode.com/photos/2');
             props.changeBusan(res.data.title);
             props.setLoading(false);
-        }
+        };
 
         fetchComment();
     }, []);
