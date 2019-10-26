@@ -10,7 +10,7 @@ $boxContent__footer: "boxContent__footer";
   display: grid;
   grid: {
     template-columns: 1fr 1fr 1fr;
-    template-rows: 1fr 680px 30px;
+    template-rows: 80px 680px 30px;
     template-areas:
             "boxContent__header boxContent__header boxContent_header"
             "boxContent__main boxContent__main boxContent__main"
@@ -33,19 +33,22 @@ $boxContent__footer: "boxContent__footer";
       grid-area: box_header_title;
       display: flex;
       justify-content: center;
-      align-content: center;
+      align-content: flex-end;
     }
 
     &__pagination {
       grid-area: box_header_pagination;
       display: flex;
-      align-self: center;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 0.8em;
+      height: 4.25rem;
     }
   }
 
   &__main {
     grid-area: boxContent__main;
-    background-color: #c68cd6;
+    background-color: #e2cfc1;
     display: grid;
     grid: {
       template-columns: 170px 1fr;

@@ -13,11 +13,11 @@ export const NavHome: React.FC = () => {
 
 export const NavAccount: React.FC = () => {
     return (
-        <ul>
-            <li><NavLink to='/signup'>Sign up</NavLink></li>
-            <li><NavLink to='/login'>Login</NavLink></li>
-            <li><NavLink to='/favorites'>Favorites</NavLink></li>
-            <li><NavLink to='/favorites'>History</NavLink></li>
+        <ul style={{fontSize: '0.7em'}}>
+            <li><NavLink to='/signup'>History</NavLink></li>
+            <li><NavLink to='/login'>Favorites</NavLink></li>
+            <li><NavLink to='/favorites'>Login</NavLink></li>
+            <li><NavLink to='/favorites'>Register</NavLink></li>
         </ul>
     )
 };

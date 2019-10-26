@@ -1,0 +1,62 @@
+@mixin home-main-content {
+  display: grid;
+  border-top: 2px solid rgb(107, 107, 107);
+  border-top: 2px solid rgb(107, 107, 107);
+  overflow: hidden;
+
+  grid: {
+    row-gap: 1rem;
+    column-gap: 1rem;
+    template-columns: 2fr 1fr;
+    template-rows: repeat(2, 1fr) repeat(1, 0.5fr);
+    template-areas:
+            "home-main-cafe home-main-shopping"
+            "home-main-news home-main-shopping"
+            "home-footer home-footer";
+  }
+
+  @include forSmallScreens(900) {
+    width: 100%;
+    grid: {
+      row-gap: 1rem;
+      column-gap: 1rem;
+      template-columns: 0.9fr;
+      template-rows: repeat(3, 1fr) repeat(1, 0.5fr);
+      template-areas:
+              "home-main-cafe"
+              "home-main-shopping"
+              "home-main-news"
+              "home-footer";
+    }
+  }
+
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-top: 1.5rem;
+  justify-content: center;
+  background-color: #eeeff3;
+
+  &__header {
+    grid-area: home-main-header;
+    background-color: white;
+  }
+
+  &__cafe {
+    grid-area: home-main-cafe;
+    background-color: white;
+    border: 1px solid #ffc891;
+  }
+
+  &__news {
+    grid-area: home-main-news;
+    background-color: white;
+    border: 1px solid #ffc891;
+
+  }
+
+  &__shopping {
+    grid-area: home-main-shopping;
+    background-color: white;
+    border: 1px solid #ffc891;
+  }
+}

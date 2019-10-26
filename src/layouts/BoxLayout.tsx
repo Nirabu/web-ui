@@ -12,6 +12,7 @@ interface HomeBoxProps {
     loading: boolean;
     buttonName1: string;
     buttonName2: string;
+    links: string[];
 }
 
 const BoxLayout: React.FC<HomeBoxProps> = (props) => {
@@ -38,9 +39,9 @@ const BoxLayout: React.FC<HomeBoxProps> = (props) => {
 
                 <section className='boxContent__header__pagination'>
                     <HomeBoxPagination
-                        link0={'cafe'}
-                        link1={'cafe1'}
-                        link2={'cafe2'}
+                        link0={props.links[0]}
+                        link1={props.links[1]}
+                        link2={props.links[2]}
                     />
                 </section>
             </header>

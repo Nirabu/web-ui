@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TitleBig} from "../../components/Titles";
+import {TitleBig, TitleMedium} from "../../components/Titles";
 
 import {Circle} from "../../components/Shapes";
 import {SearchBox} from "../../components/Search";
@@ -12,17 +12,20 @@ interface DefaultHeader {
 const DefaultHeader: React.FC<DefaultHeader> = (props) => {
     return (
         <>
-            <header className='default__header__title'>
-                <TitleBig title={props.title}/>
+            <nav
+                className='default_header_user'
+                style={{display: 'flex', alignContent: 'flex-start', border: '1px solid blue'}}
+            >
+                <NavAccount/>
+            </nav>
+
+            <header className='default__header__search'>
+                <TitleMedium title={props.title}/>
             </header>
 
             <article className='default__header__search'>
                 <SearchBox/>
             </article>
-
-            <nav style={{display: 'flex', alignContent: 'center'}}>
-                <NavAccount/>
-            </nav>
         </>
     )
 };

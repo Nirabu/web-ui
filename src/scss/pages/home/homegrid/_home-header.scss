@@ -1,0 +1,80 @@
+@mixin home-header-content {
+  display: grid;
+  grid: {
+    template-rows: 1fr 0.5fr;
+    template-columns: 1fr 250px 1fr;
+    template-areas:
+            "home-header-account home-header-search home-header-weather"
+            "home-header-nav home-header-nav home-header-nav";
+  }
+
+  padding-right: 5rem;
+  padding-left: 5rem;
+
+
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+
+  &__account {
+    grid-area: home-header-account;
+  }
+
+  &__search {
+    grid-area: home-header-search;
+    display: grid;
+    grid: {
+      template-rows: 55px;
+      template-columns: 50px 200px;
+      template-areas:
+              "home-header-search-title home-header-search-box";
+    }
+
+    &__box {
+      grid-area: home-header-search-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title {
+      grid-area: home-header-search-title;
+      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+    }
+
+
+    &__bar {
+      justify-content: flex-end;
+      grid-column: 3/4;
+      align-self: flex-start;
+      padding-top: 0.8rem;
+      padding-left: 2rem;
+      margin-right: 10rem;
+    }
+  }
+
+  &__weather {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__nav {
+    grid-area: home-header-nav;
+
+
+    .link-cafe a:hover {
+      color: $cafe;
+    }
+
+    .link-news a:hover {
+      color: $news;
+    }
+
+    .link-shopping a:hover {
+      color: $shopping;
+    }
+  }
+}

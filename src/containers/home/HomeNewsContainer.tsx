@@ -48,6 +48,7 @@ const HomeNewsContainer: React.FC<HomeNewsContainerProps> = (props) => {
                 image={busanImage}
                 changeItem={props.changeBusan}
                 loading={props.loading}
+                links={["Korea", "Japan", "China"]}
             />
         </>
     )

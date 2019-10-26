@@ -26,7 +26,7 @@ export const TitleSmall: React.FC<TitlesProps> = (props) => {
 export const TitleMedium: React.FC<TitlesProps> = (props) => {
     return (
         <>
-            <h3>{props.title}</h3>
+            <h3 style={{fontSize: '1.3em'}}>{props.title}</h3>
         </>
     )
 };

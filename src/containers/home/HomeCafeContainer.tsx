@@ -49,6 +49,7 @@ const HomeCafeContainer: React.FC<HomeCafeContainerProps> = (props) => {
                 image={cakeImage}
                 changeItem={props.changeCake}
                 loading={props.loading}
+                links={["Cake", "Coffee", "Icecream"]}
             />
         </>
     )

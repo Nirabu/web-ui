@@ -23,7 +23,6 @@ interface HomeShoppingContainerProps {
     changeDress: (text: string) => string;
     changeShoes: (text: string) => string;
     setLoading: (loading: boolean) => boolean;
-
 }
 
 const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
@@ -42,13 +41,14 @@ const HomeShoppingContainer: React.FC<HomeShoppingContainerProps> = (props) => {
     return (
         <>
             <BoxLayout
-                titleHeader="Shopping"
+                titleHeader={"Shopping"}
                 buttonName1={"Recipe"}
                 buttonName2={"Pictures"}
                 contentData={props.shoes}
                 image={shoesImage}
                 changeItem={props.changeShoes}
                 loading={props.loading}
+                links={["Dresses", "Pants", "Shirts", "Socks"]}
             />
         </>
     )
