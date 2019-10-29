@@ -47,11 +47,15 @@ li {
   list-style-type: none;
   padding-right: 1rem;
   margin: 0;
+
+  :hover {
+    color: #ba6079;
+  }
 }
 
 li a {
   text-decoration: none;
-  color: #595cd6;
+  color: #282829;
   padding: 0;
   margin: 0;
 }

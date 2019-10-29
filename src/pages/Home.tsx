@@ -6,10 +6,11 @@ import DefaultFooter from "./../layouts/default/DefaultFooter";
 import HomeCafeContainer from "../containers/home/HomeCafeContainer";
 import HomeNewsContainer from "../containers/home/HomeNewsContainer";
 import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
-import {NavAccount} from "../components/Navigations";
+import {NavAccount, NavTour} from "../components/Navigations";
 import {Icon} from "@material-ui/core";
 import {SearchBox} from "../components/Search";
 import {TitleMedium} from "../components/Titles";
+import {mainChapter9} from "../functions/ecmascript/chapter9";
 
 interface AppProps {
     value?: string;
@@ -17,7 +18,8 @@ interface AppProps {
 
 const Home: React.FC<AppProps> = (props) => {
     function showState() {
-        console.log('Result:')
+        console.log('Result:');
+        mainChapter9();
     }
 
     return (
@@ -41,7 +43,7 @@ const Home: React.FC<AppProps> = (props) => {
                 </article>
 
                 <article className='home-header-nav'>
-                    <p>Navigation bar</p>
+                    <NavTour />
                 </article>
             </header>
 
@@ -68,8 +70,6 @@ const Home: React.FC<AppProps> = (props) => {
             <footer className="home__footer">
                 <DefaultFooter version={`v0.2.6`}/>
             </footer>
-
-            {showState()}
         </div>
     );
 };

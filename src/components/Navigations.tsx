@@ -25,12 +25,9 @@ export const NavAccount: React.FC = () => {
 export const NavTour: React.FC = () => {
     return (
         <ul>
-            <li><NavLink to='/'>Portal</NavLink></li>
-            <li><NavLink to='/playground'>Playground</NavLink></li>
-            <li><NavLink to='/aquarium'>Aquarium</NavLink></li>
-            <li><NavLink to='/cafe'>Cafe</NavLink></li>
-            <li><NavLink to='/garden'>Garden</NavLink></li>
-            <li><NavLink to='/cinema'>Cinema</NavLink></li>
+            <li style={{fontSize: '0.9em'}}><NavLink to='/'>Home</NavLink></li>
+            <li style={{fontSize: '0.9em'}}><NavLink to='/cafe'>Cafe</NavLink></li>
+            <li style={{fontSize: '0.9em'}}><NavLink to='/shopping'>Shopping</NavLink></li>
         </ul>
     )
 };
