@@ -7,7 +7,6 @@ import HomeCafeContainer from "../containers/home/HomeCafeContainer";
 import HomeNewsContainer from "../containers/home/HomeNewsContainer";
 import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
 import {NavAccount, NavTour} from "../components/Navigations";
-import {Icon} from "@material-ui/core";
 import {SearchBox} from "../components/Search";
 import {TitleMedium} from "../components/Titles";
 import {mainChapter9} from "../functions/ecmascript/chapter9";

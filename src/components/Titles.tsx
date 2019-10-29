@@ -18,7 +18,7 @@ class test extends Component {
 export const TitleSmall: React.FC<TitlesProps> = (props) => {
     return (
         <>
-            <h6>{props.title}</h6>
+            <h5>{props.title}</h5>
         </>
     )
 };
