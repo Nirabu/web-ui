@@ -10,6 +10,7 @@ import {NavAccount, NavTour} from "../components/Navigations";
 import {SearchBox} from "../components/Search";
 import {TitleMedium} from "../components/Titles";
 import {mainChapter9} from "../functions/ecmascript/chapter9";
+import {Temperature} from "../components/Weather";
 
 interface AppProps {
     value?: string;
@@ -39,6 +40,7 @@ const Home: React.FC<AppProps> = (props) => {
 
                 <article className='home__header__weather'>
                     <p style={{fontSize: '0.7em'}}>Seoul 31 Celsius</p>
+                    <Temperature degrees={30} humid={2}/>
                 </article>
 
                 <article className='home-header-nav'>
