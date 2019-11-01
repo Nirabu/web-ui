@@ -17,11 +17,6 @@ interface AppProps {
 }
 
 const Home: React.FC<AppProps> = (props) => {
-    function showState() {
-        console.log('Result:');
-        mainChapter9();
-    }
-
     return (
         <div className="home">
             <header className="home__header">
@@ -39,7 +34,6 @@ const Home: React.FC<AppProps> = (props) => {
                 </section>
 
                 <article className='home__header__weather'>
-                    <p style={{fontSize: '0.7em'}}>Seoul 31 Celsius</p>
                     <Temperature degrees={30} humid={2}/>
                 </article>
 
