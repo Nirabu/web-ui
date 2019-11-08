@@ -1,10 +1,20 @@
-/* Nitji */
-$standard: #A5C2AE;
+// Typography
+$font-size: 0.8em;
 
-/* Theme colors */
+// Layouts
+$header-height: 2rem;
+$bottom-height: 2rem;
+$padding: 1rem;
+$side: $padding*4;
+
+// Colors
+$white: #f9f9f9;
+$border: #323130;
+$theme: #A5C2AE;
+$background: #f2f2f2;
 $cafe: #D69F53;
 $news: #6BD68E;
-$shopping: #4fc5d6;  ;
+$shopping: #4fc5d6;
 
 /* News */
 /* Cinema */

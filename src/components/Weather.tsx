@@ -14,7 +14,7 @@ interface TemperatureProps {
 
 export const Temperature: React.FC<TemperatureProps> = (props) => {
     return (
-        <div>
+        <div className='weather'>
             <p>Temperature: {props.degrees}</p>
         </div>
     )

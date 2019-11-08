@@ -9,12 +9,12 @@
 @import './mixins/_mobileFirst';
 @import './mixins/_desktopFirst';
 
-
 @import 'pages/home/home';
+
 @import './modules/layouts/defaultHeader';
+@import './modules/weather';
 @import './modules/layouts/boxContent';
 @import './modules/paginations';
-
 @import './modules/buttons';
 @import './modules/navbar';
 @import './modules/portalnav';

@@ -8,9 +8,8 @@
             "home-header-nav home-header-nav home-header-nav";
   }
 
-  padding-right: 5rem;
-  padding-left: 5rem;
-
+  padding-right: $side;
+  padding-left: $side;
 
   flex-wrap: nowrap;
   justify-content: center;
@@ -63,7 +62,6 @@
 
   &__nav {
     grid-area: home-header-nav;
-
 
     .link-cafe a:hover {
       color: $cafe;

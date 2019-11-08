@@ -1,6 +1,7 @@
 @import "./homegrid/home-header";
 @import './homegrid/home-main';
 @import "./homegrid/home-footer";
+@import "./homegrid/home_base";
 
 .home {
   display: grid;
@@ -13,31 +14,30 @@
             "home-footer";
   }
 
-  // Breakpoint
   @include forLargeScreens(900) {
-    // Properties for large screens.
-    width: 100%;
-    background: #d1dbe3;
     grid-template-areas:
             "home-header"
             "home-main"
             "home-footer";
   }
 
-  padding-top: 0.3rem;
+  padding-top: $padding / 4;
 
   &__header {
-    grid-area: home-header;
-    @include home-header-content;
+    grid-area: home-header; // custom.
+    @include home-header-content; // similar with variables.
+    @extend %home-base; // common.
   }
 
   &__main {
     grid-area: home-main;
-    @include home-main-content;
+    @include home-main-content($background);
+    @extend %home-base;
   }
 
   &__footer {
     grid-area: home-footer;
     @include home-footer-content;
+    @extend %home-base;
   }
 }
