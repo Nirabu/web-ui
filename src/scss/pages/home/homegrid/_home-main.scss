@@ -1,4 +1,4 @@
-@mixin home-main-content($background-color-main) {
+@mixin boxes($background-color-main) {
   display: grid;
   border-top: 2px solid rgb(107, 107, 107);
   border-top: 2px solid rgb(107, 107, 107);
@@ -30,14 +30,10 @@
     }
   }
 
-  padding: {
-    right: $side;
-    left: $side;
-  }
-
+  left: $side;
   justify-content: center;
 
-  &__header {
+  &__title {
     grid-area: home-main-header;
     background-color: $white;
   }
@@ -52,7 +48,6 @@
     grid-area: home-main-news;
     background-color: $white;
     border: 2px solid $border;
-
   }
 
   &__shopping {

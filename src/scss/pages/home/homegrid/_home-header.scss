@@ -1,4 +1,4 @@
-@mixin home-header-content {
+@mixin introduction {
   display: grid;
   grid: {
     template-rows: 1fr 0.5fr;
@@ -8,19 +8,16 @@
             "home-header-nav home-header-nav home-header-nav";
   }
 
-  padding-right: $side;
-  padding-left: $side;
-
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
 
-  &__account {
+  .account {
     grid-area: home-header-account;
   }
 
-  &__search {
+  .search {
     grid-area: home-header-search;
     display: grid;
     grid: {
