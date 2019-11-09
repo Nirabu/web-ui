@@ -1,7 +1,7 @@
 import * as React from "react";
 import DefaultFooter from "./default/DefaultFooter";
 
-const HomeFooter: React.FC = () => {
+const Ending: React.FC = () => {
     return (
         <>
             <DefaultFooter version={`v0.2.6`}/>
@@ -9,4 +9,4 @@ const HomeFooter: React.FC = () => {
     )
 };
 
-export default HomeFooter;
+export default Ending;

@@ -4,7 +4,7 @@ import {SearchBox} from "../components/Search";
 import {TitleMedium} from "../components/Titles";
 import {Temperature} from "../components/Weather";
 
-const HomeHeader: React.FC = () => {
+const Introduction: React.FC = () => {
     return (
         <>
             <article className='account'>
@@ -32,4 +32,4 @@ const HomeHeader: React.FC = () => {
     )
 };
 
-export default HomeHeader;
+export default Introduction;

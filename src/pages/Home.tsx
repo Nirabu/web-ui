@@ -11,9 +11,9 @@ import {SearchBox} from "../components/Search";
 import {TitleMedium} from "../components/Titles";
 import {mainChapter9} from "../functions/ecmascript/chapter9";
 import {Temperature} from "../components/Weather";
-import HomeHeader from "../layouts/HomeHeader";
-import HomeMain from "../layouts/HomeMain";
-import HomeFooter from "../layouts/HomeFooter";
+import Introduction from "../layouts/Introduction";
+import Boxes from "../layouts/Boxes";
+import Ending from "../layouts/Ending";
 
 interface AppProps {
     value?: string;
@@ -23,15 +23,15 @@ const Home: React.FC<AppProps> = (props) => {
     return (
         <div className="home">
             <header className="home__header">
-                <HomeHeader />
+                <Introduction />
             </header>
 
             <main className="home__main">
-                <HomeMain/>
+                <Boxes/>
             </main>
 
             <footer className="home__footer">
-                <HomeFooter />
+                <Ending />
             </footer>
         </div>
     );

@@ -3,7 +3,7 @@ import HomeCafeContainer from "../containers/home/HomeCafeContainer";
 import HomeShoppingContainer from "../containers/home/HomeShoppingContainer";
 import HomeNewsContainer from "../containers/home/HomeNewsContainer";
 
-const HomeMain = () => {
+const Boxes = () => {
     return (
         <>
             <section className="cafe">
@@ -27,4 +27,4 @@ const HomeMain = () => {
     )
 };
 
-export default HomeMain;
+export default Boxes;
