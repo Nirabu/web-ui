@@ -22,15 +22,15 @@ interface AppProps {
 const Home: React.FC<AppProps> = (props) => {
     return (
         <div className="home">
-            <header className="home__header">
+            <header className="introduction">
                 <Introduction />
             </header>
 
-            <main className="home__main">
+            <main className="boxes">
                 <Boxes/>
             </main>
 
-            <footer className="home__footer">
+            <footer className="ending">
                 <Ending />
             </footer>
         </div>
