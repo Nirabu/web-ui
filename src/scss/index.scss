@@ -10,6 +10,10 @@
 @import './mixins/_desktopFirst';
 
 @import 'pages/home/home';
+@import 'pages/home/homegrid/boxes';
+@import 'pages/home/homegrid/ending';
+@import 'pages/home/homegrid/home_base';
+@import 'pages/home/homegrid/introduction';
 
 @import './modules/layouts/defaultHeader';
 @import './modules/weather';

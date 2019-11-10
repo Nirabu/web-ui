@@ -8,36 +8,30 @@
   grid: {
     template-columns: repeat(1, 1fr);
     template-rows: 100px 1800px 1.5fr;
-    template-areas:
-            "home-header"
-            "home-main"
-            "home-footer";
+    template-areas: "home-header" "home-main" "home-footer";
   }
 
   @include forLargeScreens(900) {
-    grid-template-areas:
-            "home-header"
-            "home-main"
-            "home-footer";
+    grid-template-areas: "home-header" "home-main" "home-footer";
   }
 
   padding-top: $padding / 4;
 
-  &__header {
+  &__introduction {
     grid-area: home-header; // custom.
 
     @include introduction; // similar with variables.
     @extend %home-base; // common.
   }
 
-  &__main {
+  &__boxes {
     grid-area: home-main;
 
     @include boxes($background);
     @extend %home-base;
   }
 
-  &__footer {
+  &__ending {
     grid-area: home-footer;
 
     @include ending;
