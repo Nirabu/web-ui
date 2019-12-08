@@ -13,21 +13,17 @@ const Introduction: React.FC = () => {
 
             <section className='search'>
                 <article className='search__box'>
-                    <SearchBox />
+
                 </article>
 
                 <article className='search__title'>
-                    <TitleMedium title='Nitji'/>
+                    <TitleMedium title='Hinatu'/>
                 </article>
             </section>
 
             <article className='weather'>
                 <Temperature degrees={30} humid={2}/>
             </article>
-
-            <section className='services'>
-                <NavTour />
-            </section>
         </>
     )
 };

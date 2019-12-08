@@ -15,8 +15,8 @@ const Home: React.FC<AppProps> = (props) => {
                 <Introduction />
             </header>
 
-            <main className="home__boxes">
-                <Boxes/>
+            <main className="home_boxes">
+
             </main>
 
             <footer className="home__ending">

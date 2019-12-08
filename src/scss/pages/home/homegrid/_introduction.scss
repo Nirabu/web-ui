@@ -22,7 +22,7 @@
     display: grid;
     grid: {
       template-rows: 55px;
-      template-columns: 50px 200px;
+      template-columns: 60px 200px;
       template-areas:
               "home-header-search-title home-header-search-box";
     }
@@ -40,7 +40,6 @@
       display: flex;
       align-items: center;
     }
-
 
     &__bar {
       justify-content: flex-end;
