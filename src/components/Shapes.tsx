@@ -11,9 +11,7 @@ export const Square: React.FC<BoxProps> = (props) => {
                 <h3>{props.title}</h3>
             </div>
 
-            <main className='content'>
-
-            </main>
+            <main className='content'> </main>
         </div>
     )
 };
